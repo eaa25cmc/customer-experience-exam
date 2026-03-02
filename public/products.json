@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Sort frakke",
+    "price": "200 kr",
+    "category": "Overtøj",
+    "description": "bla blavbaoeiwjf"
+  },
+  {
+    "id": 2,
+    "title": "Rød bluse",
+    "price": "200 kr",
+    "category": "Overtøj",
+    "description": "bla blavbaoeiwjf"
+  },
+
+  {
+    "id": 3,
+    "title": "Product 4",
+    "price": "200 kr",
+    "category": "Overtøj",
+    "description": "bla blavbaoeiwjf"
+  },
+
+  {
+    "id": 4,
+    "title": "Product 5",
+    "price": "200 kr",
+    "category": "Overtøj",
+    "description": "bla blavbaoeiwjf"
+  }
+]
