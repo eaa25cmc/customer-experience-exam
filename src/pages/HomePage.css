@@ -18,3 +18,30 @@ button {
   font-family: var(--font-display);
   font-size: 1.25rem;
 }
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* billed-container */
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* ligger bagerst */
+}
+
+/* selve billedet */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* tekst og knap ovenpå */
+.title,
+.hero button {
+  position: relative;
+  z-index: 2;
+}
