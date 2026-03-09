@@ -2,6 +2,7 @@ import "./HomePage.css";
 import HeroPictures from "../components/HeroPictures";
 import BrandKarrusel from "../components/BrandKarrusel";
 import GenderSection from "../components/GenderSection";
+import Badges from "../components/Badges";
 
 export default function HomePage() {
   return (
@@ -40,7 +41,9 @@ export default function HomePage() {
         </section>
 
         {/* badges Section */}
-        <section className="badges"></section>
+        <section className="badges">
+          <Badges />
+        </section>
 
         {/* inspiration Section */}
         <section className="inspiration">
