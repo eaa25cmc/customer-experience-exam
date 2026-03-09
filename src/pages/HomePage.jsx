@@ -27,7 +27,6 @@ export default function HomePage() {
             <span style={{ color: "var(--orange)" }}> e</span>
             <span style={{ color: "var(--blå)" }}> r</span>
           </p>
-          <button>Se nyheder</button>
         </section>
 
         {/* populære brands Section */}
