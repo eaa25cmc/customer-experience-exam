@@ -1,3 +1,4 @@
+import "./HeroPictures.css";
 import { useState, useEffect } from "react";
 
 import img1 from "../image/Desktop-forside-1.png";
