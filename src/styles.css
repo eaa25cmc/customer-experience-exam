@@ -1,22 +1,148 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #e0e0e0;
-  background-color: #34495e;
+  /*Farver*/
+  --hvid: #f6f3ee;
+  --brun: #4a2f2c;
+  --sekundærhvid: #e8dccd;
+  --blå: #bfd1f4;
+  --grøn: #c7d38c;
+  --gul: #f4d77a;
+  --lyserød: #e9acc8;
+  --orange: #f8b553;
+  --rød: #b8474f;
+  --sekundærblå: #e9e8f3;
+  --sekundærlyserød: #f6dde5;
+  --sekundærgul: #f9eace;
+  --strokebrun: #918482;
+  /*Fonte*/
+  --font-display: "Schoolbell", cursive;
+  --font-body: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  color: var(--brun);
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--hvid);
+  color: var(--brun);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+/* Fonte */
+/*Desktop*/
+.title {
+  font-family: var(--font-display);
+  font-size: 6rem;
+  line-height: 1.25;
+  -webkit-text-stroke: 1px var(--brun);
+  text-shadow: var(--brun) 1px 1px 0;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  line-height: 1.25;
+}
+
+h2 {
+  font-family: var(--font-body);
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+h4 {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+h5 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+h6 {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+/*mobil*/
+@media (max-width: 768px) {
+  h1 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  h5 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  h6 {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    line-height: 0.75;
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    line-height: 1.25;
+  }
 }
 
 /* Navigation */
 nav {
-  background-color: #2c3e50;
+  background-color: var(--hvid);
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 6rem;
+  box-shadow: 0 2px 4px var(--brun);
   display: flex;
   justify-content: center;
   gap: 0.5rem;
@@ -26,28 +152,28 @@ nav {
 }
 
 nav a {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--brun);
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 2rem 1rem;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
+  color: var(--brun);
+  text-shadow: var(--brun) 1px 0px 0;
 }
 
 nav a.active {
-  background-color: #4a50c7;
-  color: white;
+  color: var(--brun);
+  text-shadow: var(--brun) 1px 0px 0;
 }
 
 /* Header */
 header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 2rem 1rem;
+  background-color: var(--hvid);
+  color: var(--brun);
+  padding: 4rem 1rem;
   text-align: center;
 }
 
@@ -87,7 +213,7 @@ main h2 {
 
 main h3 {
   margin-top: 1.5rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--brun);
 }
 
 /* 404 */
@@ -105,20 +231,20 @@ main h3 {
 }
 
 .not-found-link {
-  color: #ffffff;
+  color: var(--brun);
   text-decoration: none;
-  background-color: #4a50c7;
+  background-color: var(--brun);
   padding: 0.6rem 1.5rem;
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
 
 .not-found-link:hover {
-  background-color: #5a60d7;
+  background-color: var(--brun);
 }
 
 .home-intro {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--brun);
   margin-top: 0.5rem;
 }
 
@@ -130,8 +256,7 @@ main h3 {
 }
 
 .feature-card {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--sekundærhvid);
   border-radius: 8px;
   padding: 1.25rem;
 }
@@ -144,8 +269,7 @@ main h3 {
   margin-top: 1rem;
   padding: 1.25rem;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--sekundærhvid);
 }
 
 .contact-button {
@@ -154,8 +278,8 @@ main h3 {
   padding: 0.5rem 1rem;
   border-radius: 6px;
   text-decoration: none;
-  color: #fff;
-  background: #4a50c7;
+  color: var(--brun);
+  background: var(--sekundærhvid);
 }
 
 .services-grid {
@@ -167,8 +291,7 @@ main h3 {
 .service-card {
   padding: 1.25rem;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--sekundærhvid);
 }
 /**** About page styling ****/
 
@@ -187,6 +310,6 @@ main h3 {
   text-align: center;
   padding: 1rem;
   border-radius: 8px;
-  background: #4a50c7;
-  color: #fff;
+  background: var(--hvid);
+  color: var(--brun);
 }

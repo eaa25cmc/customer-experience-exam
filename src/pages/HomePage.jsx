@@ -3,24 +3,25 @@ import reactRouterLogo from "../assets/example.svg";
 export default function HomePage() {
   return (
     <>
-      <header>
-        <h1>Home</h1>
-        <p className="home-intro">Welcome to our React Router project.</p>
-      </header>
+      <header></header>
       <main>
-        <section className="home-features">
-          <article className="feature-card">
-            <h3>Routing</h3>
-            <p>Navigate between pages with React Router.</p>
-          </article>
-          <article className="feature-card">
-            <h3>Components</h3>
-            <p>Build reusable UI components for each page.</p>
-          </article>
-          <article className="feature-card">
-            <h3>Deployment</h3>
-            <p>Deploy automatically to GitHub Pages.</p>
-          </article>
+        <section className="hero">
+          <p className="title">
+            <span style={{ color: "var(--blå)" }}> F</span>
+            <span style={{ color: "var(--lyserød)" }}> o</span>
+            <span style={{ color: "var(--orange)" }}> r</span>
+            <span style={{ color: "var(--gul)" }}> å</span>
+            <span style={{ color: "var(--grøn)" }}> r</span>
+            <span style={{ color: "var(--rød)" }}> s</span>
+            <span style={{ color: "var(--gul)" }}> n</span>
+            <span style={{ color: "var(--blå)" }}> y</span>
+            <span style={{ color: "var(--rød)" }}> h</span>
+            <span style={{ color: "var(--grøn)" }}> e</span>
+            <span style={{ color: "var(--lyserød)" }}> d</span>
+            <span style={{ color: "var(--orange)" }}> e</span>
+            <span style={{ color: "var(--blå)" }}> r</span>
+          </p>
+          <button>Se nyheder</button>
         </section>
 
         <article>
