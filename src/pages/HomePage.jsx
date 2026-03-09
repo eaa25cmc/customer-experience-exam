@@ -1,10 +1,12 @@
-import reactRouterLogo from "../assets/example.svg";
+import "./HomePage.css";
+import BrandCarousel from "../components/BrandCarousel";
 
 export default function HomePage() {
   return (
     <>
       <header></header>
       <main>
+        {/* Hero Section */}
         <section className="hero">
           <p className="title">
             <span style={{ color: "var(--blå)" }}> F</span>
@@ -24,27 +26,25 @@ export default function HomePage() {
           <button>Se nyheder</button>
         </section>
 
-        <article>
-          <h2>Displaying images in React</h2>
+        {/* populære brands Section */}
+        <section className="populære-brands">
+          <h3>Populære brands</h3>
+        </section>
 
-          <h3>1. Import from src/assets</h3>
-          <img src={reactRouterLogo} alt="Example SVG" className="img-small" />
+        {/* populære brands Section */}
+        <section className="køn"></section>
 
-          <h3>2. Public folder</h3>
-          <img
-            src="logo.webp"
-            alt="Logo from public folder"
-            className="img-small"
-          />
+        {/* badges Section */}
+        <section className="badges"></section>
 
-          <h3>3. External URL</h3>
-          <img
-            src="https://picsum.photos/200"
-            alt="Random external image"
-            className="img-medium"
-          />
-        </article>
+        {/* inspiration Section */}
+        <section className="inspiration">
+          <h3>Inspiration</h3>
+        </section>
       </main>
+
+      {/* footer */}
+      <footer></footer>
     </>
   );
 }
