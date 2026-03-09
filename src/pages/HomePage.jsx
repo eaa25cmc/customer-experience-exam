@@ -1,5 +1,4 @@
 import "./HomePage.css";
-import BrandCarousel from "../components/BrandCarousel";
 
 export default function HomePage() {
   return (
