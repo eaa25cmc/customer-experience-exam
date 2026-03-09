@@ -1,4 +1,5 @@
 import "./HomePage.css";
+import HeroPictures from "../components/HeroPictures";
 
 export default function HomePage() {
   return (
@@ -7,6 +8,7 @@ export default function HomePage() {
       <main>
         {/* Hero Section */}
         <section className="hero">
+          <HeroPictures />
           <p className="title">
             <span style={{ color: "var(--blå)" }}> F</span>
             <span style={{ color: "var(--lyserød)" }}> o</span>

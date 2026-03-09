@@ -169,52 +169,9 @@ nav a.active {
   text-shadow: var(--brun) 1px 0px 0;
 }
 
-/* Header */
-header {
-  background-color: var(--hvid);
-  color: var(--brun);
-  padding: 4rem 1rem;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
+/*header mangler*/
 
 /* Layout */
-main {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-main p {
-  font-size: 1.2rem;
-}
-
-main img {
-  display: block;
-  margin: 1rem 0;
-  border-radius: 8px;
-}
-
-.img-small {
-  width: 100px;
-}
-
-.img-medium {
-  width: 200px;
-}
-
-main h2 {
-  margin-top: 2rem;
-}
-
-main h3 {
-  margin-top: 1.5rem;
-  color: var(--brun);
-}
 
 /* 404 */
 .not-found-title {
