@@ -1,3 +1,9 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
 .hero {
   position: relative;
   height: 100vh;
@@ -19,29 +25,36 @@ button {
   font-size: 1.25rem;
 }
 
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* billed-container */
-.hero-slider {
-  position: absolute;
-  inset: 0;
-  z-index: 0; /* ligger bagerst */
-}
-
-/* selve billedet */
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* tekst og knap ovenpå */
 .title,
 .hero button {
   position: relative;
   z-index: 2;
+}
+
+.gender-grid {
+  display: flex;
+  gap: 4.5rem;
+  justify-content: center;
+}
+
+.gender-card {
+  position: relative;
+  width: 25rem;
+}
+
+.gender-card img {
+  width: 100%;
+  height: 41rem;
+  object-fit: cover;
+}
+
+.gender-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--sekundærhvid);
+  padding: 1rem 2rem;
+  border-radius: 999px;
 }

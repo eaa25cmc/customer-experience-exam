@@ -1,0 +1,33 @@
+.brand-section {
+  margin-left: 3.5rem;
+}
+
+.brand-row {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+
+.brand-card {
+  position: relative;
+}
+
+.brand-image {
+  width: 18rem;
+  height: 31rem;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--sekundærhvid);
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  text-align: center;
+}

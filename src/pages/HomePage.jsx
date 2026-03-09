@@ -1,5 +1,7 @@
 import "./HomePage.css";
 import HeroPictures from "../components/HeroPictures";
+import BrandKarrusel from "../components/BrandKarrusel";
+import GenderSection from "../components/GenderSection";
 
 export default function HomePage() {
   return (
@@ -29,11 +31,13 @@ export default function HomePage() {
 
         {/* populære brands Section */}
         <section className="populære-brands">
-          <h3>Populære brands</h3>
+          <BrandKarrusel />
         </section>
 
-        {/* populære brands Section */}
-        <section className="køn"></section>
+        {/* Køn Section */}
+        <section className="køn">
+          <GenderSection />
+        </section>
 
         {/* badges Section */}
         <section className="badges"></section>
