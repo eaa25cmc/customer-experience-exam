@@ -1,8 +1,8 @@
-export default function ProductsPage() {
+export default function InspirationPage() {
   return (
     <>
       <header>
-        <h1>Produkter</h1>
+        <h1>Inspiration</h1>
       </header>
       <main className="about-container">
         <p>

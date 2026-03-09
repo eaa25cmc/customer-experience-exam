@@ -1,8 +1,8 @@
-export default function ProductsPage() {
+export default function News() {
   return (
     <>
       <header>
-        <h1>Produkter</h1>
+        <h1>Nyheder</h1>
       </header>
       <main className="about-container">
         <p>

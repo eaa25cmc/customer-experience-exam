@@ -1,8 +1,8 @@
-export default function ProductsPage() {
+export default function PaymentPage() {
   return (
     <>
       <header>
-        <h1>Produkter</h1>
+        <h1>Betalingsside</h1>
       </header>
       <main className="about-container">
         <p>

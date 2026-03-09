@@ -4,9 +4,12 @@ export default function Navbar() {
   return (
     <nav>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/about">About</NavLink>
-      <NavLink to="/services">Services</NavLink>
-      <NavLink to="/contact">Contact</NavLink>
+      <NavLink to="/Baby">Baby</NavLink>
+      <NavLink to="/Pige">Pige</NavLink>
+      <NavLink to="/Dreng">Dreng</NavLink>
+      <NavLink to="/Sale">Udsalg</NavLink>
+      <NavLink to="/News">Nyheder</NavLink>
+      <NavLink to="/Inspiration">Inspiration</NavLink>
     </nav>
   );
 }
