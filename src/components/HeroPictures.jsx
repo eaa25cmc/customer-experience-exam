@@ -1,9 +1,9 @@
-import "./HeroPictures.css";
 import { useState, useEffect } from "react";
 
-import img1 from "../image/Desktop-forside-1.png";
-import img2 from "../image/Desktop-forside-2.png";
-import img3 from "../image/Desktop-forside.png";
+import img1 from "../image/forsidebillede.png";
+import img2 from "../image/forsidebillede2.png";
+import img3 from "../image/forsidebillede3.png";
+import heroCta from "../image/nyhederhero.svg";
 
 export default function HeroPictures() {
   const images = [img1, img2, img3];
@@ -24,6 +24,13 @@ export default function HeroPictures() {
   return (
     <div className="hero-slider">
       <img src={images[current]} alt="Hero billede" className="hero-image" />
+      <img src={heroCta} alt="Shop nyheder" className="hero-cta" />
+
+      <div className="hero-dots">
+        <span className={current === 0 ? "dot active" : "dot"}></span>
+        <span className={current === 1 ? "dot active" : "dot"}></span>
+        <span className={current === 2 ? "dot active" : "dot"}></span>
+      </div>
     </div>
   );
 }

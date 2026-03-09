@@ -8,21 +8,57 @@ main {
   position: relative;
   height: 100vh;
   display: flex;
+  overflow: hidden;
+
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 7rem;
 }
 
-button {
-  background-color: var(--sekundærhvid);
-  color: var(--brun);
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 32px;
-  cursor: pointer;
-  font-family: var(--font-display);
-  font-size: 1.25rem;
+/* billed-container */
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* ligger bagerst */
+}
+
+/* selve billedet */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-cta {
+  position: absolute;
+  bottom: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 22rem;
+  height: auto;
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 1rem;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: rgba(74, 47, 44, 0.35);
+}
+
+.dot.active {
+  background-color: var(--brun);
 }
 
 /* tekst og knap ovenpå */
