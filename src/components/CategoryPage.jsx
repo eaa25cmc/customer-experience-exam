@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import styles from "./ProductGrid.module.css";
 import Breadcrumbs from "./Breadcrumbs";
+import CategoryFilterPanel from "./CategoryFilterPanel";
 
 export default function CategoryPage() {
   const { category } = useParams();
@@ -35,25 +36,11 @@ export default function CategoryPage() {
     <div>
       <Breadcrumbs />
       <h1>{category}</h1>
-      <section className={styles.filterPanel} aria-label="Product filters">
-        <div className={styles.categoryButtons}>
-          <button
-            className={`${styles.categoryButton} ${selectedSub === "all" ? styles.activeCategoryButton : ""}`}
-            onClick={() => setSelectedSub("all")}
-          >
-            Alle
-          </button>
-          {subCategories.map((sub) => (
-            <button
-              key={sub}
-              className={`${styles.categoryButton} ${selectedSub === sub ? styles.activeCategoryButton : ""}`}
-              onClick={() => setSelectedSub(sub)}
-            >
-              {sub}
-            </button>
-          ))}
-        </div>
-      </section>
+      <CategoryFilterPanel
+        subCategories={subCategories}
+        selectedSub={selectedSub}
+        setSelectedSub={setSelectedSub}
+      />
       <div className={styles.productGrid}>
         {shownProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
