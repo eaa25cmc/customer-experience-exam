@@ -4,6 +4,7 @@ main {
   gap: 6rem;
 }
 
+/* Hero sektion*/
 .hero {
   position: relative;
   height: 100vh;
@@ -80,20 +81,17 @@ main {
   width: 25rem;
 }
 
-.gender-card img {
+.gender-card img:first-child {
   width: 100%;
   height: 41rem;
   object-fit: cover;
 }
 
-.gender-text {
+.gender-card img:last-child {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--sekundærhvid);
-  padding: 1rem 2rem;
-  border-radius: 999px;
 }
 
 /* badges sektion*/
