@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-kolonne">
-          <h3>Shopping guide</h3>
+          <h2>Shopping guide</h2>
           <a href="#">Størrelsesguide</a>
           <a href="#">Levering & fragt</a>
           <a href="#">Returnering</a>
