@@ -11,6 +11,8 @@
 
 .brand-card {
   position: relative;
+  flex: 0 0 auto;
+  width: 18rem;
 }
 
 .brand-image {
@@ -19,15 +21,12 @@
   object-fit: cover;
   display: block;
 }
-
-.brand-text {
+.brand-cta {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: var(--sekundærhvid);
-  padding: 1rem 3rem;
-  border-radius: 2rem;
-  text-align: center;
+  width: 80%;
+  height: auto;
 }
