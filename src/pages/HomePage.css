@@ -183,3 +183,9 @@ main {
   object-fit: contain;
   margin-bottom: 0.5rem;
 }
+
+/*Anmeldelser sektion*/
+.anmeldelser-sektion {
+  display: flex;
+  justify-content: center;
+}
