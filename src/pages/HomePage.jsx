@@ -4,6 +4,7 @@ import BrandKarrusel from "../components/BrandKarrusel";
 import GenderSection from "../components/GenderSection";
 import Badges from "../components/Badges";
 import ForsideInspiration from "../components/ForsideInspiration";
+import Infoikoner from "../components/infoikoner";
 
 export default function HomePage() {
   return (
@@ -48,6 +49,11 @@ export default function HomePage() {
         {/* inspiration Section */}
         <section className="inspiration">
           <ForsideInspiration />
+        </section>
+
+        {/* inspiration Section */}
+        <section className="infoikonersektion">
+          <Infoikoner />
         </section>
       </main>
 
