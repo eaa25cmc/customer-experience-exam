@@ -149,3 +149,37 @@ main {
   margin-left: 3.5rem;
   text-decoration: underline;
 }
+
+/*infoikoner sektion*/
+.infoikonersektion {
+  border-top: 1px solid var(--brun);
+  border-bottom: 1px solid var(--brun);
+
+  padding: 1rem 0; /* giver luft mellem cards og linjerne */
+}
+
+.infoikoner {
+  margin: 4rem 0;
+}
+
+.info-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.info-card img {
+  width: 4rem;
+  height: 4.5rem;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
