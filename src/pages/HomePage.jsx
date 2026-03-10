@@ -5,7 +5,6 @@ import GenderSection from "../components/GenderSection";
 import Badges from "../components/Badges";
 import ForsideInspiration from "../components/ForsideInspiration";
 import Infoikoner from "../components/infoikoner";
-import AnmeldelserForside from "../components/AnmeldelserForside";
 
 export default function HomePage() {
   return (
@@ -52,19 +51,11 @@ export default function HomePage() {
           <ForsideInspiration />
         </section>
 
-        {/* Infoikoner Section */}
+        {/* inspiration Section */}
         <section className="infoikonersektion">
           <Infoikoner />
         </section>
-
-        {/* Anmeldelser Section */}
-        <section className="anmeldelser-sektion">
-          <AnmeldelserForside />
-        </section>
       </main>
-
-      {/* footer */}
-      <footer></footer>
     </>
   );
 }
