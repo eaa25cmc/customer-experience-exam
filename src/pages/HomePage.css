@@ -113,3 +113,39 @@ main {
 .badge-description {
   max-width: 16rem;
 }
+
+/* inspiration sektion*/
+.forside-inspiration {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.forside-inspiration-tekst {
+  margin-left: 3.5rem;
+}
+
+.inspiration-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.inspiration-card {
+  position: relative;
+}
+
+.inspiration-card img {
+  width: 21rem;
+  height: 31rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.instagramtag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 3.5rem;
+  text-decoration: underline;
+}

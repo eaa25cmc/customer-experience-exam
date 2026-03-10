@@ -6,7 +6,7 @@
   display: flex;
   gap: 2rem;
   overflow-x: auto;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .brand-card {
