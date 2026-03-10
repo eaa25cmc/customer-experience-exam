@@ -1,0 +1,35 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--brun);
+  gap: 0.5rem;
+  border: none;
+  box-shadow: none;
+  background: none;
+  padding: 0;
+  justify-content: flex-start; /* venstrejustering */
+  margin-left: 1rem; 
+}
+.crumbLink {
+  color: var(--brun);
+  font-size: 1rem;
+}
+
+.crumbItem {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.crumbSep {
+  font-size: 1rem 1rem;
+  color: var(--brun);
+  font-family: inherit;
+}
+
+.crumbCurrent {
+  color: var(--brun);
+  text-decoration: underline;
+  font-size: 1rem;
+}
