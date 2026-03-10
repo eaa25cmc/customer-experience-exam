@@ -3,6 +3,7 @@ import HeroPictures from "../components/HeroPictures";
 import BrandKarrusel from "../components/BrandKarrusel";
 import GenderSection from "../components/GenderSection";
 import Badges from "../components/Badges";
+import ForsideInspiration from "../components/ForsideInspiration";
 
 export default function HomePage() {
   return (
@@ -46,7 +47,7 @@ export default function HomePage() {
 
         {/* inspiration Section */}
         <section className="inspiration">
-          <h3>Inspiration</h3>
+          <ForsideInspiration />
         </section>
       </main>
 
