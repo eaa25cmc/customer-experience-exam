@@ -138,38 +138,95 @@ p {
 }
 
 /* Navigation */
-nav {
-  background-color: var(--hvid);
-  padding: 1rem 2rem;
-  min-height: 6rem;
-  box-shadow: 0 2px 4px var(--brun);
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  position: sticky;
+.hero-header {
+  position: sticky; /*Bruges til at holde headeren fast i toppen */
   top: 0;
-  z-index: 100;
+  z-index: 100; /* bruges til at være det forreste altid */
 }
 
-nav a {
+.topnav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3.5rem;
+  background-color: var(--hvid);
+}
+.logo {
+  justify-self: start;
+}
+.logo img {
+  height: 4rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.navbar a {
   color: var(--brun);
   text-decoration: none;
   padding: 2rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-  color: var(--brun);
+.navbar a:hover {
   text-shadow: var(--brun) 1px 0px 0;
 }
 
-nav a.active {
-  color: var(--brun);
+.navbar a.active {
   text-shadow: var(--brun) 1px 0px 0;
 }
 
-/*header mangler*/
+.klikikoner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  height: 2.5rem;
+}
+
+.banner {
+  position: relative;
+  margin-top: -0.5rem; /*bruges til at overlappe navbar */
+}
+
+.banner-image {
+  width: 100%;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.5rem 0;
+}
+
+.banner-track {
+  display: flex;
+  gap: 60rem;
+  animation: scrollText 24s linear infinite;
+}
+
+.banner-track span {
+  font-weight: 400;
+  font-family: var(--font-body);
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 /* Layout */
 

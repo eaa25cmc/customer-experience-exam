@@ -10,7 +10,7 @@ export default function Infoikoner() {
         <div className="info-card">
           <img src={leveringikon} alt="Levering" />
           <h4>Levering</h4>
-          <p>Kun 1-2 dages levering</p>
+          <p>Kun 1-2 hverdage</p>
         </div>
         <div className="info-card">
           <img src={fragtikon} alt="Frifragt" />
