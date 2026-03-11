@@ -1,0 +1,15 @@
+.saleBadge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 60px;
+  height: auto;
+}
+
+.newsBadge {
+  position: absolute;
+  top: 16px;
+  left: 90px;
+  width: 60px;
+  height: auto;
+}

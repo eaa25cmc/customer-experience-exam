@@ -1,13 +1,33 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom"; // Korrekt import til routing
 import { useState } from "react";
 import styles from "./ProductCard.module.css";
 import HeartIcon from "./HeartIcon";
 import nyhedIcon from "../image/nyhed-ikon.svg";
 import saleIcon from "../image/Sale-ikon.svg";
 
+// Funktion der finder det første billede, enten fra images eller fra variant
+function getFirstImage(product) {
+  // Hvis produktet har images-array med mindst ét billede
+  if (product.images && product.images.length > 0) {
+    return product.images[0];
+  }
+  // Hvis produktet har varianter med billeder
+  if (
+    product.variants &&
+    product.variants.length > 0 &&
+    product.variants[0].images &&
+    product.variants[0].images.length > 0
+  ) {
+    return product.variants[0].images[0];
+  }
+  // Hvis ingen billeder findes, vises placeholder
+  return "/images/placeholder.jpg";
+}
+
 export default function ProductCard({ product }) {
   const [isFavorite, setIsFavorite] = useState(false);
 
+  // Skifter favorit-status når hjertet klikkes
   function toggleFavorite() {
     setIsFavorite((prev) => !prev);
   }
@@ -15,23 +35,28 @@ export default function ProductCard({ product }) {
   return (
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
-        <Link to={`/products/${product.id}`} className={styles.cardLink}>
+        {/* Link til produktets detaljeside */}
+        <Link to={`/produkt/${product.id}`} className={styles.cardLink}>
+          {/* Viser første billede eller placeholder */}
           <img
-            src={product.image}
-            alt={product.name}
+            src={getFirstImage(product)}
+            alt={product.title}
             className={styles.image}
           />
         </Link>
         <div className={styles.topBar}>
           <div className={styles.leftIcons}>
+            {/* Nyhed-ikon */}
             {product.news && (
               <img src={nyhedIcon} alt="Nyhed" className={styles.nyhedBoks} />
             )}
+            {/* Sale-ikon */}
             {product.sale && (
               <img src={saleIcon} alt="Sale" className={styles.saleBoks} />
             )}
           </div>
           <div className={styles.heartWrapper}>
+            {/* Favorit-hjerte */}
             <HeartIcon
               filled={isFavorite}
               onClick={toggleFavorite}
@@ -39,9 +64,12 @@ export default function ProductCard({ product }) {
             />
           </div>
         </div>
-        <Link to={`/products/${product.id}`} className={styles.cardLink}>
+        {/* Link til detaljeside med info */}
+        <Link to={`/produkt/${product.id}`} className={styles.cardLink}>
           <div className={styles.info}>
-            <h5 className={styles.title}>{product.name || "Produktnavn"}</h5>
+            {/* Produktnavn eller fallback */}
+            <h6 className={styles.title}>{product.title || "Produktnavn"}</h6>
+            {/* Pris */}
             <p className={styles.price}>{product.price} DKK</p>
           </div>
         </Link>

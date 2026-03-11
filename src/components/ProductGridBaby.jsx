@@ -21,8 +21,37 @@ export default function ProductGridBaby() {
       const url = "/products.json";
       const response = await fetch(url);
       const data = await response.json();
-      // Filtrer kun baby-produkter
-      const babyProducts = data.filter((product) => product.gender === "Baby");
+
+      // Flad listen ud, så hver variant bliver et produktkort
+      const allProducts = data.flatMap((product) => {
+        if (product.variants && product.variants.length > 0) {
+          return product.variants.map((variant, idx) => ({
+            ...variant,
+            id: product.id + "-" + idx,
+            mainTitle: product.title,
+            price: product.price,
+            gender: variant.gender || product.gender,
+            over_kategori: product.over_kategori,
+            under_kategori: product.under_kategori,
+            brand: product.brand,
+            description: product.description,
+            materiale: product.materiale,
+            pasform: product.pasform,
+            rating: product.rating,
+            news: product.news,
+            sale: product.sale,
+            available: product.available,
+            images: variant.images || product.images,
+          }));
+        }
+        return [product];
+      });
+
+      // Filtrér på gender EFTER flatten
+      const babyProducts = allProducts.filter(
+        (product) => product.gender === "Baby",
+      );
+
       setProducts(babyProducts);
       setSelectedCategory("all");
       setActiveFilters(createEmptyFilters());

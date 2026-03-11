@@ -21,10 +21,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/1-1.png",
-          "/src/image/1-2.png",
-          "/src/image/1-3.png",
-          "/src/image/1-4.png"
+          "/product-pics/1-1.png",
+          "/product-pics/1-2.png",
+          "/product-pics/1-3.png",
+          "/product-pics/1-4.png"
         ],
         "size": {
           "56": true,
@@ -55,10 +55,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/2-1.png",
-          "/src/image/2-2.png",
-          "/src/image/2-3.png",
-          "/src/image/2-4.png"
+          "/product-pics/2-1.png",
+          "/product-pics/2-2.png",
+          "/product-pics/2-3.png",
+          "/product-pics/2-4.png"
         ],
         "size": {
           "56": false,
@@ -96,10 +96,10 @@
     "pasform": "Regular",
     "rating": 4.4,
     "images": [
-      "/src/image/3-1.png",
-      "/src/image/3-2.png",
-      "/src/image/3-3.png",
-      "/src/image/3-4.png"
+      "/product-pics/3-1.png",
+      "/product-pics/3-2.png",
+      "/product-pics/3-3.png",
+      "/product-pics/3-4.png"
     ],
     "size": {
       "56": true,
@@ -135,10 +135,10 @@
     "pasform": "Loose",
     "rating": 4.7,
     "images": [
-      "/src/image/4-1.png",
-      "/src/image/4-2.png",
-      "/src/image/4-3.png",
-      "/src/image/4-4.png"
+      "/product-pics/4-1.png",
+      "/product-pics/4-2.png",
+      "/product-pics/4-3.png",
+      "/product-pics/4-4.png"
     ],
     "size": {
       "56": true,
@@ -174,10 +174,10 @@
     "pasform": "Loose",
     "rating": 4.5,
     "images": [
-      "/src/image/5-1.png",
-      "/src/image/5-2.png",
-      "/src/image/5-3.png",
-      "/src/image/5-4.png"
+      "/product-pics/5-1.png",
+      "/product-pics/5-2.png",
+      "/product-pics/5-3.png",
+      "/product-pics/5-4.png"
     ],
     "size": {
       "56": false,
@@ -213,10 +213,10 @@
     "pasform": "Regular",
     "rating": 4.3,
     "images": [
-      "/src/image/6-1.png",
-      "/src/image/6-2.png",
-      "/src/image/6-3.png",
-      "/src/image/6-4.png"
+      "/product-pics/6-1.png",
+      "/product-pics/6-2.png",
+      "/product-pics/6-3.png",
+      "/product-pics/6-4.png"
     ],
     "size": {
       "56": true,
@@ -252,10 +252,10 @@
     "pasform": "Loose",
     "rating": 4.6,
     "images": [
-      "/src/image/7-1.png",
-      "/src/image/7-2.png",
-      "/src/image/7-3.png",
-      "/src/image/7-4.png"
+      "/product-pics/7-1.png",
+      "/product-pics/7-2.png",
+      "/product-pics/7-3.png",
+      "/product-pics/7-4.png"
     ],
     "size": {
       "56": true,
@@ -287,7 +287,7 @@
         "title": "Pacey Sun Hat",
         "color": "bloomiegrape",
         "color_filter": ["multicolor", "yellow"],
-        "gender": "Pige",
+        "gender": ["Pige", "Baby"],
         "sale": false,
         "news": true,
         "available": true,
@@ -295,10 +295,10 @@
         "pasform": "Regular",
         "rating": 4.8,
         "images": [
-          "/src/image/8-1.png",
-          "/src/image/8-2.png",
-          "/src/image/8-3.png",
-          "/src/image/8-4.png"
+          "/product-pics/8-1.png",
+          "/product-pics/8-2.png",
+          "/product-pics/8-3.png",
+          "/product-pics/8-4.png"
         ],
         "size": {
           "56": false,
@@ -321,7 +321,7 @@
         "title": "Pacey Sun Hat",
         "color": "tramonto",
         "color_filter": ["white", "blue"],
-        "gender": "Pige",
+        "gender": ["Pige", "Baby"],
         "sale": false,
         "news": true,
         "available": true,
@@ -329,10 +329,10 @@
         "pasform": "Regular",
         "rating": 4.8,
         "images": [
-          "/src/image/8-pacey-solhat-hvid-1.png",
-          "/src/image/8-pacey-solhat-hvid-2.png",
-          "/src/image/8-pacey-solhat-hvid-3.png",
-          "/src/image/8-pacey-solhat-hvid-4.png"
+          "/product-pics/8-pacey-solhat-hvid-1.png",
+          "/product-pics/8-pacey-solhat-hvid-2.png",
+          "/product-pics/8-pacey-solhat-hvid-3.png",
+          "/product-pics/8-pacey-solhat-hvid-4.png"
         ],
         "size": {
           "56": false,
@@ -362,7 +362,7 @@
     "over_kategori": "Accessories",
     "under_kategori": "Hat",
     "brand": "Konges Slojd",
-    "gender": "Dreng",
+    "gender": "Unisex",
     "sale": false,
     "news": false,
     "available": true,
@@ -371,10 +371,10 @@
     "pasform": "Regular",
     "rating": 4.2,
     "images": [
-      "/src/image/9-1.png",
-      "/src/image/9-2.png",
-      "/src/image/9-3.png",
-      "/src/image/9-4.png"
+      "/product-pics/9-1.png",
+      "/product-pics/9-2.png",
+      "/product-pics/9-3.png",
+      "/product-pics/9-4.png"
     ],
     "size": {
       "56": true,
@@ -415,10 +415,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/10-1.png",
-          "/src/image/10-2.png",
-          "/src/image/10-3.png",
-          "/src/image/10-4.png"
+          "/product-pics/10-1.png",
+          "/product-pics/10-2.png",
+          "/product-pics/10-3.png",
+          "/product-pics/10-4.png"
         ],
         "size": {
           "56": false,
@@ -449,8 +449,8 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/10-vicino-socks-blue-1.png",
-          "/src/image/10-vicino-socks-blue-2.png"
+          "/product-pics/10-vicino-socks-blue-1.png",
+          "/product-pics/10-vicino-socks-blue-2.png"
         ],
         "size": {
           "56": false,
@@ -489,10 +489,10 @@
     "pasform": "Regular",
     "rating": 4.7,
     "images": [
-      "/src/image/product-pics/pj-lemon-1.png",
-      "/src/image/product-pics/pj-lemon-2.png",
-      "/src/image/product-pics/pj-lemon-3.png",
-      "/src/image/product-pics/pj-lemon-4.png"
+      "/product-pics/pj-lemon-1.png",
+      "/product-pics/pj-lemon-2.png",
+      "/product-pics/pj-lemon-3.png",
+      "/product-pics/pj-lemon-4.png"
     ],
     "size": {
       "56": true,
@@ -533,10 +533,10 @@
         "pasform": "Regular",
         "rating": 4.4,
         "images": [
-          "/src/image/12-1.png",
-          "/src/image/12-2.png",
-          "/src/image/12-3.png",
-          "/src/image/12-4.png"
+          "/product-pics/12-1.png",
+          "/product-pics/12-2.png",
+          "/product-pics/12-3.png",
+          "/product-pics/12-4.png"
         ],
         "size": {
           "56": true,
@@ -567,10 +567,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/12-1.png",
-          "/src/image/12-2.png",
-          "/src/image/12-3.png",
-          "/src/image/12-4.png"
+          "/product-pics/12-1.png",
+          "/product-pics/12-2.png",
+          "/product-pics/12-3.png",
+          "/product-pics/12-4.png"
         ],
         "size": {
           "56": false,
@@ -613,10 +613,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/13-1.png",
-          "/src/image/13-2.png",
-          "/src/image/13-3.png",
-          "/src/image/13-4.png"
+          "/product-pics/13-1.png",
+          "/product-pics/13-2.png",
+          "/product-pics/13-3.png",
+          "/product-pics/13-4.png"
         ],
         "size": {
           "56": false,
@@ -647,10 +647,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/14-1.png",
-          "/src/image/14-2.png",
-          "/src/image/14-3.png",
-          "/src/image/14-4.png"
+          "/product-pics/14-1.png",
+          "/product-pics/14-2.png",
+          "/product-pics/14-3.png",
+          "/product-pics/14-4.png"
         ],
         "size": {
           "56": true,
@@ -693,10 +693,10 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/15-1.png",
-          "/src/image/15-2.png",
-          "/src/image/15-3.png",
-          "/src/image/15-4.png"
+          "/product-pics/15-1.png",
+          "/product-pics/15-2.png",
+          "/product-pics/15-3.png",
+          "/product-pics/15-4.png"
         ],
         "size": {
           "56": true,
@@ -727,10 +727,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/16-1.png",
-          "/src/image/16-2.png",
-          "/src/image/16-3.png",
-          "/src/image/16-4.png"
+          "/product-pics/16-1.png",
+          "/product-pics/16-2.png",
+          "/product-pics/16-3.png",
+          "/product-pics/16-4.png"
         ],
         "size": {
           "56": false,
@@ -773,10 +773,10 @@
         "pasform": "Loose",
         "rating": 4.4,
         "images": [
-          "/src/image/17-1.png",
-          "/src/image/17-2.png",
-          "/src/image/17-3.png",
-          "/src/image/17-4.png"
+          "/product-pics/17-1.png",
+          "/product-pics/17-2.png",
+          "/product-pics/17-3.png",
+          "/product-pics/17-4.png"
         ],
         "size": {
           "56": true,
@@ -807,10 +807,10 @@
         "pasform": "Loose",
         "rating": 4.3,
         "images": [
-          "/src/image/18-1.png",
-          "/src/image/18-2.png",
-          "/src/image/18-3.png",
-          "/src/image/18-4.png"
+          "/product-pics/18-1.png",
+          "/product-pics/18-2.png",
+          "/product-pics/18-3.png",
+          "/product-pics/18-4.png"
         ],
         "size": {
           "56": false,
@@ -853,10 +853,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/19-1.png",
-          "/src/image/19-2.png",
-          "/src/image/19-3.png",
-          "/src/image/19-4.png"
+          "/product-pics/19-1.png",
+          "/product-pics/19-2.png",
+          "/product-pics/19-3.png",
+          "/product-pics/19-4.png"
         ],
         "size": {
           "56": true,
@@ -887,10 +887,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/20-1.png",
-          "/src/image/20-2.png",
-          "/src/image/20-3.png",
-          "/src/image/20-4.png"
+          "/product-pics/20-1.png",
+          "/product-pics/20-2.png",
+          "/product-pics/20-3.png",
+          "/product-pics/20-4.png"
         ],
         "size": {
           "56": false,
@@ -933,10 +933,10 @@
         "pasform": "Loose",
         "rating": 4.6,
         "images": [
-          "/src/image/21-1.png",
-          "/src/image/21-2.png",
-          "/src/image/21-3.png",
-          "/src/image/21-4.png"
+          "/product-pics/21-1.png",
+          "/product-pics/21-2.png",
+          "/product-pics/21-3.png",
+          "/product-pics/21-4.png"
         ],
         "size": {
           "56": true,
@@ -967,10 +967,10 @@
         "pasform": "Loose",
         "rating": 4.5,
         "images": [
-          "/src/image/22-1.png",
-          "/src/image/22-2.png",
-          "/src/image/22-3.png",
-          "/src/image/22-4.png"
+          "/product-pics/22-1.png",
+          "/product-pics/22-2.png",
+          "/product-pics/22-3.png",
+          "/product-pics/22-4.png"
         ],
         "size": {
           "56": false,
@@ -1013,10 +1013,10 @@
         "pasform": "Regular",
         "rating": 4.4,
         "images": [
-          "/src/image/23-1.png",
-          "/src/image/23-2.png",
-          "/src/image/23-3.png",
-          "/src/image/23-4.png"
+          "/product-pics/23-1.png",
+          "/product-pics/23-2.png",
+          "/product-pics/23-3.png",
+          "/product-pics/23-4.png"
         ],
         "size": {
           "56": true,
@@ -1047,10 +1047,10 @@
         "pasform": "Regular",
         "rating": 4.3,
         "images": [
-          "/src/image/24-1.png",
-          "/src/image/24-2.png",
-          "/src/image/24-3.png",
-          "/src/image/24-4.png"
+          "/product-pics/24-1.png",
+          "/product-pics/24-2.png",
+          "/product-pics/24-3.png",
+          "/product-pics/24-4.png"
         ],
         "size": {
           "56": false,
@@ -1093,10 +1093,10 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/25-1.png",
-          "/src/image/25-2.png",
-          "/src/image/25-3.png",
-          "/src/image/25-4.png"
+          "/product-pics/25-1.png",
+          "/product-pics/25-2.png",
+          "/product-pics/25-3.png",
+          "/product-pics/25-4.png"
         ],
         "size": {
           "56": true,
@@ -1127,10 +1127,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/26-1.png",
-          "/src/image/26-2.png",
-          "/src/image/26-3.png",
-          "/src/image/26-4.png"
+          "/product-pics/26-1.png",
+          "/product-pics/26-2.png",
+          "/product-pics/26-3.png",
+          "/product-pics/26-4.png"
         ],
         "size": {
           "56": true,
@@ -1173,10 +1173,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/27-1.png",
-          "/src/image/27-2.png",
-          "/src/image/27-3.png",
-          "/src/image/27-4.png"
+          "/product-pics/27-1.png",
+          "/product-pics/27-2.png",
+          "/product-pics/27-3.png",
+          "/product-pics/27-4.png"
         ],
         "size": {
           "56": true,
@@ -1207,10 +1207,10 @@
         "pasform": "Regular",
         "rating": 4.4,
         "images": [
-          "/src/image/28-1.png",
-          "/src/image/28-2.png",
-          "/src/image/28-3.png",
-          "/src/image/28-4.png"
+          "/product-pics/28-1.png",
+          "/product-pics/28-2.png",
+          "/product-pics/28-3.png",
+          "/product-pics/28-4.png"
         ],
         "size": {
           "56": false,
@@ -1253,10 +1253,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/29-1.png",
-          "/src/image/29-2.png",
-          "/src/image/29-3.png",
-          "/src/image/29-4.png"
+          "/product-pics/29-1.png",
+          "/product-pics/29-2.png",
+          "/product-pics/29-3.png",
+          "/product-pics/29-4.png"
         ],
         "size": {
           "56": true,
@@ -1287,10 +1287,10 @@
         "pasform": "Regular",
         "rating": 4.4,
         "images": [
-          "/src/image/30-1.png",
-          "/src/image/30-2.png",
-          "/src/image/30-3.png",
-          "/src/image/30-4.png"
+          "/product-pics/30-1.png",
+          "/product-pics/30-2.png",
+          "/product-pics/30-3.png",
+          "/product-pics/30-4.png"
         ],
         "size": {
           "56": false,
@@ -1325,7 +1325,7 @@
         "title": "Hipsters i Merinould",
         "color": "brown",
         "color_filter": "brown",
-        "gender": "Dreng",
+        "gender": "Unisex",
         "sale": false,
         "news": true,
         "available": true,
@@ -1333,10 +1333,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/31-1.png",
-          "/src/image/31-2.png",
-          "/src/image/31-3.png",
-          "/src/image/31-4.png"
+          "/product-pics/31-1.png",
+          "/product-pics/31-2.png",
+          "/product-pics/31-3.png",
+          "/product-pics/31-4.png"
         ],
         "size": {
           "56": true,
@@ -1367,10 +1367,10 @@
         "pasform": "Regular",
         "rating": 4.4,
         "images": [
-          "/src/image/32-1.png",
-          "/src/image/32-2.png",
-          "/src/image/32-3.png",
-          "/src/image/32-4.png"
+          "/product-pics/32-1.png",
+          "/product-pics/32-2.png",
+          "/product-pics/32-3.png",
+          "/product-pics/32-4.png"
         ],
         "size": {
           "56": false,
@@ -1408,10 +1408,10 @@
     "pasform": "Regular",
     "rating": 4.6,
     "images": [
-      "/src/image/33-1.png",
-      "/src/image/33-2.png",
-      "/src/image/33-3.png",
-      "/src/image/33-4.png"
+      "/product-pics/33-1.png",
+      "/product-pics/33-2.png",
+      "/product-pics/33-3.png",
+      "/product-pics/33-4.png"
     ],
     "size": {
       "56": true,
@@ -1452,10 +1452,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/34-1.png",
-          "/src/image/34-2.png",
-          "/src/image/34-3.png",
-          "/src/image/34-4.png"
+          "/product-pics/34-1.png",
+          "/product-pics/34-2.png",
+          "/product-pics/34-3.png",
+          "/product-pics/34-4.png"
         ],
         "size": {
           "56": true,
@@ -1486,10 +1486,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/35-1.png",
-          "/src/image/35-2.png",
-          "/src/image/35-3.png",
-          "/src/image/35-4.png"
+          "/product-pics/35-1.png",
+          "/product-pics/35-2.png",
+          "/product-pics/35-3.png",
+          "/product-pics/35-4.png"
         ],
         "size": {
           "56": false,
@@ -1532,10 +1532,10 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/36-1.png",
-          "/src/image/36-2.png",
-          "/src/image/36-3.png",
-          "/src/image/36-4.png"
+          "/product-pics/36-1.png",
+          "/product-pics/36-2.png",
+          "/product-pics/36-3.png",
+          "/product-pics/36-4.png"
         ],
         "size": {
           "56": true,
@@ -1566,10 +1566,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/37-1.png",
-          "/src/image/37-2.png",
-          "/src/image/37-3.png",
-          "/src/image/37-4.png"
+          "/product-pics/37-1.png",
+          "/product-pics/37-2.png",
+          "/product-pics/37-3.png",
+          "/product-pics/37-4.png"
         ],
         "size": {
           "56": false,
@@ -1608,10 +1608,10 @@
     "pasform": "Regular",
     "rating": 4.7,
     "images": [
-      "/src/image/38-1.png",
-      "/src/image/38-2.png",
-      "/src/image/38-3.png",
-      "/src/image/38-4.png"
+      "/product-pics/38-1.png",
+      "/product-pics/38-2.png",
+      "/product-pics/38-3.png",
+      "/product-pics/38-4.png"
     ],
     "size": {
       "56": true,
@@ -1652,10 +1652,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/39-1.png",
-          "/src/image/39-2.png",
-          "/src/image/39-3.png",
-          "/src/image/39-4.png"
+          "/product-pics/39-1.png",
+          "/product-pics/39-2.png",
+          "/product-pics/39-3.png",
+          "/product-pics/39-4.png"
         ],
         "size": {
           "56": true,
@@ -1667,40 +1667,6 @@
           "92": true,
           "100": false,
           "110": true,
-          "120": true,
-          "130": false,
-          "140": true,
-          "150": false
-        }
-      },
-      {
-        "variantId": "v2",
-        "title": "Baby Futter i Merinould Fleece",
-        "color": "brown",
-        "color_filter": "brown",
-        "gender": "Baby",
-        "sale": false,
-        "news": false,
-        "available": true,
-        "materiale": "Merinould fleece",
-        "pasform": "Regular",
-        "rating": 4.5,
-        "images": [
-          "/src/image/40-1.png",
-          "/src/image/40-2.png",
-          "/src/image/40-3.png",
-          "/src/image/40-4.png"
-        ],
-        "size": {
-          "56": false,
-          "62": true,
-          "68": true,
-          "74": false,
-          "80": true,
-          "86": true,
-          "92": false,
-          "100": true,
-          "110": false,
           "120": true,
           "130": false,
           "140": true,
@@ -1728,10 +1694,10 @@
     "pasform": "Regular",
     "rating": 4.7,
     "images": [
-      "/src/image/41-1.png",
-      "/src/image/41-2.png",
-      "/src/image/41-3.png",
-      "/src/image/41-4.png"
+      "/product-pics/40-1.png",
+      "/product-pics/40-2.png",
+      "/product-pics/40-3.png",
+      "/product-pics/40-4.png"
     ],
     "size": {
       "56": true,
@@ -1767,10 +1733,10 @@
     "pasform": "Loose",
     "rating": 4.7,
     "images": [
-      "/src/image/42-1.png",
-      "/src/image/42-2.png",
-      "/src/image/42-3.png",
-      "/src/image/42-4.png"
+      "/product-pics/41-1.png",
+      "/product-pics/41-2.png",
+      "/product-pics/41-3.png",
+      "/product-pics/41-4.png"
     ],
     "size": {
       "56": false,
@@ -1806,10 +1772,10 @@
     "pasform": "Regular",
     "rating": 4.5,
     "images": [
-      "/src/image/43-1.png",
-      "/src/image/43-2.png",
-      "/src/image/43-3.png",
-      "/src/image/43-4.png"
+      "/product-pics/42-1.png",
+      "/product-pics/42-2.png",
+      "/product-pics/42-3.png",
+      "/product-pics/42-4.png"
     ],
     "size": {
       "56": true,
@@ -1845,10 +1811,10 @@
     "pasform": "Regular",
     "rating": 4.6,
     "images": [
-      "/src/image/44-1.png",
-      "/src/image/44-2.png",
-      "/src/image/44-3.png",
-      "/src/image/44-4.png"
+      "/product-pics/43-1.png",
+      "/product-pics/43-2.png",
+      "/product-pics/43-3.png",
+      "/product-pics/43-4.png"
     ],
     "size": {
       "56": false,
@@ -1884,10 +1850,10 @@
     "pasform": "Regular",
     "rating": 4.5,
     "images": [
-      "/src/image/45-1.png",
-      "/src/image/45-2.png",
-      "/src/image/45-3.png",
-      "/src/image/45-4.png"
+      "/product-pics/44-1.png",
+      "/product-pics/44-2.png",
+      "/product-pics/44-3.png",
+      "/product-pics/44-4.png"
     ],
     "size": {
       "56": true,
@@ -1923,10 +1889,10 @@
     "pasform": "Regular",
     "rating": 4.6,
     "images": [
-      "/src/image/46-1.png",
-      "/src/image/46-2.png",
-      "/src/image/46-3.png",
-      "/src/image/46-4.png"
+      "/product-pics/45-1.png",
+      "/product-pics/45-2.png",
+      "/product-pics/45-3.png",
+      "/product-pics/45-4.png"
     ],
     "size": {
       "56": false,
@@ -1956,7 +1922,8 @@
 
     "variants": [
       {
-        "variantId": "Seagull UV Suit",
+        "variantId": "v1",
+        "title": "Seagull UV Suit",
         "color": "brown",
         "color_filter": "brown",
 
@@ -1968,10 +1935,10 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/47-1.png",
-          "/src/image/47-2.png",
-          "/src/image/47-3.png",
-          "/src/image/47-4.png"
+          "/product-pics/46-1.png",
+          "/product-pics/46-2.png",
+          "/product-pics/46-3.png",
+          "/product-pics/46-4.png"
         ],
         "size": {
           "56": true,
@@ -1991,7 +1958,8 @@
       },
 
       {
-        "variantId": "Sailboat UV Suit",
+        "variantId": "v2",
+        "title": "Sailboat UV Suit",
         "color": "orange",
         "color_filter": "orange",
         "gender": "Baby",
@@ -2002,10 +1970,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/48-1.png",
-          "/src/image/48-2.png",
-          "/src/image/48-3.png",
-          "/src/image/48-4.png"
+          "/product-pics/47-1.png",
+          "/product-pics/47-2.png",
+          "/product-pics/47-3.png",
+          "/product-pics/47-4.png"
         ],
 
         "size": {
@@ -2045,10 +2013,10 @@
     "pasform": "Regular",
     "rating": 4.7,
     "images": [
-      "/src/image/49-1.png",
-      "/src/image/49-2.png",
-      "/src/image/49-3.png",
-      "/src/image/49-4.png"
+      "/product-pics/48-1.png",
+      "/product-pics/48-2.png",
+      "/product-pics/48-3.png",
+      "/product-pics/48-4.png"
     ],
     "size": {
       "56": true,
@@ -2075,7 +2043,7 @@
     "over_kategori": "Accessories",
     "under_kategori": "Badetøj",
     "brand": "Mini Rodini",
-    "gender": "Dreng",
+    "gender": "Unisex",
     "sale": false,
     "news": false,
     "available": true,
@@ -2084,10 +2052,10 @@
     "pasform": "Regular",
     "rating": 4.5,
     "images": [
-      "/src/image/50-1.png",
-      "/src/image/50-2.png",
-      "/src/image/50-3.png",
-      "/src/image/50-4.png"
+      "/product-pics/49-1.png",
+      "/product-pics/49-2.png",
+      "/product-pics/49-3.png",
+      "/product-pics/49-4.png"
     ],
     "size": {
       "56": false,
@@ -2128,10 +2096,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/51-1.png",
-          "/src/image/51-2.png",
-          "/src/image/51-3.png",
-          "/src/image/51-4.png"
+          "/product-pics/50-1.png",
+          "/product-pics/50-2.png",
+          "/product-pics/50-3.png",
+          "/product-pics/50-4.png"
         ],
         "size": {
           "56": true,
@@ -2162,10 +2130,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/52-1.png",
-          "/src/image/52-2.png",
-          "/src/image/52-3.png",
-          "/src/image/52-4.png"
+          "/product-pics/51-1.png",
+          "/product-pics/51-2.png",
+          "/product-pics/51-3.png",
+          "/product-pics/51-4.png"
         ],
         "size": {
           "56": false,
@@ -2204,10 +2172,10 @@
     "pasform": "Regular",
     "rating": 4.8,
     "images": [
-      "/src/image/52-1.png",
-      "/src/image/52-2.png",
-      "/src/image/52-3.png",
-      "/src/image/52-4.png"
+      "/product-pics/52-1.png",
+      "/product-pics/52-2.png",
+      "/product-pics/52-3.png",
+      "/product-pics/52-4.png"
     ],
     "size": {
       "56": true,
@@ -2244,10 +2212,10 @@
     "pasform": "Regular",
     "rating": 4.7,
     "images": [
-      "/src/image/53-1.png",
-      "/src/image/53-2.png",
-      "/src/image/53-3.png",
-      "/src/image/53-4.png"
+      "/product-pics/53-1.png",
+      "/product-pics/53-2.png",
+      "/product-pics/53-3.png",
+      "/product-pics/53-4.png"
     ],
     "size": {
       "56": false,
@@ -2288,10 +2256,10 @@
         "pasform": "Slim",
         "rating": 4.7,
         "images": [
-          "/src/image/54-1.png",
-          "/src/image/54-2.png",
-          "/src/image/54-3.png",
-          "/src/image/54-4.png"
+          "/product-pics/54-1.png",
+          "/product-pics/54-2.png",
+          "/product-pics/54-3.png",
+          "/product-pics/54-4.png"
         ],
         "size": {
           "56": true,
@@ -2322,10 +2290,10 @@
         "pasform": "Slim",
         "rating": 4.7,
         "images": [
-          "/src/image/55-1.png",
-          "/src/image/55-2.png",
-          "/src/image/55-3.png",
-          "/src/image/55-4.png"
+          "/product-pics/55-1.png",
+          "/product-pics/55-2.png",
+          "/product-pics/55-3.png",
+          "/product-pics/55-4.png"
         ],
         "size": {
           "56": false,
@@ -2364,10 +2332,10 @@
     "pasform": "Loose",
     "rating": 4.6,
     "images": [
-      "/src/image/56-1.png",
-      "/src/image/56-2.png",
-      "/src/image/58-3.png",
-      "/src/image/56-4.png"
+      "/product-pics/56-1.png",
+      "/product-pics/56-2.png",
+      "/product-pics/58-3.png",
+      "/product-pics/56-4.png"
     ],
     "size": {
       "56": true,
@@ -2403,10 +2371,10 @@
     "pasform": "Regular",
     "rating": 4.5,
     "images": [
-      "/src/image/57-1.png",
-      "/src/image/57-2.png",
-      "/src/image/57-3.png",
-      "/src/image/57-4.png"
+      "/product-pics/57-1.png",
+      "/product-pics/57-2.png",
+      "/product-pics/57-3.png",
+      "/product-pics/57-4.png"
     ],
     "size": {
       "56": false,
@@ -2442,10 +2410,10 @@
     "pasform": "Regular",
     "rating": 4.5,
     "images": [
-      "/src/image/58-1.png",
-      "/src/image/58-2.png",
-      "/src/image/58-3.png",
-      "/src/image/58-4.png"
+      "/product-pics/58-1.png",
+      "/product-pics/58-2.png",
+      "/product-pics/58-3.png",
+      "/product-pics/58-4.png"
     ],
     "size": {
       "56": true,
@@ -2481,10 +2449,10 @@
     "pasform": "Slim",
     "rating": 4.6,
     "images": [
-      "/src/image/59-1.png",
-      "/src/image/59-2.png",
-      "/src/image/59-3.png",
-      "/src/image/59-4.png"
+      "/product-pics/59-1.png",
+      "/product-pics/59-2.png",
+      "/product-pics/59-3.png",
+      "/product-pics/59-4.png"
     ],
     "size": {
       "56": false,
@@ -2520,10 +2488,10 @@
     "pasform": "Slim",
     "rating": 4.6,
     "images": [
-      "/src/image/60-1.png",
-      "/src/image/60-2.png",
-      "/src/image/60-3.png",
-      "/src/image/60-4.png"
+      "/product-pics/60-1.png",
+      "/product-pics/60-2.png",
+      "/product-pics/60-3.png",
+      "/product-pics/60-4.png"
     ],
     "size": {
       "56": true,
@@ -2558,7 +2526,7 @@
     "materiale": "",
     "pasform": "Regular",
     "rating": 4.5,
-    "images": ["/src/image/61-1.png", "/src/image/61-2.png"],
+    "images": ["/product-pics/61-1.png", "/product-pics/61-2.png"],
     "size": {
       "56": true,
       "62": true,
@@ -2593,10 +2561,10 @@
     "pasform": "Regular",
     "rating": 4.7,
     "images": [
-      "/src/image/62-1.png",
-      "/src/image/62-2.png",
-      "/src/image/62-3.png",
-      "/src/image/62-4.png"
+      "/product-pics/62-1.png",
+      "/product-pics/62-2.png",
+      "/product-pics/62-3.png",
+      "/product-pics/62-4.png"
     ],
     "size": {
       "56": false,
@@ -2633,10 +2601,10 @@
     "pasform": "Regular",
     "rating": 4.6,
     "images": [
-      "/src/image/63-1.png",
-      "/src/image/63-2.png",
-      "/src/image/63-3.png",
-      "/src/image/63-4.png"
+      "/product-pics/63-1.png",
+      "/product-pics/63-2.png",
+      "/product-pics/63-3.png",
+      "/product-pics/63-4.png"
     ],
     "size": {
       "56": false,
@@ -2672,10 +2640,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/64-1.png",
-          "/src/image/64-2.png",
-          "/src/image/64-3.png",
-          "/src/image/64-4.png"
+          "/product-pics/64-1.png",
+          "/product-pics/64-2.png",
+          "/product-pics/64-3.png",
+          "/product-pics/64-4.png"
         ],
         "size": {
           "56": false,
@@ -2706,10 +2674,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/65-1.png",
-          "/src/image/65-2.png",
-          "/src/image/65-3.png",
-          "/src/image/65-4.png"
+          "/product-pics/65-1.png",
+          "/product-pics/65-2.png",
+          "/product-pics/65-3.png",
+          "/product-pics/65-4.png"
         ],
         "size": {
           "56": true,
@@ -2752,10 +2720,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/64-1.png",
-          "/src/image/64-2.png",
-          "/src/image/64-3.png",
-          "/src/image/64-4.png"
+          "/product-pics/66-1.png",
+          "/product-pics/66-2.png",
+          "/product-pics/66-3.png",
+          "/product-pics/66-4.png"
         ],
         "size": {
           "56": false,
@@ -2786,10 +2754,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/65-1.png",
-          "/src/image/65-2.png",
-          "/src/image/65-3.png",
-          "/src/image/65-4.png"
+          "/product-pics/67-1.png",
+          "/product-pics/67-2.png",
+          "/product-pics/67-3.png",
+          "/product-pics/67-4.png"
         ],
         "size": {
           "56": true,
@@ -2828,10 +2796,10 @@
     "pasform": "Regular",
     "rating": 4.7,
     "images": [
-      "/src/image/68-1.png",
-      "/src/image/68-2.png",
-      "/src/image/68-3.png",
-      "/src/image/68-4.png"
+      "/product-pics/68-1.png",
+      "/product-pics/68-2.png",
+      "/product-pics/68-3.png",
+      "/product-pics/68-4.png"
     ],
     "size": {
       "56": true,
@@ -2867,10 +2835,10 @@
         "pasform": "Slim",
         "rating": 4.6,
         "images": [
-          "/src/image/70-1.png",
-          "/src/image/70-2.png",
-          "/src/image/70-3.png",
-          "/src/image/70-4.png"
+          "/product-pics/70-1.png",
+          "/product-pics/70-2.png",
+          "/product-pics/70-3.png",
+          "/product-pics/70-4.png"
         ],
         "size": {
           "56": true,
@@ -2901,10 +2869,10 @@
         "pasform": "Slim",
         "rating": 4.6,
         "images": [
-          "/src/image/71-1.png",
-          "/src/image/71-2.png",
-          "/src/image/71-3.png",
-          "/src/image/71-4.png"
+          "/product-pics/71-1.png",
+          "/product-pics/71-2.png",
+          "/product-pics/71-3.png",
+          "/product-pics/71-4.png"
         ],
         "size": {
           "56": false,
@@ -2947,10 +2915,10 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/72-1.png",
-          "/src/image/72-2.png",
-          "/src/image/72-3.png",
-          "/src/image/72-4.png"
+          "/product-pics/72-1.png",
+          "/product-pics/72-2.png",
+          "/product-pics/72-3.png",
+          "/product-pics/72-4.png"
         ],
         "size": {
           "92": true,
@@ -2975,10 +2943,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/75-1.png",
-          "/src/image/75-2.png",
-          "/src/image/75-3.png",
-          "/src/image/75-4.png"
+          "/product-pics/73-1.png",
+          "/product-pics/73-2.png",
+          "/product-pics/73-3.png",
+          "/product-pics/73-4.png"
         ],
         "size": {
           "92": true,
@@ -3011,10 +2979,10 @@
     "pasform": "Regular",
     "rating": 4.6,
     "images": [
-      "/src/image/74-1.png",
-      "/src/image/74-2.png",
-      "/src/image/74-3.png",
-      "/src/image/74-4.png"
+      "/product-pics/74-1.png",
+      "/product-pics/74-2.png",
+      "/product-pics/74-3.png",
+      "/product-pics/74-4.png"
     ],
     "size": {
       "56": true,
@@ -3050,10 +3018,10 @@
     "pasform": "Regular",
     "rating": 4.4,
     "images": [
-      "/src/image/75-1.png",
-      "/src/image/75-2.png",
-      "/src/image/75-3.png",
-      "/src/image/75-4.png"
+      "/product-pics/75-1.png",
+      "/product-pics/75-2.png",
+      "/product-pics/75-3.png",
+      "/product-pics/75-4.png"
     ],
     "size": {
       "56": false,
@@ -3089,10 +3057,10 @@
     "pasform": "Loose",
     "rating": 4.5,
     "images": [
-      "/src/image/76-1.png",
-      "/src/image/76-2.png",
-      "/src/image/76-3.png",
-      "/src/image/76-4.png"
+      "/product-pics/76-1.png",
+      "/product-pics/76-2.png",
+      "/product-pics/76-3.png",
+      "/product-pics/76-4.png"
     ],
     "size": {
       "56": true,
@@ -3119,7 +3087,7 @@
     "over_kategori": "Underdel",
     "under_kategori": "Overalls",
     "brand": "Lil' Atelier",
-    "gender": "Baby",
+    "gender": ["Unisex", "Baby"],
     "sale": false,
     "news": true,
     "available": true,
@@ -3128,10 +3096,10 @@
     "pasform": "Loose",
     "rating": 4.7,
     "images": [
-      "/src/image/77-1.png",
-      "/src/image/77-2.png",
-      "/src/image/77-3.png",
-      "/src/image/77-4.png"
+      "/product-pics/77-1.png",
+      "/product-pics/77-2.png",
+      "/product-pics/77-3.png",
+      "/product-pics/77-4.png"
     ],
     "size": {
       "56": false,
@@ -3158,7 +3126,7 @@
     "over_kategori": "Underdel",
     "under_kategori": "Bukser",
     "brand": "Lil' Atelier",
-    "gender": "Pige",
+    "gender": ["Unisex"],
     "sale": false,
     "news": false,
     "available": true,
@@ -3167,10 +3135,10 @@
     "pasform": "Loose",
     "rating": 4.4,
     "images": [
-      "/src/image/78-1.png",
-      "/src/image/78-2.png",
-      "/src/image/78-3.png",
-      "/src/image/78-4.png"
+      "/product-pics/78-1.png",
+      "/product-pics/78-2.png",
+      "/product-pics/78-3.png",
+      "/product-pics/78-4.png"
     ],
     "size": {
       "56": true,
@@ -3206,10 +3174,10 @@
     "pasform": "Regular",
     "rating": 4.3,
     "images": [
-      "/src/image/79-1.png",
-      "/src/image/79-2.png",
-      "/src/image/79-3.png",
-      "/src/image/79-4.png"
+      "/product-pics/79-1.png",
+      "/product-pics/79-2.png",
+      "/product-pics/79-3.png",
+      "/product-pics/79-4.png"
     ],
     "size": {
       "56": false,
@@ -3246,10 +3214,10 @@
     "pasform": "Regular",
     "rating": 4.5,
     "images": [
-      "/src/image/80-1.png",
-      "/src/image/80-2.png",
-      "/src/image/80-3.png",
-      "/src/image/80-4.png"
+      "/product-pics/80-1.png",
+      "/product-pics/80-2.png",
+      "/product-pics/80-3.png",
+      "/product-pics/80-4.png"
     ],
     "size": {
       "56": true,
@@ -3285,10 +3253,10 @@
     "pasform": "Regular",
     "rating": 4.3,
     "images": [
-      "/src/image/81-1.png",
-      "/src/image/81-2.png",
-      "/src/image/81-3.png",
-      "/src/image/81-4.png"
+      "/product-pics/81-1.png",
+      "/product-pics/81-2.png",
+      "/product-pics/81-3.png",
+      "/product-pics/81-4.png"
     ],
     "size": {
       "56": true,
@@ -3329,10 +3297,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/82-1.png",
-          "/src/image/82-2.png",
-          "/src/image/82-3.png",
-          "/src/image/82-4.png"
+          "/product-pics/82-1.png",
+          "/product-pics/82-2.png",
+          "/product-pics/82-3.png",
+          "/product-pics/82-4.png"
         ],
         "size": {
           "56": true,
@@ -3363,9 +3331,9 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/product-pics/2-pak-socks-hvid-1.png",
-          "/src/image/product-pics/2-pak-socks-hvid-2.png",
-          "/src/image/product-pics/2-pak-socks-hvid-3.png"
+          "/product-pics/2-pak-socks-hvid-1.png",
+          "/product-pics/2-pak-socks-hvid-2.png",
+          "/product-pics/2-pak-socks-hvid-3.png"
         ],
         "size": {
           "size": {
@@ -3405,10 +3373,10 @@
     "pasform": "Regular",
     "rating": 4.4,
     "images": [
-      "/src/image/83-1.png",
-      "/src/image/83-2.png",
-      "/src/image/83-3.png",
-      "/src/image/83-4.png"
+      "/product-pics/83-1.png",
+      "/product-pics/83-2.png",
+      "/product-pics/83-3.png",
+      "/product-pics/83-4.png"
     ],
     "size": {
       "56": true,
@@ -3444,10 +3412,10 @@
     "pasform": "Regular",
     "rating": 4.7,
     "images": [
-      "/src/image/84-1.png",
-      "/src/image/84-2.png",
-      "/src/image/84-3.png",
-      "/src/image/84-4.png"
+      "/product-pics/84-1.png",
+      "/product-pics/84-2.png",
+      "/product-pics/84-3.png",
+      "/product-pics/84-4.png"
     ],
     "size": {
       "56": false,
@@ -3488,10 +3456,10 @@
         "pasform": "Loose",
         "rating": 4.8,
         "images": [
-          "/src/image/85-1.png",
-          "/src/image/85-2.png",
-          "/src/image/85-3.png",
-          "/src/image/85-4.png"
+          "/product-pics/85-1.png",
+          "/product-pics/85-2.png",
+          "/product-pics/85-3.png",
+          "/product-pics/85-4.png"
         ],
         "size": {
           "56": true,
@@ -3522,10 +3490,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/86-1.png",
-          "/src/image/86-2.png",
-          "/src/image/86-3.png",
-          "/src/image/86-4.png"
+          "/product-pics/86-1.png",
+          "/product-pics/86-2.png",
+          "/product-pics/86-3.png",
+          "/product-pics/86-4.png"
         ],
         "size": {
           "56": true,
@@ -3556,10 +3524,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/product-pics/lil-flyver-grøn-1.png",
-          "/src/image/product-pics/lil-flyver-grøn-2.png",
-          "/src/image/product-pics/lil-flyver-grøn-3.png",
-          "/src/image/product-pics/lil-flyver-grøn-4.png"
+          "/product-pics/lil-flyver-grøn-1.png",
+          "/product-pics/lil-flyver-grøn-2.png",
+          "/product-pics/lil-flyver-grøn-3.png",
+          "/product-pics/lil-flyver-grøn-4.png"
         ],
         "size": {
           "56": true,
@@ -3590,10 +3558,10 @@
         "pasform": "Loose",
         "rating": 4.7,
         "images": [
-          "/src/image/88-1.png",
-          "/src/image/88-2.png",
-          "/src/image/88-3.png",
-          "/src/image/88-4.png"
+          "/product-pics/88-1.png",
+          "/product-pics/88-2.png",
+          "/product-pics/88-3.png",
+          "/product-pics/88-4.png"
         ],
         "size": {
           "56": false,
@@ -3632,10 +3600,10 @@
     "pasform": "Loose",
     "rating": 4.8,
     "images": [
-      "/src/image/87-1.png",
-      "/src/image/87-2.png",
-      "/src/image/87-3.png",
-      "/src/image/87-4.png"
+      "/product-pics/87-1.png",
+      "/product-pics/87-2.png",
+      "/product-pics/87-3.png",
+      "/product-pics/87-4.png"
     ],
     "size": {
       "56": false,
@@ -3676,10 +3644,10 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/89-1.png",
-          "/src/image/89-2.png",
-          "/src/image/89-3.png",
-          "/src/image/89-4.png"
+          "/product-pics/89-1.png",
+          "/product-pics/89-2.png",
+          "/product-pics/89-3.png",
+          "/product-pics/89-4.png"
         ],
         "size": {
           "56": true,
@@ -3710,9 +3678,9 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/product-pics/lil-natdragt-pink-1.png",
-          "/src/image/product-pics/lil-natdragt-pink-2.png",
-          "/src/image/product-pics/lil-natdragt-pink-3.png"
+          "/product-pics/lil-natdragt-pink-1.png",
+          "/product-pics/lil-natdragt-pink-2.png",
+          "/product-pics/lil-natdragt-pink-3.png"
         ],
         "size": {
           "56": true,
@@ -3755,10 +3723,10 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/90-1.png",
-          "/src/image/90-2.png",
-          "/src/image/90-3.png",
-          "/src/image/90-4.png"
+          "/product-pics/90-1.png",
+          "/product-pics/90-2.png",
+          "/product-pics/90-3.png",
+          "/product-pics/90-4.png"
         ],
         "size": {
           "56": true,
@@ -3789,10 +3757,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/91-1.png",
-          "/src/image/91-2.png",
-          "/src/image/91-3.png",
-          "/src/image/91-4.png"
+          "/product-pics/91-1.png",
+          "/product-pics/91-2.png",
+          "/product-pics/91-3.png",
+          "/product-pics/91-4.png"
         ],
         "size": {
           "56": false,
@@ -3835,10 +3803,10 @@
         "pasform": "Loose",
         "rating": 4.7,
         "images": [
-          "/src/image/92-1.png",
-          "/src/image/92-2.png",
-          "/src/image/92-3.png",
-          "/src/image/92-4.png"
+          "/product-pics/92-1.png",
+          "/product-pics/92-2.png",
+          "/product-pics/92-3.png",
+          "/product-pics/92-4.png"
         ],
         "size": {
           "56": true,
@@ -3869,10 +3837,10 @@
         "pasform": "Loose",
         "rating": 4.6,
         "images": [
-          "/src/image/93-1.png",
-          "/src/image/93-2.png",
-          "/src/image/93-3.png",
-          "/src/image/93-4.png"
+          "/product-pics/93-1.png",
+          "/product-pics/93-2.png",
+          "/product-pics/93-3.png",
+          "/product-pics/93-4.png"
         ],
         "size": {
           "56": false,
@@ -3910,10 +3878,10 @@
     "pasform": "Regular",
     "rating": 4.5,
     "images": [
-      "/src/image/94-1.png",
-      "/src/image/94-2.png",
-      "/src/image/94-3.png",
-      "/src/image/94-4.png"
+      "/product-pics/94-1.png",
+      "/product-pics/94-2.png",
+      "/product-pics/94-3.png",
+      "/product-pics/94-4.png"
     ],
     "size": {
       "56": true,
@@ -3954,10 +3922,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/95-1.png",
-          "/src/image/95-2.png",
-          "/src/image/95-3.png",
-          "/src/image/95-4.png"
+          "/product-pics/95-1.png",
+          "/product-pics/95-2.png",
+          "/product-pics/95-3.png",
+          "/product-pics/95-4.png"
         ],
         "size": {
           "56": false,
@@ -3988,9 +3956,9 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/product-pics/wheat-leggins-pink-1.png",
-          "/src/image/product-pics/wheat-leggins-pink-2.png",
-          "/src/image/product-pics/wheat-leggins-pink-2.png"
+          "/product-pics/wheat-leggins-pink-1.png",
+          "/product-pics/wheat-leggins-pink-2.png",
+          "/product-pics/wheat-leggins-pink-2.png"
         ],
         "size": {
           "56": false,
@@ -4033,10 +4001,10 @@
         "pasform": "Regular",
         "rating": 4.4,
         "images": [
-          "/src/image/96-1.png",
-          "/src/image/96-2.png",
-          "/src/image/96-3.png",
-          "/src/image/96-4.png"
+          "/product-pics/96-1.png",
+          "/product-pics/96-2.png",
+          "/product-pics/96-3.png",
+          "/product-pics/96-4.png"
         ],
         "size": {
           "56": true,
@@ -4067,10 +4035,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/97-1.png",
-          "/src/image/97-2.png",
-          "/src/image/97-3.png",
-          "/src/image/97-4.png"
+          "/product-pics/97-1.png",
+          "/product-pics/97-2.png",
+          "/product-pics/97-3.png",
+          "/product-pics/97-4.png"
         ],
         "size": {
           "56": false,
@@ -4113,10 +4081,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/98-1.png",
-          "/src/image/98-2.png",
-          "/src/image/98-3.png",
-          "/src/image/98-4.png"
+          "/product-pics/98-1.png",
+          "/product-pics/98-2.png",
+          "/product-pics/98-3.png",
+          "/product-pics/98-4.png"
         ],
         "size": {
           "56": true,
@@ -4147,10 +4115,10 @@
         "pasform": "Regular",
         "rating": 4.4,
         "images": [
-          "/src/image/99-1.png",
-          "/src/image/99-2.png",
-          "/src/image/99-3.png",
-          "/src/image/99-4.png"
+          "/product-pics/99-1.png",
+          "/product-pics/99-2.png",
+          "/product-pics/99-3.png",
+          "/product-pics/99-4.png"
         ],
         "size": {
           "56": true,
@@ -4193,10 +4161,10 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/100-1.png",
-          "/src/image/100-2.png",
-          "/src/image/100-3.png",
-          "/src/image/100-4.png"
+          "/product-pics/100-1.png",
+          "/product-pics/100-2.png",
+          "/product-pics/100-3.png",
+          "/product-pics/100-4.png"
         ],
         "size": {
           "56": false,
@@ -4227,10 +4195,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/101-1.png",
-          "/src/image/101-2.png",
-          "/src/image/101-3.png",
-          "/src/image/101-4.png"
+          "/product-pics/101-1.png",
+          "/product-pics/101-2.png",
+          "/product-pics/101-3.png",
+          "/product-pics/101-4.png"
         ],
         "size": {
           "56": true,
@@ -4269,10 +4237,10 @@
     "pasform": "Regular",
     "rating": 4.6,
     "images": [
-      "/src/image/102-1.png",
-      "/src/image/102-2.png",
-      "/src/image/102-3.png",
-      "/src/image/102-4.png"
+      "/product-pics/102-1.png",
+      "/product-pics/102-2.png",
+      "/product-pics/102-3.png",
+      "/product-pics/102-4.png"
     ],
     "size": {
       "56": false,
@@ -4313,10 +4281,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/103-1.png",
-          "/src/image/103-2.png",
-          "/src/image/103-3.png",
-          "/src/image/103-4.png"
+          "product-pics/103-1.png",
+          "product-pics/103-2.png",
+          "product-pics/103-3.png",
+          "product-pics/103-4.png"
         ],
         "size": {
           "56": true,
@@ -4347,8 +4315,8 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/product-pics/wheat-badeshorts-striber-1.png",
-          "/src/image/product-pics/wheat-badeshorts-striber-2.png"
+          "/product-pics/wheat-badeshorts-striber-1.png",
+          "/product-pics/wheat-badeshorts-striber-2.png"
         ],
         "size": {
           "56": true,
@@ -4387,10 +4355,10 @@
     "pasform": "Regular",
     "rating": 4.5,
     "images": [
-      "/src/image/104-1.png",
-      "/src/image/104-2.png",
-      "/src/image/104-3.png",
-      "/src/image/104-4.png"
+      "/product-pics/104-1.png",
+      "/product-pics/104-2.png",
+      "/product-pics/104-3.png",
+      "/product-pics/104-4.png"
     ],
     "size": {
       "56": false,
@@ -4426,10 +4394,10 @@
     "pasform": "Loose",
     "rating": 4.5,
     "images": [
-      "/src/image/105-1.png",
-      "/src/image/105-2.png",
-      "/src/image/105-3.png",
-      "/src/image/105-4.png"
+      "/product-pics/105-1.png",
+      "/product-pics/105-2.png",
+      "/product-pics/105-3.png",
+      "/product-pics/105-4.png"
     ],
     "size": {
       "56": true,
@@ -4470,10 +4438,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/106-1.png",
-          "/src/image/106-2.png",
-          "/src/image/106-3.png",
-          "/src/image/106-4.png"
+          "/product-pics/107-1.png",
+          "/product-pics/107-2.png",
+          "/product-pics/107-3.png",
+          "/product-pics/107-4.png"
         ],
         "size": {
           "56": false,
@@ -4504,10 +4472,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/107-1.png",
-          "/src/image/107-2.png",
-          "/src/image/107-3.png",
-          "/src/image/107-4.png"
+          "/product-pics/106-1.png",
+          "/product-pics/106-2.png",
+          "/product-pics/106-3.png",
+          "/product-pics/106-4.png"
         ],
         "size": {
           "56": true,
@@ -4550,10 +4518,10 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/108-1.png",
-          "/src/image/108-2.png",
-          "/src/image/108-3.png",
-          "/src/image/108-4.png"
+          "/product-pics/108-1.png",
+          "/product-pics/108-2.png",
+          "/product-pics/108-3.png",
+          "/product-pics/108-4.png"
         ],
         "size": {
           "56": false,
@@ -4584,10 +4552,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/109-1.png",
-          "/src/image/109-2.png",
-          "/src/image/109-3.png",
-          "/src/image/109-4.png"
+          "/product-pics/109-1.png",
+          "/product-pics/109-2.png",
+          "/product-pics/109-3.png",
+          "/product-pics/109-4.png"
         ],
         "size": {
           "56": true,
@@ -4630,10 +4598,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/110-1.png",
-          "/src/image/110-2.png",
-          "/src/image/110-3.png",
-          "/src/image/110-4.png"
+          "/product-pics/110-1.png",
+          "/product-pics/110-2.png",
+          "/product-pics/110-3.png",
+          "/product-pics/110-4.png"
         ],
         "size": {
           "56": true,
@@ -4664,10 +4632,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/src/image/111-1.png",
-          "/src/image/111-2.png",
-          "/src/image/111-3.png",
-          "/src/image/111-4.png"
+          "/product-pics/111-1.png",
+          "/product-pics/111-2.png",
+          "/product-pics/111-3.png",
+          "/product-pics/111-4.png"
         ],
         "size": {
           "56": false,
@@ -4710,10 +4678,10 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/112-1.png",
-          "/src/image/112-2.png",
-          "/src/image/112-3.png",
-          "/src/image/112-4.png"
+          "/product-pics/112-1.png",
+          "/product-pics/112-2.png",
+          "/product-pics/112-3.png",
+          "/product-pics/112-4.png"
         ],
         "size": {
           "56": true,
@@ -4744,10 +4712,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/113-1.png",
-          "/src/image/113-2.png",
-          "/src/image/113-3.png",
-          "/src/image/113-4.png"
+          "/product-pics/113-1.png",
+          "/product-pics/113-2.png",
+          "/product-pics/113-3.png",
+          "/product-pics/113-4.png"
         ],
         "size": {
           "56": false,
@@ -4790,10 +4758,10 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/114-1.png",
-          "/src/image/114-2.png",
-          "/src/image/114-3.png",
-          "/src/image/114-4.png"
+          "/product-pics/114-1.png",
+          "/product-pics/114-2.png",
+          "/product-pics/114-3.png",
+          "/product-pics/114-4.png"
         ],
         "size": {
           "56": true,
@@ -4824,10 +4792,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/115-1.png",
-          "/src/image/115-2.png",
-          "/src/image/115-3.png",
-          "/src/image/115-4.png"
+          "/product-pics/115-1.png",
+          "/product-pics/115-2.png",
+          "/product-pics/115-3.png",
+          "/product-pics/115-4.png"
         ],
         "size": {
           "56": false,
@@ -4870,10 +4838,10 @@
         "pasform": "Regular",
         "rating": 4.8,
         "images": [
-          "/src/image/116-1.png",
-          "/src/image/116-2.png",
-          "/src/image/116-3.png",
-          "/src/image/116-4.png"
+          "/product-pics/116-1.png",
+          "/product-pics/116-2.png",
+          "/product-pics/116-3.png",
+          "/product-pics/116-4.png"
         ],
         "size": {
           "56": true,
@@ -4904,10 +4872,10 @@
         "pasform": "Regular",
         "rating": 4.7,
         "images": [
-          "/src/image/117-1.png",
-          "/src/image/117-2.png",
-          "/src/image/117-3.png",
-          "/src/image/117-4.png"
+          "/product-pics/117-1.png",
+          "/product-pics/117-2.png",
+          "/product-pics/117-3.png",
+          "/product-pics/117-4.png"
         ],
         "size": {
           "56": false,
@@ -4946,10 +4914,10 @@
     "pasform": "Regular",
     "rating": 4.7,
     "images": [
-      "/src/image/118-1.png",
-      "/src/image/118-2.png",
-      "/src/image/118-3.png",
-      "/src/image/118-4.png"
+      "/product-pics/118-1.png",
+      "/product-pics/118-2.png",
+      "/product-pics/118-3.png",
+      "/product-pics/118-4.png"
     ],
     "size": {
       "56": true,
@@ -4985,10 +4953,10 @@
     "pasform": "Regular",
     "rating": 4.6,
     "images": [
-      "/src/image/119-1.png",
-      "/src/image/119-2.png",
-      "/src/image/119-3.png",
-      "/src/image/119-4.png"
+      "/product-pics/119-1.png",
+      "/product-pics/119-2.png",
+      "/product-pics/119-3.png",
+      "/product-pics/119-4.png"
     ],
     "size": {
       "56": false,
@@ -5006,7 +4974,231 @@
       "150": false
     }
   },
+  {
+    "id": 129,
+    "title": "Sun Hat",
+    "over_kategori": "Accessories",
+    "under_kategori": "Hat",
+    "brand": "Serendipity Organics",
+    "description": "Solhat i økologisk bomuld",
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Indigo Sun Hat",
+        "color": "indigo",
+        "color_filter": "blue",
+        "gender": ["Baby", "Unisex"],
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "Økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.6,
+        "images": [
+          "/product-pics/129-1.png",
+          "/product-pics/129-2.png",
+          "/product-pics/129-3.png",
+          "/product-pics/129-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": true,
+          "74": false,
+          "80": true,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      },
+      {
+        "variantId": "v2",
+        "title": "Lemon Check Sun Hat",
+        "color": "lemon",
+        "color_filter": "yellow",
+        "gender": "Unisex",
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "Økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.6,
+        "images": [
+          "/product-pics/130-1.png",
+          "/product-pics/130-2.png",
+          "/product-pics/130-3.png",
+          "/product-pics/130-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": false,
+          "150": true
+        }
+      },
+      {
+        "variantId": "v3",
+        "title": "Dawn Check Sun Hat",
+        "color": "dawn",
+        "color_filter": "pink",
+        "gender": "Unisex",
+        "sale": false,
+        "news": true,
+        "available": true,
+        "materiale": "Økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.6,
+        "images": [
+          "/product-pics/131-1.png",
+          "/product-pics/131-2.png",
+          "/product-pics/131-3.png",
+          "/product-pics/131-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      },
+      {
+        "variantId": "v4",
+        "title": "Denim Bucket Hat",
+        "color": "denim",
+        "color_filter": "blue",
+        "gender": "Unisex",
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "Økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.5,
+        "images": [
+          "/product-pics/132-1.png",
+          "/product-pics/132-2.png",
+          "/product-pics/132-3.png",
+          "/product-pics/132-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": false,
+          "92": true,
+          "100": false,
+          "110": true,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      }
+    ]
+  },
 
+  {
+    "id": 133,
+    "title": "Bucket Hat",
+    "over_kategori": "Accessories",
+    "under_kategori": "Hat",
+    "brand": "Serendipity Organics",
+    "description": "Klassisk bucket hat i økologisk bomuld",
+    "variants": [
+      {
+        "variantId": "v1",
+        "title": "Indigo Bucket Hat",
+        "color": "indigo",
+        "color_filter": "blue",
+        "gender": "Baby",
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "Økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.5,
+        "images": [
+          "/product-pics/133-1.png",
+          "/product-pics/133-2.png",
+          "/product-pics/133-3.png",
+          "/product-pics/133-4.png"
+        ],
+        "size": {
+          "56": false,
+          "62": true,
+          "68": true,
+          "74": false,
+          "80": true,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": false,
+          "120": true,
+          "130": false,
+          "140": true,
+          "150": false
+        }
+      },
+      {
+        "variantId": "v2",
+        "title": "Lemon Bucket Hat",
+        "color": "lemon",
+        "color_filter": "yellow",
+        "gender": "Baby",
+        "sale": false,
+        "news": false,
+        "available": true,
+        "materiale": "Økologisk bomuld",
+        "pasform": "Regular",
+        "rating": 4.5,
+        "images": [
+          "/product-pics/134-1.png",
+          "/product-pics/134-2.png",
+          "/product-pics/134-3.png",
+          "/product-pics/134-4.png"
+        ],
+        "size": {
+          "56": true,
+          "62": false,
+          "68": true,
+          "74": true,
+          "80": false,
+          "86": true,
+          "92": false,
+          "100": true,
+          "110": true,
+          "120": false,
+          "130": true,
+          "140": false,
+          "150": true
+        }
+      }
+    ]
+  },
   {
     "id": 135,
     "title": "Gio nattøjssæt",
@@ -5025,10 +5217,10 @@
     "pasform": "Regular",
     "rating": 4.6,
     "images": [
-      "/src/image/135-1.png",
-      "/src/image/135-2.png",
-      "/src/image/135-3.png",
-      "/src/image/135-4.png"
+      "/product-pics/135-1.png",
+      "/product-pics/135-2.png",
+      "/product-pics/135-3.png",
+      "/product-pics/135-4.png"
     ],
     "size": {
       "56": true,
@@ -5069,10 +5261,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/136-1.png",
-          "/src/image/136-2.png",
-          "/src/image/136-3.png",
-          "/src/image/136-4.png"
+          "/product-pics/136-1.png",
+          "/product-pics/136-2.png",
+          "/product-pics/136-3.png",
+          "/product-pics/136-4.png"
         ],
         "size": {
           "56": false,
@@ -5103,10 +5295,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/137-1.png",
-          "/src/image/137-2.png",
-          "/src/image/137-3.png",
-          "/src/image/137-4.png"
+          "/product-pics/137-1.png",
+          "/product-pics/137-2.png",
+          "/product-pics/137-3.png",
+          "/product-pics/137-4.png"
         ],
         "size": {
           "56": true,
@@ -5149,10 +5341,10 @@
         "pasform": "Loose",
         "rating": 4.7,
         "images": [
-          "/src/image/138-1.png",
-          "/src/image/138-2.png",
-          "/src/image/138-3.png",
-          "/src/image/138-4.png"
+          "/product-pics/138-1.png",
+          "/product-pics/138-2.png",
+          "/product-pics/138-3.png",
+          "/product-pics/138-4.png"
         ],
         "size": {
           "56": false,
@@ -5183,10 +5375,10 @@
         "pasform": "Loose",
         "rating": 4.5,
         "images": [
-          "/src/image/139-1.png",
-          "/src/image/139-2.png",
-          "/src/image/139-3.png",
-          "/src/image/139-4.png"
+          "/product-pics/139-1.png",
+          "/product-pics/139-2.png",
+          "/product-pics/139-3.png",
+          "/product-pics/139-4.png"
         ],
         "size": {
           "56": true,
@@ -5225,10 +5417,10 @@
     "pasform": "Loose",
     "rating": 4.3,
     "images": [
-      "/src/image/140-1.png",
-      "/src/image/140-2.png",
-      "/src/image/140-3.png",
-      "/src/image/140-4.png"
+      "/product-pics/140-1.png",
+      "/product-pics/140-2.png",
+      "/product-pics/140-3.png",
+      "/product-pics/140-4.png"
     ],
     "size": {
       "56": false,
@@ -5249,7 +5441,7 @@
 
   {
     "id": 142,
-    "title": "Rainy Palme Regnsæt med for",
+    "title": "Rainy Palme Regnsæt",
     "price": 699.95,
     "over_kategori": "Overtøj",
     "under_kategori": "Regntøj",
@@ -5269,10 +5461,10 @@
         "pasform": "Regular",
         "rating": 4.6,
         "images": [
-          "/src/image/142-1.png",
-          "/src/image/142-2.png",
-          "/src/image/142-3.png",
-          "/src/image/142-4.png"
+          "/product-pics/142-1.png",
+          "/product-pics/142-2.png",
+          "/product-pics/142-3.png",
+          "/product-pics/142-4.png"
         ],
         "size": {
           "56": true,
@@ -5303,10 +5495,10 @@
         "pasform": "Regular",
         "rating": 4.8,
         "images": [
-          "/src/image/141-1.png",
-          "/src/image/141-2.png",
-          "/src/image/141-3.png",
-          "/src/image/141-4.png"
+          "/product-pics/141-1.png",
+          "/product-pics/141-2.png",
+          "/product-pics/141-3.png",
+          "/product-pics/141-4.png"
         ],
         "size": {
           "56": false,
@@ -5344,10 +5536,10 @@
     "pasform": "Regular",
     "rating": 4.5,
     "images": [
-      "/src/image/145-1.png",
-      "/src/image/145-2.png",
-      "/src/image/145-3.png",
-      "/src/image/145-4.png"
+      "/product-pics/145-1.png",
+      "/product-pics/145-2.png",
+      "/product-pics/145-3.png",
+      "/product-pics/145-4.png"
     ],
     "size": {
       "56": true,
@@ -5383,10 +5575,10 @@
     "pasform": "Regular",
     "rating": 4.2,
     "images": [
-      "/src/image/146-1.png",
-      "/src/image/146-2.png",
-      "/src/image/146-3.png",
-      "/src/image/146-4.png"
+      "/product-pics/146-1.png",
+      "/product-pics/146-2.png",
+      "/product-pics/146-3.png",
+      "/product-pics/146-4.png"
     ],
     "size": {
       "56": false,
