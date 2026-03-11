@@ -4,7 +4,7 @@
   padding: 4rem 5rem 3rem;
 }
 
-.footer h3,
+.footer h4,
 .footer p,
 .footer a {
   color: var(--hvid);
@@ -27,7 +27,7 @@
   border-right: none;
 }
 
-.footer-kolonne h3 {
+.footer-kolonne h4 {
   margin-bottom: 1rem;
 }
 

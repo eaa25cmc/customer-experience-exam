@@ -5,8 +5,58 @@ import styles from "./ProductGrid.module.css";
 import Breadcrumbs from "./Breadcrumbs";
 import CategoryFilterPanel from "./CategoryFilterPanel";
 
+const genderMap = {
+  baby: "Baby",
+  pige: "Pige",
+  dreng: "Dreng",
+};
+
+const mainCategoryMap = {
+  overtoj: "Overtøj",
+  overdele: "Overdele",
+  accessories: "Accessories",
+  underdele: "Underdele",
+  fodtoj: "Fodtøj",
+  undertojognattoj: "Undertøj & nattøj",
+  udsalg: "Udsalg",
+  nyheder: "Nyheder",
+};
+
+const subMap = {
+  flyverdragt: "Flyverdragt",
+  regntoj: "Regntøj",
+  jakker: "Jakke",
+  huerogvanter: "Hue og vanter",
+  termotoj: "Termotøj",
+
+  strik: "Strik",
+  bluser: "Bluse",
+  skjorter: "Skjorte",
+  tshirt: "T-shirt",
+  kjoler: "Kjole",
+  bodyer: "Bodyer",
+  cardigans: "Cardigan",
+
+  stromper: "Strømper",
+  hatte: "Hat",
+  badetoj: "Badetøj",
+  harpynt: "Hårpynt",
+
+  shorts: "Shorts",
+  jeans: "Jeans",
+  bukser: "Bukser",
+  nederdele: "Nederdel",
+  legginsogstrompebukser: "Leggins og strømpebukser",
+
+  sko: "Sko",
+  stovler: "Støvler",
+  gummistovler: "Gummistøvler",
+  sandaler: "Sandaler",
+  futter: "Futter",
+};
+
 export default function CategoryPage() {
-  const { category } = useParams();
+  const { gender, mainCategory, subcategory } = useParams();
   const [products, setProducts] = useState([]);
   const [selectedSub, setSelectedSub] = useState("all");
 
@@ -14,19 +64,44 @@ export default function CategoryPage() {
     async function fetchProducts() {
       const response = await fetch("/products.json");
       const data = await response.json();
-      // Filtrer på over_kategori
-      const filtered = data.filter((p) => p.over_kategori === category);
-      setProducts(filtered);
-    }
-    fetchProducts();
-  }, [category]);
 
-  // Find unikke under_kategorier
+      let filtered = data;
+
+      if (genderMap[gender]) {
+        filtered = filtered.filter((p) => p.gender === genderMap[gender]);
+      }
+
+      if (mainCategory === "udsalg") {
+        filtered = filtered.filter((p) => p.sale === true);
+      } else if (mainCategory === "nyheder") {
+        filtered = filtered.filter((p) => p.news === true);
+      } else if (mainCategoryMap[mainCategory]) {
+        filtered = filtered.filter(
+          (p) => p.over_kategori === mainCategoryMap[mainCategory],
+        );
+
+        if (subcategory) {
+          const mappedSub = subMap[subcategory];
+
+          if (mappedSub) {
+            filtered = filtered.filter((p) => p.under_kategori === mappedSub);
+          } else {
+            filtered = [];
+          }
+        }
+      }
+
+      setProducts(filtered);
+      setSelectedSub("all");
+    }
+
+    fetchProducts();
+  }, [gender, mainCategory, subcategory]);
+
   const subCategories = [
     ...new Set(products.map((p) => p.under_kategori)),
   ].sort();
 
-  // Filtrer på valgt under_kategori
   const shownProducts =
     selectedSub === "all"
       ? products
@@ -35,12 +110,15 @@ export default function CategoryPage() {
   return (
     <div>
       <Breadcrumbs />
-      <h1>{category}</h1>
+
+      <h1>{mainCategoryMap[mainCategory] || mainCategory}</h1>
+
       <CategoryFilterPanel
         subCategories={subCategories}
         selectedSub={selectedSub}
         setSelectedSub={setSelectedSub}
       />
+
       <div className={styles.productGrid}>
         {shownProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
