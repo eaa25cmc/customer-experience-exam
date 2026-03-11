@@ -4,6 +4,12 @@ import ProductCard from "./ProductCard";
 import styles from "./ProductGrid.module.css";
 import Breadcrumbs from "./Breadcrumbs";
 import CategoryFilterPanel from "./CategoryFilterPanel";
+import FilterOverlay from "./FilterOverlay";
+import {
+  applyProductFilters,
+  buildFilterOptions,
+  createEmptyFilters,
+} from "../utils/productFilters";
 
 const genderMap = {
   baby: "Baby",
@@ -59,6 +65,9 @@ export default function CategoryPage() {
   const { gender, mainCategory, subcategory } = useParams();
   const [products, setProducts] = useState([]);
   const [selectedSub, setSelectedSub] = useState("all");
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [activeFilters, setActiveFilters] = useState(createEmptyFilters());
+  const [draftFilters, setDraftFilters] = useState(createEmptyFilters());
 
   useEffect(() => {
     async function fetchProducts() {
@@ -93,6 +102,8 @@ export default function CategoryPage() {
 
       setProducts(filtered);
       setSelectedSub("all");
+      setActiveFilters(createEmptyFilters());
+      setDraftFilters(createEmptyFilters());
     }
 
     fetchProducts();
@@ -107,11 +118,42 @@ export default function CategoryPage() {
       ? products
       : products.filter((p) => p.under_kategori === selectedSub);
 
+  const filterOptions = buildFilterOptions(products);
+  const finalProducts = applyProductFilters(shownProducts, activeFilters);
+
+  const openMobileFilter = () => {
+    setDraftFilters(activeFilters);
+    setIsMobileFilterOpen(true);
+  };
+
+  const applyMobileFilter = () => {
+    setActiveFilters(draftFilters);
+    setIsMobileFilterOpen(false);
+  };
+
+  const resetMobileFilter = () => {
+    const empty = createEmptyFilters();
+    setActiveFilters(empty);
+    setDraftFilters(empty);
+    setSelectedSub("all");
+  };
+
   return (
     <div>
       <Breadcrumbs />
 
       <h1>{mainCategoryMap[mainCategory] || mainCategory}</h1>
+
+      <FilterOverlay
+        isOpen={isMobileFilterOpen}
+        onOpen={openMobileFilter}
+        onClose={() => setIsMobileFilterOpen(false)}
+        options={filterOptions}
+        draftFilters={draftFilters}
+        onDraftFiltersChange={setDraftFilters}
+        onReset={resetMobileFilter}
+        onApply={applyMobileFilter}
+      />
 
       <CategoryFilterPanel
         subCategories={subCategories}
@@ -120,7 +162,7 @@ export default function CategoryPage() {
       />
 
       <div className={styles.productGrid}>
-        {shownProducts.map((product) => (
+        {finalProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
