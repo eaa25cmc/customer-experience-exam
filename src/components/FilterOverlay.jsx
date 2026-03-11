@@ -122,11 +122,6 @@ export default function FilterOverlay({
 
             {openSections.sort && (
               <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterRowTitle}>
-                  <span>Sorter</span>
-                  <span>−</span>
-                </div>
-
                 <div className={styles.mobileFilterCheckboxList}>
                   {options.sort.map((option) => (
                     <label
@@ -155,11 +150,6 @@ export default function FilterOverlay({
 
             {openSections.colors && (
               <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterRowTitle}>
-                  <span>Farver</span>
-                  <span>−</span>
-                </div>
-
                 <div className={styles.mobileFilterCheckboxList}>
                   {options.colors.map((color) => (
                     <label key={color} className={styles.mobileFilterCheckRow}>
@@ -184,11 +174,6 @@ export default function FilterOverlay({
 
             {openSections.sizes && (
               <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterRowTitle}>
-                  <span>Størrelse</span>
-                  <span>−</span>
-                </div>
-
                 {options.sizes.map((group) => (
                   <div
                     key={group.label}
@@ -224,11 +209,6 @@ export default function FilterOverlay({
 
             {openSections.brands && (
               <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterRowTitle}>
-                  <span>Brands</span>
-                  <span>−</span>
-                </div>
-
                 <div className={styles.mobileFilterCheckboxList}>
                   {options.brands.map((brand) => (
                     <label key={brand} className={styles.mobileFilterCheckRow}>
@@ -253,11 +233,6 @@ export default function FilterOverlay({
 
             {openSections.genders && (
               <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterRowTitle}>
-                  <span>Køn</span>
-                  <span>−</span>
-                </div>
-
                 <div className={styles.mobileFilterCheckboxList}>
                   {options.genders.map((gender) => (
                     <label key={gender} className={styles.mobileFilterCheckRow}>
@@ -282,11 +257,6 @@ export default function FilterOverlay({
 
             {openSections.prices && (
               <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterRowTitle}>
-                  <span>Pris</span>
-                  <span>−</span>
-                </div>
-
                 <div className={styles.mobileFilterCheckboxList}>
                   {options.prices.map((price) => (
                     <label
@@ -314,11 +284,6 @@ export default function FilterOverlay({
 
             {openSections.types && (
               <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterRowTitle}>
-                  <span>Type</span>
-                  <span>−</span>
-                </div>
-
                 <div className={styles.mobileFilterCheckboxList}>
                   {options.types.map((type) => (
                     <label key={type} className={styles.mobileFilterCheckRow}>

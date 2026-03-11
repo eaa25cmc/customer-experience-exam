@@ -22,7 +22,32 @@ export const SIZE_GROUPS = [
   },
   {
     label: "Barn",
-    options: ["1 Ar", "2 Ar", "3-4 Ar", "5 Ar", "6 Ar", "8 Ar", "10 Ar", "12 Ar"],
+    options: [
+      "1 Ar",
+      "2 Ar",
+      "3-4 Ar",
+      "5 Ar",
+      "6 Ar",
+      "8 Ar",
+      "10 Ar",
+      "12 Ar",
+    ],
+  },
+];
+
+// NYT: Grupperede farver
+export const COLOR_GROUPS = [
+  {
+    label: "Kolde farver",
+    options: ["Blå", "Grøn", "Lilla"],
+  },
+  {
+    label: "Varme farver",
+    options: ["Rød", "Orange", "Gul"],
+  },
+  {
+    label: "Neutrale farver",
+    options: ["Sort", "Hvid", "Grå", "Beige", "Brun"],
   },
 ];
 
@@ -41,21 +66,21 @@ const COLOR_LABELS = {
 };
 
 const SIZE_TO_FILTER_LABEL = {
-  "56": "0-2 M",
-  "62": "4 M",
-  "68": "6 M",
-  "74": "9 M",
-  "80": "12 M",
-  "86": "18 M",
-  "92": "24 M",
-  "100": "1 Ar",
-  "104": "2 Ar",
-  "110": "3-4 Ar",
-  "116": "5 Ar",
-  "120": "6 Ar",
-  "128": "8 Ar",
-  "140": "10 Ar",
-  "150": "12 Ar",
+  56: "0-2 M",
+  62: "4 M",
+  68: "6 M",
+  74: "9 M",
+  80: "12 M",
+  86: "18 M",
+  92: "24 M",
+  100: "1 Ar",
+  104: "2 Ar",
+  110: "3-4 Ar",
+  116: "5 Ar",
+  120: "6 Ar",
+  128: "8 Ar",
+  140: "10 Ar",
+  150: "12 Ar",
 };
 
 export function createEmptyFilters() {
@@ -71,7 +96,10 @@ export function createEmptyFilters() {
 }
 
 function normalize(value) {
-  return String(value || "").trim().toLowerCase().replace(/[_-]/g, " ");
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[_-]/g, " ");
 }
 
 function toTitle(value) {
@@ -85,6 +113,52 @@ function toTitle(value) {
     .join(" ");
 }
 
+function normalizeGenderValue(value) {
+  const raw = String(value || "")
+    .trim()
+    .toLowerCase();
+
+  if (raw === "pige") return "Pige";
+  if (raw === "dreng") return "Dreng";
+  if (raw === "baby" || raw === "unisex") return "Unisex";
+
+  return null;
+}
+
+function productToGenders(product) {
+  const values = [];
+
+  const addValue = (value) => {
+    if (Array.isArray(value)) {
+      value.forEach(addValue);
+      return;
+    }
+
+    const raw = String(value || "")
+      .trim()
+      .toLowerCase();
+
+    if (!raw) return;
+
+    // Some products store combined values like "Pige Dreng".
+    if (raw.includes("pige") && raw.includes("dreng")) {
+      values.push("Pige", "Dreng");
+      return;
+    }
+
+    const normalized = normalizeGenderValue(raw);
+    if (normalized) values.push(normalized);
+  };
+
+  addValue(product?.gender);
+
+  if (Array.isArray(product?.variants)) {
+    product.variants.forEach((variant) => addValue(variant?.gender));
+  }
+
+  return [...new Set(values)];
+}
+
 export function colorToLabel(color) {
   const key = normalize(color);
   return COLOR_LABELS[key] || toTitle(color);
@@ -93,14 +167,18 @@ export function colorToLabel(color) {
 export function productToColors(product) {
   const values = [];
 
-  if (Array.isArray(product?.color_filter)) values.push(...product.color_filter);
-  if (typeof product?.color_filter === "string") values.push(product.color_filter);
+  if (Array.isArray(product?.color_filter))
+    values.push(...product.color_filter);
+  if (typeof product?.color_filter === "string")
+    values.push(product.color_filter);
   if (product?.color) values.push(product.color);
 
   if (Array.isArray(product?.variants)) {
     product.variants.forEach((variant) => {
-      if (Array.isArray(variant?.color_filter)) values.push(...variant.color_filter);
-      if (typeof variant?.color_filter === "string") values.push(variant.color_filter);
+      if (Array.isArray(variant?.color_filter))
+        values.push(...variant.color_filter);
+      if (typeof variant?.color_filter === "string")
+        values.push(variant.color_filter);
       if (variant?.color) values.push(variant.color);
     });
   }
@@ -136,10 +214,10 @@ export function buildFilterOptions(products) {
   const colors = new Set();
 
   products.forEach((product) => {
+    const productGenders = productToGenders(product);
     if (product?.brand) brands.add(product.brand);
-    if (product?.gender) genders.add(product.gender);
+    productGenders.forEach((gender) => genders.add(gender));
     if (product?.under_kategori) types.add(product.under_kategori);
-
     productToColors(product).forEach((color) => colors.add(color));
   });
 
@@ -148,7 +226,7 @@ export function buildFilterOptions(products) {
     colors: [...colors].sort(),
     sizes: SIZE_GROUPS,
     brands: [...brands].sort(),
-    genders: [...genders].sort(),
+    genders: ["Pige", "Dreng", "Unisex"],
     prices: PRICE_OPTIONS,
     types: [...types].sort(),
   };
@@ -171,25 +249,40 @@ export function applyProductFilters(products, filters) {
   const filtered = products.filter((product) => {
     const colors = productToColors(product);
     const sizes = productToSizeLabels(product);
+    const genders = productToGenders(product);
 
     const colorMatch =
-      filters.colors.length === 0 || filters.colors.some((color) => colors.includes(color));
+      filters.colors.length === 0 ||
+      filters.colors.some((color) => colors.includes(color));
 
     const sizeMatch =
-      filters.sizes.length === 0 || filters.sizes.some((size) => sizes.includes(size));
+      filters.sizes.length === 0 ||
+      filters.sizes.some((size) => sizes.includes(size));
 
     const brandMatch =
       filters.brands.length === 0 || filters.brands.includes(product.brand);
 
     const genderMatch =
-      filters.genders.length === 0 || filters.genders.includes(product.gender);
+      filters.genders.length === 0 ||
+      filters.genders.some((gender) => genders.includes(gender));
 
     const typeMatch =
-      filters.types.length === 0 || filters.types.includes(product.under_kategori);
+      filters.types.length === 0 ||
+      filters.types.includes(product.under_kategori);
 
-    const priceMatch = matchesPriceRanges(Number(product.price || 0), filters.prices);
+    const priceMatch = matchesPriceRanges(
+      Number(product.price || 0),
+      filters.prices,
+    );
 
-    return colorMatch && sizeMatch && brandMatch && genderMatch && typeMatch && priceMatch;
+    return (
+      colorMatch &&
+      sizeMatch &&
+      brandMatch &&
+      genderMatch &&
+      typeMatch &&
+      priceMatch
+    );
   });
 
   if (!filters.sort) return filtered;
