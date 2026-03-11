@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import "./FavoritesPage.css";
+import { addShoppingbagItem } from "../utils/shoppingbagStorage";
 
 const initialFavorites = [
   {
@@ -80,27 +82,42 @@ function ShareIcon() {
 }
 
 export default function FavoritesPage() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [favorites, setFavorites] = useState(initialFavorites);
-  const [lastRemoved, setLastRemoved] = useState(null);
+  const [removedFavorites, setRemovedFavorites] = useState({});
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState(null);
   const [selectedSizes, setSelectedSizes] = useState({});
   const [addedToCart, setAddedToCart] = useState({});
 
   const removeFavorite = (id) => {
     const product = favorites.find((p) => p.id === id);
-    setLastRemoved(product);
+    if (!product) return;
+
+    setRemovedFavorites((prev) => ({ ...prev, [id]: product }));
     setFavorites((prev) => prev.filter((p) => p.id !== id));
   };
 
-  const undoRemove = () => {
-    if (!lastRemoved) return;
+  const undoRemove = (id) => {
+    const product = removedFavorites[id];
+    if (!product) return;
+
     setFavorites((prev) => {
-      const idx = initialFavorites.findIndex((p) => p.id === lastRemoved.id);
-      const updated = [...prev];
-      updated.splice(idx, 0, lastRemoved);
+      const updated = [...prev, product];
+      updated.sort(
+        (a, b) =>
+          initialFavorites.findIndex((p) => p.id === a.id) -
+          initialFavorites.findIndex((p) => p.id === b.id),
+      );
       return updated;
     });
-    setLastRemoved(null);
+
+    setRemovedFavorites((prev) => {
+      const next = { ...prev };
+      delete next[id];
+      return next;
+    });
   };
 
   const toggleDropdown = (id) => {
@@ -115,9 +132,75 @@ export default function FavoritesPage() {
   const addToCart = (product) => {
     const size = selectedSizes[product.id];
     if (!size) return;
+
+    addShoppingbagItem({
+      id: `${product.id}-${size}`,
+      baseId: product.id,
+      name: product.name,
+      price: Number(product.price.replace(" DKK", "").replace(",", ".")),
+      size,
+      quantity: 1,
+      image: product.image,
+    });
+
     setAddedToCart((prev) => ({ ...prev, [product.id]: true }));
+    navigate("/shoppingbag", { state: { backgroundLocation: location } });
     setTimeout(() => {
       setAddedToCart((prev) => ({ ...prev, [product.id]: false }));
+    }, 2000);
+  };
+
+  const addAllToCart = () => {
+    if (favorites.length === 0) return;
+
+    const addedIds = [];
+    const inferredSizes = {};
+
+    favorites.forEach((product) => {
+      const size = selectedSizes[product.id] || product.sizes?.[0];
+      if (!size) return;
+
+      addShoppingbagItem({
+        id: `${product.id}-${size}`,
+        baseId: product.id,
+        name: product.name,
+        price: Number(product.price.replace(" DKK", "").replace(",", ".")),
+        size,
+        quantity: 1,
+        image: product.image,
+      });
+
+      if (!selectedSizes[product.id]) {
+        inferredSizes[product.id] = size;
+      }
+
+      addedIds.push(product.id);
+    });
+
+    if (addedIds.length === 0) return;
+
+    navigate("/shoppingbag", { state: { backgroundLocation: location } });
+
+    if (Object.keys(inferredSizes).length > 0) {
+      setSelectedSizes((prev) => ({ ...prev, ...inferredSizes }));
+    }
+
+    setAddedToCart((prev) => {
+      const next = { ...prev };
+      addedIds.forEach((id) => {
+        next[id] = true;
+      });
+      return next;
+    });
+
+    setTimeout(() => {
+      setAddedToCart((prev) => {
+        const next = { ...prev };
+        addedIds.forEach((id) => {
+          next[id] = false;
+        });
+        return next;
+      });
     }, 2000);
   };
 
@@ -146,76 +229,109 @@ export default function FavoritesPage() {
         </section>
 
         <section className="favorite-grid" aria-label="Favorit produkter">
-          {lastRemoved && (
-            <div className="favorite-undo-card">
-              <p>Fjernet: <strong>{lastRemoved.name}</strong></p>
-              <button type="button" onClick={undoRemove} className="favorite-undo-btn">
-                ↩ Fortryd
-              </button>
-            </div>
-          )}
-          {favorites.map((product) => (
-            <article key={product.id} className="favorite-card">
-              <div className="favorite-image-wrap">
-                {product.badge && (
-                  <span className="favorite-badge">{product.badge}</span>
-                )}
+          {initialFavorites.map((product) => {
+            const activeProduct = favorites.find((p) => p.id === product.id);
+            if (!activeProduct) {
+              if (!removedFavorites[product.id]) return null;
+
+              return (
+                <div key={`undo-${product.id}`} className="favorite-undo-tile">
+                  <button
+                    type="button"
+                    onClick={() => undoRemove(product.id)}
+                    className="favorite-undo-btn"
+                  >
+                    ↩ Fortryd
+                  </button>
+                </div>
+              );
+            }
+
+            const isSizeOpen =
+              openDropdown === product.id || hoveredCard === product.id;
+
+            return (
+              <article key={activeProduct.id} className="favorite-card">
+                <div
+                  className="favorite-image-wrap"
+                  onMouseEnter={() => setHoveredCard(activeProduct.id)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
+                  {activeProduct.badge && (
+                    <span className="favorite-badge">
+                      {activeProduct.badge}
+                    </span>
+                  )}
+                  <button
+                    type="button"
+                    aria-label={`Fjern ${activeProduct.name} fra favoritter`}
+                    className="favorite-heart"
+                    onClick={() => removeFavorite(activeProduct.id)}
+                  >
+                    ❤
+                  </button>
+                  <img src={activeProduct.image} alt={activeProduct.name} />
+                </div>
+
+                <div className="favorite-card-body">
+                  <h3>{activeProduct.name}</h3>
+                  <p>{activeProduct.price}</p>
+                </div>
+
+                <div
+                  className="favorite-size-wrap"
+                  onMouseEnter={() => setHoveredCard(activeProduct.id)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
+                  <button
+                    type="button"
+                    className="favorite-size-btn"
+                    onClick={() => toggleDropdown(activeProduct.id)}
+                  >
+                    {selectedSizes[activeProduct.id]
+                      ? `Str. ${selectedSizes[activeProduct.id]}`
+                      : "Vælg størrelse"}
+                    <span>{isSizeOpen ? "⌃" : "⌄"}</span>
+                  </button>
+                  {isSizeOpen && (
+                    <ul className="favorite-size-dropdown">
+                      {activeProduct.sizes.map((size) => (
+                        <li key={size}>
+                          <button
+                            type="button"
+                            className={`favorite-size-option ${selectedSizes[activeProduct.id] === size ? "selected" : ""}`}
+                            onClick={() => selectSize(activeProduct.id, size)}
+                          >
+                            {size}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+
                 <button
                   type="button"
-                  aria-label={`Fjern ${product.name} fra favoritter`}
-                  className="favorite-heart"
-                  onClick={() => removeFavorite(product.id)}
+                  className={`favorite-cart-btn ${!selectedSizes[activeProduct.id] ? "disabled" : ""}`}
+                  onClick={() => addToCart(activeProduct)}
+                  disabled={!selectedSizes[activeProduct.id]}
                 >
-                  ❤
+                  {addedToCart[activeProduct.id]
+                    ? "✓ Lagt i kurv!"
+                    : "Læg i kurv"}
                 </button>
-                <img src={product.image} alt={product.name} />
-              </div>
-
-              <div className="favorite-card-body">
-                <h3>{product.name}</h3>
-                <p>{product.price}</p>
-              </div>
-
-              <div className="favorite-size-wrap">
-                <button
-                  type="button"
-                  className="favorite-size-btn"
-                  onClick={() => toggleDropdown(product.id)}
-                >
-                  {selectedSizes[product.id] ? `Str. ${selectedSizes[product.id]}` : "Vælg størrelse"}
-                  <span>{openDropdown === product.id ? "⌃" : "⌄"}</span>
-                </button>
-                {openDropdown === product.id && (
-                  <ul className="favorite-size-dropdown">
-                    {product.sizes.map((size) => (
-                      <li key={size}>
-                        <button
-                          type="button"
-                          className={`favorite-size-option ${selectedSizes[product.id] === size ? "selected" : ""}`}
-                          onClick={() => selectSize(product.id, size)}
-                        >
-                          {size}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-
-              <button
-                type="button"
-                className={`favorite-cart-btn ${!selectedSizes[product.id] ? "disabled" : ""}`}
-                onClick={() => addToCart(product)}
-                disabled={!selectedSizes[product.id]}
-              >
-                {addedToCart[product.id] ? "✓ Lagt i kurv!" : "Læg i kurv"}
-              </button>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </section>
 
         <div className="favorite-bulk-wrap">
-          <button type="button" className="favorite-bulk-btn">
+          <button
+            type="button"
+            className="favorite-bulk-btn"
+            onClick={addAllToCart}
+            disabled={favorites.length === 0}
+          >
             Føj alle til kurv
           </button>
         </div>

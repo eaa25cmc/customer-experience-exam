@@ -1,17 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ShoppingbagPage.css";
+import {
+  loadShoppingbagItems,
+  saveShoppingbagItems,
+} from "../utils/shoppingbagStorage";
 
-const initialCartItems = [
-  {
-    id: 1,
-    name: "Langærmet Strikket Top",
-    price: 227.95,
-    size: "110",
-    quantity: 1,
-    image: "/src/image/1-1.png",
-  },
-];
+const initialCartItems = [];
 
 const steps = ["Kurv", "Oplysninger", "Levering", "Betaling", "Bekræftelse"];
 
@@ -37,7 +32,9 @@ function TrashIcon() {
 }
 
 export default function ShoppingbagPage() {
-  const [cartItems, setCartItems] = useState(initialCartItems);
+  const [cartItems, setCartItems] = useState(() =>
+    loadShoppingbagItems(initialCartItems),
+  );
   const navigate = useNavigate();
 
   const closeOverlay = () => {
@@ -45,17 +42,24 @@ export default function ShoppingbagPage() {
   };
 
   const updateQuantity = (id, delta) => {
-    setCartItems((prev) =>
-      prev
+    setCartItems((prev) => {
+      const nextItems = prev
         .map((item) =>
           item.id === id ? { ...item, quantity: item.quantity + delta } : item,
         )
-        .filter((item) => item.quantity > 0),
-    );
+        .filter((item) => item.quantity > 0);
+
+      saveShoppingbagItems(nextItems);
+      return nextItems;
+    });
   };
 
   const removeItem = (id) => {
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
+    setCartItems((prev) => {
+      const nextItems = prev.filter((item) => item.id !== id);
+      saveShoppingbagItems(nextItems);
+      return nextItems;
+    });
   };
 
   const totalCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
@@ -107,46 +111,52 @@ export default function ShoppingbagPage() {
 
         {/* Cart Items */}
         <div className="shoppingbag-items">
-          {cartItems.map((item) => (
-            <div className="shoppingbag-item" key={item.id}>
-              <img
-                src={item.image}
-                alt={item.name}
-                className="shoppingbag-item-img"
-              />
-              <div className="shoppingbag-item-info">
-                <p className="shoppingbag-item-name">{item.name}</p>
-                <p className="shoppingbag-item-price">
-                  {formatPrice(item.price)}
-                </p>
-                <p className="shoppingbag-item-size">Str. {item.size}</p>
-                <div className="shoppingbag-qty">
-                  <button
-                    className="shoppingbag-qty-btn"
-                    onClick={() => updateQuantity(item.id, -1)}
-                    aria-label="Reducer antal"
-                  >
-                    −
-                  </button>
-                  <span className="shoppingbag-qty-count">{item.quantity}</span>
-                  <button
-                    className="shoppingbag-qty-btn"
-                    onClick={() => updateQuantity(item.id, 1)}
-                    aria-label="Forøg antal"
-                  >
-                    +
-                  </button>
+          {cartItems.length === 0 ? (
+            <p className="shoppingbag-empty">Din kurv er tom.</p>
+          ) : (
+            cartItems.map((item) => (
+              <div className="shoppingbag-item" key={item.id}>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="shoppingbag-item-img"
+                />
+                <div className="shoppingbag-item-info">
+                  <p className="shoppingbag-item-name">{item.name}</p>
+                  <p className="shoppingbag-item-price">
+                    {formatPrice(item.price)}
+                  </p>
+                  <p className="shoppingbag-item-size">Str. {item.size}</p>
+                  <div className="shoppingbag-qty">
+                    <button
+                      className="shoppingbag-qty-btn"
+                      onClick={() => updateQuantity(item.id, -1)}
+                      aria-label="Reducer antal"
+                    >
+                      −
+                    </button>
+                    <span className="shoppingbag-qty-count">
+                      {item.quantity}
+                    </span>
+                    <button
+                      className="shoppingbag-qty-btn"
+                      onClick={() => updateQuantity(item.id, 1)}
+                      aria-label="Forøg antal"
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
+                <button
+                  className="shoppingbag-delete-btn"
+                  onClick={() => removeItem(item.id)}
+                  aria-label="Fjern produkt"
+                >
+                  <TrashIcon />
+                </button>
               </div>
-              <button
-                className="shoppingbag-delete-btn"
-                onClick={() => removeItem(item.id)}
-                aria-label="Fjern produkt"
-              >
-                <TrashIcon />
-              </button>
-            </div>
-          ))}
+            ))
+          )}
         </div>
 
         <hr className="shoppingbag-divider" />

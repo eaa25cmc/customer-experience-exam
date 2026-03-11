@@ -1,11 +1,13 @@
 .favorite-page {
   background: var(--hvid);
-  padding: 1.5rem 1rem 2.5rem;
+  padding: 1.5rem 0 2.5rem;
 }
 
 .favorite-content {
-  max-width: 1260px;
+  max-width: 90rem;
   margin: 0 auto;
+  padding: 0 3.5rem;
+  box-sizing: border-box;
 }
 
 .favorite-header {
@@ -28,7 +30,7 @@
 
 .favorite-login-box {
   margin: 1.75rem auto 0;
-  width: min(1140px, 100%);
+  width: min(71rem, 100%);
   position: relative;
   background: var(--sekundærhvid);
   border-top: 5px solid var(--brun);
@@ -82,13 +84,16 @@
 }
 
 .favorite-grid {
-  margin-top: 1.35rem;
+  margin-top: 6rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.6rem 1.35rem;
+  grid-template-columns: repeat(4, 18.5rem);
+  justify-content: center;
+  gap: 3rem;
 }
 
 .favorite-card {
+  width: 18.5rem;
+  height: 30.5rem;
   background: var(--hvid);
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(74, 47, 44, 0.09);
@@ -131,12 +136,17 @@
   position: absolute;
   left: 0.7rem;
   top: 0.7rem;
-  border: 2px solid var(--brun);
+  border-top: 2px solid var(--brun);
+  border-right: 1.5px solid var(--brun);
+  border-bottom: 1.5px solid var(--brun);
+  border-left: 2px solid var(--brun);
   color: var(--brun);
-  background: rgba(246, 243, 238, 0.9);
-  border-radius: 5px;
-  padding: 0.1rem 0.6rem;
-  font-size: 0.95rem;
+  background: rgba(246, 243, 238, 0.94);
+  border-radius: 8px 5px 7px 6px / 5px 8px 6px 7px;
+  padding: 0.12rem 0.9rem;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  letter-spacing: 0.5px;
   z-index: 2;
 }
 
@@ -144,8 +154,8 @@
   position: absolute;
   right: 0.65rem;
   top: 0.65rem;
-  width: 33px;
-  height: 33px;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   border: 0;
   background: rgba(246, 243, 238, 0.96);
@@ -185,7 +195,9 @@
   border-bottom: 1px solid rgba(74, 47, 44, 0.4);
   color: var(--brun);
   padding: 0 0 0.45rem;
-  font-size: 0.95rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.45vw, 1.4rem);
+  font-weight: 400;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -193,15 +205,18 @@
 }
 
 .favorite-size-btn span {
-  font-size: 1rem;
+  font-size: clamp(1.35rem, 1.9vw, 1.85rem);
+  line-height: 0.8;
+  transform: translateY(-2px);
 }
 
 .favorite-size-dropdown {
   position: absolute;
-  top: 100%;
+  bottom: calc(100% + 0.9rem);
+  top: auto;
   left: 0;
   right: 0;
-  background: var(--hvid);
+  background: rgba(246, 243, 238, 0.94);
   border: 1px solid rgba(74, 47, 44, 0.3);
   border-radius: 6px;
   list-style: none;
@@ -213,6 +228,7 @@
   flex-wrap: wrap;
   gap: 0.25rem;
   padding: 0.5rem;
+  backdrop-filter: blur(1px);
 }
 
 .favorite-size-option {
@@ -235,13 +251,19 @@
 .favorite-cart-btn {
   margin-top: 0.65rem;
   width: calc(100% - 1.7rem);
-  border: 0;
+  border-top: 1.8px solid rgba(246, 243, 238, 0.9);
+  border-right: 1.4px solid rgba(246, 243, 238, 0.9);
+  border-bottom: 1.4px solid rgba(246, 243, 238, 0.9);
+  border-left: 1.8px solid rgba(246, 243, 238, 0.9);
   background: var(--brun);
   color: var(--hvid);
-  border-radius: 5px;
+  border-radius: 10px 7px 9px 8px / 8px 10px 7px 9px;
   font-family: var(--font-display);
-  font-size: 1.03rem;
-  padding: 0.55rem 0.3rem;
+  font-size: clamp(1.25rem, 1.8vw, 1.8rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.6px;
+  padding: 0.95rem 0.5rem 0.9rem;
   cursor: pointer;
   transition: background 0.2s;
   display: block;
@@ -265,62 +287,54 @@
   background: var(--brun);
   color: var(--hvid);
   border-radius: 8px;
-  min-width: 260px;
+  min-width: 16rem;
   padding: 0.72rem 1.2rem;
   font-family: var(--font-display);
   font-size: 1.2rem;
   cursor: pointer;
 }
 
-.favorite-undo-card {
+.favorite-undo-tile {
+  width: 18.5rem;
+  height: 30.5rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  background: var(--sekundærhvid);
-  border: 2px dashed var(--strokebrun);
-  border-radius: 8px;
-  padding: 1.2rem 0.75rem;
-  text-align: center;
-  min-height: 200px;
-}
-
-.favorite-undo-card p {
-  font-size: 0.9rem;
-  color: var(--brun);
+  background: rgba(232, 220, 205, 0.3);
+  border: 1px dashed rgba(74, 47, 44, 0.35);
+  border-radius: 10px;
 }
 
 .favorite-undo-btn {
-  border: 2px solid var(--brun);
-  background: transparent;
+  border: 1.5px solid var(--brun);
+  background: var(--sekundærhvid);
   color: var(--brun);
-  border-radius: 6px;
-  padding: 0.5rem 1.2rem;
+  border-radius: 8px 6px 7px 5px / 6px 8px 5px 7px;
+  padding: 0.45rem 0.95rem;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.05rem;
+  line-height: 1;
   cursor: pointer;
 }
 
 .favorite-undo-btn:hover {
-  background: var(--brun);
-  color: var(--hvid);
+  background: rgba(232, 220, 205, 0.85);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 69rem) {
   .favorite-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 18.5rem);
   }
 
   .favorite-flowers {
-    width: 180px;
+    width: 11rem;
     right: 0.2rem;
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 48.5rem) {
   .favorite-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 18.5rem);
   }
 
   .favorite-header h1 {
@@ -340,9 +354,9 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 32.5rem) {
   .favorite-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 18.5rem;
   }
 
   .favorite-share p {
