@@ -18,6 +18,9 @@ import ProductGridBaby from "./components/ProductGridBaby";
 import ProductGridGirls from "./components/ProductGridGirls";
 import ProductGridBoys from "./components/ProductGridBoys";
 import CategoryPage from "./components/CategoryPage";
+import ShoppingbagPage from "./pages/ShoppingbagPage";
+
+
 
 export default function App() {
   return (
@@ -41,6 +44,7 @@ export default function App() {
         <Route path="/kategori/:category" element={<CategoryPage />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/sustainability" element={<SustainabilityPage />} />
+        <Route path="/shoppingbag" element={<ShoppingbagPage />} />
       </Routes>
       <Footer />
     </>

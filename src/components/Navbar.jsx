@@ -27,8 +27,12 @@ export default function Navbar() {
         <div className="klikikoner">
           <img src={søgikon} alt="Søg" />
           <img src={profilikon} alt="Profil" />
-          <img src={hjerteikon} alt="Favoritter" />
-          <img src={kurvikon} alt="Kurv" />
+          <NavLink to="/favorites">
+            <img src={hjerteikon} alt="Favoritter" />
+          </NavLink>
+          <NavLink to="/shoppingbag">
+            <img src={kurvikon} alt="Kurv" />
+          </NavLink>
         </div>
       </div>
 

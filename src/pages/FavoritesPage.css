@@ -1,0 +1,344 @@
+.favorite-page {
+  background: var(--hvid);
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+.favorite-content {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.favorite-header {
+  text-align: center;
+  position: relative;
+  margin-top: 1.8rem;
+}
+
+.favorite-header h1 {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.favorite-header p {
+  margin-top: 0.45rem;
+  font-size: 1.3rem;
+}
+
+.favorite-login-box {
+  margin: 1.75rem auto 0;
+  width: min(1140px, 100%);
+  background: var(--sekundærhvid);
+  border: 4px solid var(--brun);
+  border-radius: 26px 20px 24px 18px / 20px 26px 19px 24px;
+  text-align: center;
+  padding: 2.4rem 1rem 2.1rem;
+}
+
+.favorite-login-box h2 {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.favorite-login-box p {
+  margin-top: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.favorite-login-box button {
+  margin-top: 1.45rem;
+  border: 0;
+  background: var(--brun);
+  color: var(--hvid);
+  border-radius: 6px;
+  padding: 0.8rem 2rem;
+  font-size: 1.15rem;
+  font-family: var(--font-display);
+  cursor: pointer;
+}
+
+.favorite-share {
+  margin-top: 1.65rem;
+  text-align: center;
+  color: var(--brun);
+}
+
+.favorite-share p {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+}
+
+.favorite-share svg {
+  margin-top: 0.2rem;
+}
+
+.favorite-grid {
+  margin-top: 1.35rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.6rem 1.35rem;
+}
+
+.favorite-card {
+  background: var(--hvid);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(74, 47, 44, 0.09);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.favorite-card:hover {
+  box-shadow: 0 6px 24px rgba(74, 47, 44, 0.18);
+  transform: translateY(-3px);
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.favorite-image-wrap {
+  position: relative;
+  background: #f2f1ee;
+  overflow: hidden;
+}
+
+.favorite-image-wrap img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.favorite-image-wrap:hover img {
+  transform: scale(1.06);
+}
+
+.favorite-badge {
+  position: absolute;
+  left: 0.7rem;
+  top: 0.7rem;
+  border: 2px solid var(--brun);
+  color: var(--brun);
+  background: rgba(246, 243, 238, 0.9);
+  border-radius: 5px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.95rem;
+  z-index: 2;
+}
+
+.favorite-heart {
+  position: absolute;
+  right: 0.65rem;
+  top: 0.65rem;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(246, 243, 238, 0.96);
+  color: #b8474f;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.favorite-card-body {
+  padding: 0.55rem 0.85rem 0;
+}
+
+.favorite-card h3 {
+  font-family: var(--font-body);
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.05rem;
+}
+
+.favorite-card p {
+  margin-top: 0.2rem;
+  font-size: 1rem;
+  color: var(--brun);
+}
+
+.favorite-size-wrap {
+  position: relative;
+  margin: 0 0.85rem;
+}
+
+.favorite-size-btn {
+  margin-top: 0.6rem;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid rgba(74, 47, 44, 0.4);
+  color: var(--brun);
+  padding: 0 0 0.45rem;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.favorite-size-btn span {
+  font-size: 1rem;
+}
+
+.favorite-size-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--hvid);
+  border: 1px solid rgba(74, 47, 44, 0.3);
+  border-radius: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem 0;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(74, 47, 44, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding: 0.5rem;
+}
+
+.favorite-size-option {
+  border: 1px solid rgba(74, 47, 44, 0.3);
+  background: transparent;
+  color: var(--brun);
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.favorite-size-option:hover,
+.favorite-size-option.selected {
+  background: var(--brun);
+  color: var(--hvid);
+  border-color: var(--brun);
+}
+
+.favorite-cart-btn {
+  margin-top: 0.65rem;
+  width: calc(100% - 1.7rem);
+  border: 0;
+  background: var(--brun);
+  color: var(--hvid);
+  border-radius: 5px;
+  font-family: var(--font-display);
+  font-size: 1.03rem;
+  padding: 0.55rem 0.3rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: block;
+  margin-left: 0.85rem;
+  margin-right: 0.85rem;
+}
+
+.favorite-cart-btn.disabled {
+  background: rgba(74, 47, 44, 0.3);
+  cursor: not-allowed;
+}
+
+.favorite-bulk-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.2rem;
+}
+
+.favorite-bulk-btn {
+  border: 0;
+  background: var(--brun);
+  color: var(--hvid);
+  border-radius: 8px;
+  min-width: 260px;
+  padding: 0.72rem 1.2rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.favorite-undo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--sekundærhvid);
+  border: 2px dashed var(--strokebrun);
+  border-radius: 8px;
+  padding: 1.2rem 0.75rem;
+  text-align: center;
+  min-height: 200px;
+}
+
+.favorite-undo-card p {
+  font-size: 0.9rem;
+  color: var(--brun);
+}
+
+.favorite-undo-btn {
+  border: 2px solid var(--brun);
+  background: transparent;
+  color: var(--brun);
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.favorite-undo-btn:hover {
+  background: var(--brun);
+  color: var(--hvid);
+}
+
+@media (max-width: 1100px) {
+  .favorite-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .favorite-flowers {
+    width: 180px;
+    right: 0.2rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .favorite-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .favorite-header h1 {
+    font-size: 2.1rem;
+  }
+
+  .favorite-login-box h2 {
+    font-size: 2.1rem;
+  }
+
+  .favorite-login-box p {
+    font-size: 1rem;
+  }
+
+  .favorite-flowers {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .favorite-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .favorite-share p {
+    font-size: 1.35rem;
+  }
+}
