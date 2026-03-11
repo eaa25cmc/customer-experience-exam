@@ -93,25 +93,21 @@
 
 .favorite-card {
   width: 18.5rem;
-  height: 30.5rem;
+  height: auto;
   background: var(--hvid);
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(74, 47, 44, 0.09);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
-  transition:
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
+  transition: all 0.3s ease;
 }
 
 .favorite-card:hover {
-  box-shadow: 0 6px 24px rgba(74, 47, 44, 0.18);
-  transform: translateY(-3px);
-  transition:
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .favorite-image-wrap {
@@ -120,16 +116,39 @@
   overflow: hidden;
 }
 
-.favorite-image-wrap img {
+.favorite-product-image {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 25rem;
   object-fit: cover;
   display: block;
   transition: transform 0.35s ease;
 }
 
-.favorite-image-wrap:hover img {
+.favorite-image-wrap:hover .favorite-product-image {
   transform: scale(1.06);
+}
+
+.favorite-top-bar {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.favorite-left-icons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.favorite-badge-icon {
+  height: 32px;
+  width: auto;
+  display: block;
 }
 
 .favorite-badge {
@@ -152,8 +171,8 @@
 
 .favorite-heart {
   position: absolute;
-  right: 0.65rem;
-  top: 0.65rem;
+  right: 1rem;
+  top: 1rem;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;

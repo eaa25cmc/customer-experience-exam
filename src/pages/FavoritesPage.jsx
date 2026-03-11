@@ -3,60 +3,62 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import "./FavoritesPage.css";
 import { addShoppingbagItem } from "../utils/shoppingbagStorage";
+import nyhedIcon from "../image/nyhed-ikon.svg";
+import saleIcon from "../image/Sale-ikon.svg";
 
 const initialFavorites = [
   {
     id: 1,
     name: "langærmet strik top",
     price: "227,95 DKK",
-    image: "/src/image/64.png",
-    badge: "+15%",
+    image: "/product-pics/64-1.png",
+    sale: true,
     sizes: ["86", "92", "98", "104", "110", "116"],
   },
   {
     id: 2,
     name: "økologisk bomuld top",
     price: "143,95 DKK",
-    image: "/src/image/70-1.png",
-    badge: "+15%",
+    image: "/product-pics/70-1.png",
+    sale: true,
     sizes: ["56", "62", "68", "74", "80", "86"],
   },
   {
     id: 3,
     name: "elva kjole eggshell",
     price: "449,00 DKK",
-    image: "/src/image/71-1.png",
-    badge: "Nyhed",
+    image: "/product-pics/71-1.png",
+    news: true,
     sizes: ["98", "104", "110", "116", "122", "128"],
   },
   {
     id: 4,
     name: "mimmi bluse tramonto",
     price: "279,95 DKK",
-    image: "/src/image/1-1.png",
+    image: "/product-pics/1-1.png",
     sizes: ["74", "80", "86", "92", "98", "104"],
   },
   {
     id: 5,
     name: "savora cardigan",
     price: "299,95 DKK",
-    image: "/src/image/81-1.png",
-    badge: "Nyhed",
+    image: "/product-pics/81-1.png",
+    news: true,
     sizes: ["86", "92", "98", "104", "110"],
   },
   {
     id: 6,
     name: "regular strikket top",
     price: "259,95 DKK",
-    image: "/src/image/62-1.png",
+    image: "/product-pics/62-1.png",
     sizes: ["92", "98", "104", "110", "116"],
   },
   {
     id: 7,
     name: "nyfødt slå-om body",
     price: "249,00 DKK",
-    image: "/src/image/93-1.png",
-    badge: "Nyhed",
+    image: "/product-pics/93-1.png",
+    news: true,
     sizes: ["50", "56", "62", "68"],
   },
 ];
@@ -257,11 +259,24 @@ export default function FavoritesPage() {
                   onMouseEnter={() => setHoveredCard(activeProduct.id)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
-                  {activeProduct.badge && (
-                    <span className="favorite-badge">
-                      {activeProduct.badge}
-                    </span>
-                  )}
+                  <div className="favorite-top-bar">
+                    <div className="favorite-left-icons">
+                      {activeProduct.news && (
+                        <img
+                          src={nyhedIcon}
+                          alt="Nyhed"
+                          className="favorite-badge-icon"
+                        />
+                      )}
+                      {activeProduct.sale && (
+                        <img
+                          src={saleIcon}
+                          alt="Sale"
+                          className="favorite-badge-icon"
+                        />
+                      )}
+                    </div>
+                  </div>
                   <button
                     type="button"
                     aria-label={`Fjern ${activeProduct.name} fra favoritter`}
@@ -270,7 +285,11 @@ export default function FavoritesPage() {
                   >
                     ❤
                   </button>
-                  <img src={activeProduct.image} alt={activeProduct.name} />
+                  <img
+                    src={activeProduct.image}
+                    alt={activeProduct.name}
+                    className="favorite-product-image"
+                  />
                 </div>
 
                 <div className="favorite-card-body">
