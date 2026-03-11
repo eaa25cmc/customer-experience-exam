@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { NavLink } from "react-router";
 import banner from "../image/banner.svg";
 import logo from "../image/logo.svg";
@@ -5,8 +6,13 @@ import søgikon from "../image/søgikon.svg";
 import profilikon from "../image/profil.svg";
 import hjerteikon from "../image/hjerte.svg";
 import kurvikon from "../image/kurv.svg";
+import DrengDropdown from "./DrengDropdown";
+import PigeDropdown from "./PigeDropdown";
+import BabyDropdown from "./BabyDropdown";
+import "./Navbar.css";
 
 export default function Navbar() {
+  const [activeDropdown, setActiveDropdown] = useState(null);
   return (
     <div className="hero-header">
       <div className="topnav">
@@ -16,9 +22,15 @@ export default function Navbar() {
           </NavLink>
         </div>
         <nav className="navbar">
-          <NavLink to="/Baby">Baby</NavLink>
-          <NavLink to="/Pige">Pige</NavLink>
-          <NavLink to="/Dreng">Dreng</NavLink>
+          <NavLink to="/Baby" onClick={() => setActiveDropdown("baby")}>
+            Baby
+          </NavLink>
+          <NavLink to="/Pige" onClick={() => setActiveDropdown("pige")}>
+            Pige
+          </NavLink>
+          <NavLink to="/Dreng" onClick={() => setActiveDropdown("dreng")}>
+            Dreng
+          </NavLink>
           <NavLink to="/Sale">Udsalg</NavLink>
           <NavLink to="/News">Nyheder</NavLink>
           <NavLink to="/Inspiration">Inspiration</NavLink>
@@ -31,6 +43,18 @@ export default function Navbar() {
           <img src={kurvikon} alt="Kurv" />
         </div>
       </div>
+
+      {activeDropdown === "baby" && (
+        <BabyDropdown onClose={() => setActiveDropdown(null)} />
+      )}
+
+      {activeDropdown === "pige" && (
+        <PigeDropdown onClose={() => setActiveDropdown(null)} />
+      )}
+
+      {activeDropdown === "dreng" && (
+        <DrengDropdown onClose={() => setActiveDropdown(null)} />
+      )}
 
       <div className="banner">
         <img src={banner} alt="Banner" className="banner-image" />

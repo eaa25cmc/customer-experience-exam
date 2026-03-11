@@ -1,0 +1,92 @@
+/* Navigation */
+.hero-header {
+  position: sticky; /*Bruges til at holde headeren fast i toppen */
+  top: 0;
+  z-index: 100; /* bruges til at være det forreste altid */
+}
+
+.topnav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3.5rem;
+  background-color: var(--hvid);
+}
+.logo {
+  justify-self: start;
+}
+.logo img {
+  height: 4rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.navbar a {
+  color: var(--brun);
+  text-decoration: none;
+  padding: 2rem 1rem;
+}
+
+.navbar a:hover {
+  text-shadow: var(--brun) 0.06rem 0 0;
+}
+
+.navbar a.active {
+  text-shadow: var(--brun) 0.06rem 0 0;
+}
+
+.klikikoner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  height: 2.5rem;
+}
+
+.banner {
+  position: relative;
+  z-index: 1;
+  margin-top: -0.5rem; /*bruges til at overlappe navbar */
+}
+
+.banner-image {
+  width: 100%;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.5rem 0;
+}
+
+.banner-track {
+  display: flex;
+  gap: 60rem;
+  animation: scrollText 24s linear infinite;
+}
+
+.banner-track span {
+  font-weight: 400;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
