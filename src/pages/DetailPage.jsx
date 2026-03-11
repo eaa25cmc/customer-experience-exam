@@ -28,8 +28,8 @@ export default function DetailPage() {
         <Breadcrumbs />
       </section>
       <main className={styles["product-detail"]}>
-        <ProductImageBox product={product} />
-        <ProductInfoBox product={product} />
+        <DetailImageBox product={product} />
+        <DetailInfoBox product={product} />
       </main>
     </>
   );
