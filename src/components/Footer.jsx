@@ -15,21 +15,21 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-kolonne">
-          <h3>Shopping guide</h3>
+          <h4>Shopping guide</h4>
           <a href="#">Størrelsesguide</a>
           <a href="#">Levering & fragt</a>
           <a href="#">Returnering</a>
         </div>
 
         <div className="footer-kolonne">
-          <h3>Om Little Looms</h3>
+          <h4>Om Little Looms</h4>
           <a href="#">Vores historie</a>
           <a href="#">Mission & værdier</a>
           <a href="#">Bæredygtighed</a>
         </div>
 
         <div className="footer-kolonne">
-          <h3>Min konto</h3>
+          <h4>Min konto</h4>
           <a href="#">Log ind / Opret konto</a>
           <a href="#">Ordrehistorik</a>
           <a href="#">Mine favoritter</a>
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-kolonne">
-          <h3>Hjælp</h3>
+          <h4>Hjælp</h4>
           <a href="#">Ofte stillede spørgsmål</a>
           <a href="#">Kontakt kundeservice</a>
           <a href="#">Reklamation</a>
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-kolonne">
-          <h3>Kontakt</h3>
+          <h4>Kontakt</h4>
           <a href="#">Kundeservice</a>
           <a href="#">Samarbejde</a>
           <a href="#">Presse</a>
