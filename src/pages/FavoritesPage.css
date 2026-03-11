@@ -325,11 +325,6 @@
   .favorite-grid {
     grid-template-columns: repeat(3, 18.5rem);
   }
-
-  .favorite-flowers {
-    width: 11rem;
-    right: 0.2rem;
-  }
 }
 
 @media (max-width: 48.5rem) {
@@ -347,10 +342,6 @@
 
   .favorite-login-box p {
     font-size: 1rem;
-  }
-
-  .favorite-flowers {
-    display: none;
   }
 }
 

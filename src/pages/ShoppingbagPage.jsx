@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ShoppingbagPage.css";
+import antalProdukterIcon from "../image/Antal produkter.svg";
+import skraldespandIcon from "../image/skraldespand.svg";
 import {
   loadShoppingbagItems,
   saveShoppingbagItems,
@@ -9,27 +11,6 @@ import {
 const initialCartItems = [];
 
 const steps = ["Kurv", "Oplysninger", "Levering", "Betaling", "Bekræftelse"];
-
-function TrashIcon() {
-  return (
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="3 6 5 6 21 6" />
-      <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
-      <path d="M10 11v6" />
-      <path d="M14 11v6" />
-      <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
-    </svg>
-  );
-}
 
 export default function ShoppingbagPage() {
   const [cartItems, setCartItems] = useState(() =>
@@ -127,24 +108,31 @@ export default function ShoppingbagPage() {
                     {formatPrice(item.price)}
                   </p>
                   <p className="shoppingbag-item-size">Str. {item.size}</p>
-                  <div className="shoppingbag-qty">
+                  <div
+                    className="shoppingbag-qty"
+                    aria-label={`Antal ${item.quantity}`}
+                  >
+                    <img
+                      src={antalProdukterIcon}
+                      alt=""
+                      aria-hidden="true"
+                      className="shoppingbag-qty-icon"
+                    />
                     <button
-                      className="shoppingbag-qty-btn"
+                      type="button"
+                      className="shoppingbag-qty-hit shoppingbag-qty-hit-minus"
                       onClick={() => updateQuantity(item.id, -1)}
-                      aria-label="Reducer antal"
-                    >
-                      −
-                    </button>
+                      aria-label="Fjern ét produkt"
+                    />
                     <span className="shoppingbag-qty-count">
                       {item.quantity}
                     </span>
                     <button
-                      className="shoppingbag-qty-btn"
+                      type="button"
+                      className="shoppingbag-qty-hit shoppingbag-qty-hit-plus"
                       onClick={() => updateQuantity(item.id, 1)}
-                      aria-label="Forøg antal"
-                    >
-                      +
-                    </button>
+                      aria-label="Tilføj ét produkt"
+                    />
                   </div>
                 </div>
                 <button
@@ -152,7 +140,12 @@ export default function ShoppingbagPage() {
                   onClick={() => removeItem(item.id)}
                   aria-label="Fjern produkt"
                 >
-                  <TrashIcon />
+                  <img
+                    src={skraldespandIcon}
+                    alt=""
+                    aria-hidden="true"
+                    className="shoppingbag-delete-icon"
+                  />
                 </button>
               </div>
             ))
