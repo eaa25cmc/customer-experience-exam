@@ -43,96 +43,96 @@ body {
 /* Fonte */
 /*Desktop*/
 .title {
-  font-family: var(--font-display);
-  font-size: 6rem;
+  font-family: var(--font-display); /* Schoolbell */
+  font-size: 6rem; /* 96px */
   line-height: 1.25;
   -webkit-text-stroke: 1px var(--brun);
   text-shadow: var(--brun) 1px 1px 0;
 }
 
 h1 {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-family: var(--font-display); /* Schoolbell */
+  font-size: 2.5rem; /* 40px */
   line-height: 1.25;
 }
 
 h2 {
-  font-family: var(--font-body);
-  font-size: 2rem;
+  font-family: var(--font-body); /* Inter */
+  font-size: 2rem; /* 32px */
   line-height: 1.25;
 }
 
 h3 {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-family: var(--font-display); /* Schoolbell */
+  font-size: 1.5rem; /* 24px */
   line-height: 1.25;
 }
 
 h4 {
-  font-family: var(--font-body);
-  font-size: 1.25rem;
+  font-family: var(--font-body); /* Inter */
+  font-size: 1.25rem; /* 20px */
   line-height: 1.25;
 }
 
 h5 {
-  font-family: var(--font-display);
-  font-size: 1rem;
+  font-family: var(--font-display); /* Schoolbell */
+  font-size: 1rem; /* 16px */
   line-height: 1.25;
 }
 
 h6 {
-  font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-family: var(--font-body); /* Inter */
+  font-size: 0.875rem; /* 14px */
   line-height: 1.25;
 }
 
 p {
-  font-family: var(--font-body);
-  font-size: 1rem;
+  font-family: var(--font-body); /* Inter */
+  font-size: 1rem; /* 16px */
   line-height: 1.25;
 }
 
 /*mobil*/
 @media (max-width: 768px) {
   h1 {
-    font-family: var(--font-display);
-    font-size: 2rem;
+    font-family: var(--font-display); /* Schoolbell */
+    font-size: 2rem; /* 32px */
     line-height: 1.25;
   }
 
   h2 {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-family: var(--font-display); /* Schoolbell */
+    font-size: 1.25rem; /* 20px */
     line-height: 1.25;
   }
 
   h3 {
-    font-family: var(--font-body);
-    font-size: 1.25rem;
+    font-family: var(--font-body); /* Inter */
+    font-size: 1.25rem; /* 20px */
     line-height: 1.25;
   }
 
   h4 {
-    font-family: var(--font-display);
-    font-size: 1rem;
+    font-family: var(--font-display); /* Schoolbell */
+    font-size: 1rem; /* 16px */
     line-height: 1.25;
   }
 
   h5 {
-    font-family: var(--font-body);
-    font-size: 1rem;
+    font-family: var(--font-body); /* Inter */
+    font-size: 1rem; /* 16px */
     line-height: 1.25;
   }
 
   h6 {
-    font-family: var(--font-body);
-    font-size: 1.25rem;
+    font-family: var(--font-body); /* Inter */
+    font-size: 1.25rem; /* 20px */
     line-height: 0.75;
   }
 
   p {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
+    font-family: var(--font-body); /* Inter */
+    font-size: 0.875rem; /* 14px */
     line-height: 1.25;
   }
 }
