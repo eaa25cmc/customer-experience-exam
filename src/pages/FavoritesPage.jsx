@@ -88,7 +88,6 @@ export default function FavoritesPage() {
   const location = useLocation();
   const [favorites, setFavorites] = useState(initialFavorites);
   const [removedFavorites, setRemovedFavorites] = useState({});
-  const [openDropdown, setOpenDropdown] = useState(null);
   const [hoveredCard, setHoveredCard] = useState(null);
   const [selectedSizes, setSelectedSizes] = useState({});
   const [addedToCart, setAddedToCart] = useState({});
@@ -122,13 +121,8 @@ export default function FavoritesPage() {
     });
   };
 
-  const toggleDropdown = (id) => {
-    setOpenDropdown((prev) => (prev === id ? null : id));
-  };
-
   const selectSize = (id, size) => {
     setSelectedSizes((prev) => ({ ...prev, [id]: size }));
-    setOpenDropdown(null);
   };
 
   const addToCart = (product) => {
@@ -249,16 +243,16 @@ export default function FavoritesPage() {
               );
             }
 
-            const isSizeOpen =
-              openDropdown === product.id || hoveredCard === product.id;
+            const isSizeOpen = hoveredCard === product.id;
 
             return (
-              <article key={activeProduct.id} className="favorite-card">
-                <div
-                  className="favorite-image-wrap"
-                  onMouseEnter={() => setHoveredCard(activeProduct.id)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                >
+              <article
+                key={activeProduct.id}
+                className="favorite-card"
+                onMouseEnter={() => setHoveredCard(activeProduct.id)}
+                onMouseLeave={() => setHoveredCard(null)}
+              >
+                <div className="favorite-image-wrap">
                   <div className="favorite-top-bar">
                     <div className="favorite-left-icons">
                       {activeProduct.news && (
@@ -297,28 +291,22 @@ export default function FavoritesPage() {
                   <p>{activeProduct.price}</p>
                 </div>
 
-                <div
-                  className="favorite-size-wrap"
-                  onMouseEnter={() => setHoveredCard(activeProduct.id)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                >
-                  <button
-                    type="button"
-                    className="favorite-size-btn"
-                    onClick={() => toggleDropdown(activeProduct.id)}
-                  >
+                <div className="favorite-size-wrap">
+                  <p className="favorite-size-label">
                     {selectedSizes[activeProduct.id]
                       ? `Str. ${selectedSizes[activeProduct.id]}`
                       : "Vælg størrelse"}
-                    <span>{isSizeOpen ? "⌃" : "⌄"}</span>
-                  </button>
+                  </p>
                   {isSizeOpen && (
-                    <ul className="favorite-size-dropdown">
+                    <ul
+                      className="favorite-size-inline"
+                      aria-label="Vælg størrelse"
+                    >
                       {activeProduct.sizes.map((size) => (
                         <li key={size}>
                           <button
                             type="button"
-                            className={`favorite-size-option ${selectedSizes[activeProduct.id] === size ? "selected" : ""}`}
+                            className={`favorite-size-inline-option ${selectedSizes[activeProduct.id] === size ? "selected" : ""}`}
                             onClick={() => selectSize(activeProduct.id, size)}
                           >
                             {size}
