@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
@@ -20,13 +20,14 @@ import ProductGridBoys from "./components/ProductGridBoys";
 import CategoryPage from "./components/CategoryPage";
 import ShoppingbagPage from "./pages/ShoppingbagPage";
 
-
-
 export default function App() {
+  const location = useLocation();
+  const backgroundLocation = location.state?.backgroundLocation;
+
   return (
     <>
       <Navbar />
-      <Routes>
+      <Routes location={backgroundLocation || location}>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -46,6 +47,11 @@ export default function App() {
         <Route path="/sustainability" element={<SustainabilityPage />} />
         <Route path="/shoppingbag" element={<ShoppingbagPage />} />
       </Routes>
+      {backgroundLocation && (
+        <Routes>
+          <Route path="/shoppingbag" element={<ShoppingbagPage />} />
+        </Routes>
+      )}
       <Footer />
     </>
   );

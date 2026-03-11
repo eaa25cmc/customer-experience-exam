@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import "./FavoritesPage.css";
 import { addShoppingbagItem } from "../utils/shoppingbagStorage";
@@ -81,6 +82,8 @@ function ShareIcon() {
 }
 
 export default function FavoritesPage() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [favorites, setFavorites] = useState(initialFavorites);
   const [removedFavorites, setRemovedFavorites] = useState({});
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -141,6 +144,7 @@ export default function FavoritesPage() {
     });
 
     setAddedToCart((prev) => ({ ...prev, [product.id]: true }));
+    navigate("/shoppingbag", { state: { backgroundLocation: location } });
     setTimeout(() => {
       setAddedToCart((prev) => ({ ...prev, [product.id]: false }));
     }, 2000);
@@ -174,6 +178,8 @@ export default function FavoritesPage() {
     });
 
     if (addedIds.length === 0) return;
+
+    navigate("/shoppingbag", { state: { backgroundLocation: location } });
 
     if (Object.keys(inferredSizes).length > 0) {
       setSelectedSizes((prev) => ({ ...prev, ...inferredSizes }));
