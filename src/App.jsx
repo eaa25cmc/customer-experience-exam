@@ -37,7 +37,7 @@ export default function App() {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/inspiration" element={<InspirationPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="/detail" element={<DetailPage />} />
+        <Route path="/produkt/:id" element={<DetailPage />} />
         <Route path="/kategori/:category" element={<CategoryPage />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/sustainability" element={<SustainabilityPage />} />
