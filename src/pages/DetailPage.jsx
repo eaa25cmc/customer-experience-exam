@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
-import Breadcrumbs from "./Breadcrumbs";
+import Breadcrumbs from "../components/Breadcrumbs";
 import DetailImageBox from "../components/DetailImageBox";
 import DetailInfoBox from "../components/DetailInfoBox";
 import styles from "./DetailPage.module.css";
