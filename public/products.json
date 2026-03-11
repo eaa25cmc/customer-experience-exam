@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Mimmi Bluse",
-    "price": 399,
+    "price": 299.95,
     "over_kategori": "Overdele",
     "under_kategori": "Bluse",
     "brand": "Konges Slojd",
@@ -78,11 +78,10 @@
       }
     ]
   },
-
   {
     "id": 3,
     "title": "Basi Polo Knitted Blouse",
-    "price": 499,
+    "price": 499.95,
     "color": "beige",
     "color_filter": "beige",
     "over_kategori": "Overdele",
@@ -121,7 +120,7 @@
   {
     "id": 4,
     "title": "Savora Cardigan Knitted",
-    "price": 549,
+    "price": 499.95,
     "color": "antique_white",
     "color_filter": "white",
     "over_kategori": "Overdele",
@@ -160,7 +159,7 @@
   {
     "id": 5,
     "title": "Coco Shorts Woven Bloomers",
-    "price": 299,
+    "price": 349.95,
     "color": "rosa",
     "color_filter": "pink",
     "over_kategori": "Underdele",
@@ -199,6 +198,7 @@
   {
     "id": 6,
     "title": "Chim Chinos Woven Pants",
+    "price": 399.95,
     "color": "beech",
     "color_filter": "brown",
     "over_kategori": "Underdele",
@@ -237,6 +237,7 @@
   {
     "id": 7,
     "title": "Savora Pants Knitted",
+    "price": 399.95,
     "color": "antique_white",
     "color_filter": "white",
     "over_kategori": "Underdele",
@@ -272,10 +273,10 @@
       "150": false
     }
   },
-
   {
     "id": 8,
     "title": "Pacey Sun Hat",
+    "price": 249.95,
     "over_kategori": "Accessories",
     "under_kategori": "Hat",
     "brand": "Konges Slojd",
@@ -355,6 +356,7 @@
   {
     "id": 9,
     "title": "Fender Cap",
+    "price": 249.95,
     "color": "blue",
     "color_filter": "blue",
     "over_kategori": "Accessories",
@@ -394,6 +396,7 @@
   {
     "id": 10,
     "title": "Vicino Socks 2-Pack",
+    "price": 149.95,
     "over_kategori": "Accessories",
     "under_kategori": "Sokker",
     "brand": "Konges Slojd",
@@ -471,6 +474,7 @@
   {
     "id": 11,
     "title": "Sleepy Pyjamas",
+    "price": 399.95,
     "color": "lemon",
     "color_filter": ["beige", "yellow"],
     "over_kategori": "Undertøj & nattøj",
@@ -510,6 +514,7 @@
   {
     "id": 12,
     "title": "Skjorte i Bæk & Bølge",
+    "price": 299.95,
     "over_kategori": "Overdele",
     "under_kategori": "Skjorte",
     "brand": "Dilling",
@@ -589,6 +594,7 @@
   {
     "id": 13,
     "title": "Bluse i Merinould",
+    "price": 299.95,
     "over_kategori": "Overdele",
     "under_kategori": "Bluse",
     "brand": "Dilling",
@@ -668,6 +674,7 @@
   {
     "id": 15,
     "title": "Body med korte ærmer",
+    "price": 299.95,
     "over_kategori": "Overdele",
     "under_kategori": "Body",
     "brand": "Dilling",
@@ -747,6 +754,7 @@
   {
     "id": 17,
     "title": "Nederdel i Bæk & Bølge",
+    "price": 349.95,
     "over_kategori": "Underdel",
     "under_kategori": "Nederdel",
     "brand": "Dilling",
@@ -826,6 +834,7 @@
   {
     "id": 19,
     "title": "Bukser i Merinould",
+    "price": 399.95,
     "over_kategori": "Underdel",
     "under_kategori": "Bukser",
     "brand": "Dilling",
@@ -905,6 +914,7 @@
   {
     "id": 21,
     "title": "Bukser i Merinould",
+    "price": 399.95,
     "over_kategori": "Underdel",
     "under_kategori": "Bukser",
     "brand": "Dilling",
@@ -984,6 +994,7 @@
   {
     "id": 23,
     "title": "Pandebånd i Merinould",
+    "price": 199.95,
     "over_kategori": "Accessories",
     "under_kategori": "Hårpynt",
     "brand": "Dilling",
@@ -1063,6 +1074,7 @@
   {
     "id": 25,
     "title": "Elefanthue i Merinould",
+    "price": 249.95,
     "over_kategori": "Accessories",
     "under_kategori": "Hat",
     "brand": "Dilling",
@@ -1142,6 +1154,7 @@
   {
     "id": 27,
     "title": "Baby Strømper",
+    "price": 149.95,
     "over_kategori": "Accessories",
     "under_kategori": "Strømper",
     "brand": "Dilling",
@@ -1221,6 +1234,7 @@
   {
     "id": 29,
     "title": "Underbukser i Merinould",
+    "price": 199.95,
     "over_kategori": "Undertøj & nattøj",
     "under_kategori": "Underbukser",
     "brand": "Dilling",
@@ -1300,6 +1314,7 @@
   {
     "id": 31,
     "title": "Hipsters i Merinould",
+    "price": 199.95,
     "over_kategori": "Undertøj & nattøj",
     "under_kategori": "Underbukser",
     "brand": "Dilling",
@@ -1378,6 +1393,7 @@
   {
     "id": 33,
     "title": "Baby Underbukser i Uld/silke",
+    "price": 199.95,
     "color": "sand",
     "color_filter": "beige",
     "over_kategori": "Undertøj & nattøj",
@@ -1417,6 +1433,7 @@
   {
     "id": 34,
     "title": "Elefanthue",
+    "price": 249.95,
     "over_kategori": "Overtøj",
     "under_kategori": "Hue",
     "brand": "Dilling",
@@ -1496,6 +1513,7 @@
   {
     "id": 36,
     "title": "Luffer i Merinould Fleece",
+    "price": 249.95,
     "over_kategori": "Overtøj",
     "under_kategori": "Luffer",
     "brand": "Dilling",
@@ -1575,6 +1593,7 @@
   {
     "id": 38,
     "title": "Hjemmesko i Uld",
+    "price": 349.95,
     "color": "brown",
     "color_filter": "brown",
     "over_kategori": "Fodtøj",
@@ -1614,6 +1633,7 @@
   {
     "id": 39,
     "title": "Baby Futter i Merinould Fleece",
+    "price": 349.95,
     "over_kategori": "Fodtøj",
     "under_kategori": "Futter",
     "brand": "Dilling",
@@ -1693,6 +1713,7 @@
   {
     "id": 41,
     "title": "Lingon Long Sleeve Body",
+    "price": 299.95,
     "color": "yellow",
     "color_filter": "yellow",
     "over_kategori": "Overdele",
@@ -1731,6 +1752,7 @@
   {
     "id": 42,
     "title": "Strawberries Wing Dress",
+    "price": 349.95,
     "color": "offwhite",
     "color_filter": "white",
     "over_kategori": "Overdele",
@@ -1769,6 +1791,7 @@
   {
     "id": 43,
     "title": "Milky Way T-shirt",
+    "price": 199.95,
     "color": "black",
     "color_filter": "black",
     "over_kategori": "Overdele",
@@ -1807,6 +1830,7 @@
   {
     "id": 44,
     "title": "Travel Agency Baby Leggings",
+    "price": 249.95,
     "color": "grey",
     "color_filter": "grey",
     "over_kategori": "Underdele",
@@ -1845,6 +1869,7 @@
   {
     "id": 45,
     "title": "Stripe Leggings",
+    "price": 249.95,
     "color": "pink_blue",
     "color_filter": "blue",
     "over_kategori": "Underdele",
@@ -1883,6 +1908,7 @@
   {
     "id": 46,
     "title": "Monkey Print Leggings",
+    "price": 249.95,
     "color": "navy",
     "color_filter": "blue",
     "over_kategori": "Underdele",
@@ -1922,6 +1948,7 @@
   {
     "id": 47,
     "title": "UV Suit",
+    "price": 299.95,
     "over_kategori": "Accessories",
     "under_kategori": "Badedragt",
     "brand": "Mini Rodini",
@@ -2003,6 +2030,7 @@
   {
     "id": 49,
     "title": "Strawberries Swimsuit",
+    "price": 249.95,
     "color": "offwhite",
     "color_filter": "white",
     "over_kategori": "Accessories",
@@ -2041,6 +2069,7 @@
   {
     "id": 50,
     "title": "UV Swim Shirt",
+    "price": 249.95,
     "color": "blue",
     "color_filter": "blue",
     "over_kategori": "Accessories",
@@ -2080,6 +2109,7 @@
   {
     "id": 51,
     "title": "Baby Bear Hat",
+    "price": 199.95,
     "over_kategori": "Overtøj",
     "under_kategori": "Hue",
     "brand": "Mini Rodini",
@@ -2159,6 +2189,7 @@
   {
     "id": 52,
     "title": "Daisy Heavy Puffer Jacket",
+    "price": 999.95,
     "color": "green",
     "color_filter": "green",
     "over_kategori": "Overtøj",
@@ -2198,6 +2229,7 @@
   {
     "id": 53,
     "title": "Heavy Puffer Jacket",
+    "price": 899.95,
     "color": "black",
     "color_filter": "black",
     "over_kategori": "Overtøj",
@@ -2237,6 +2269,7 @@
   {
     "id": 54,
     "title": "Belito Rib Body",
+    "price": 299.95,
     "over_kategori": "Overdele",
     "under_kategori": "Body",
     "brand": "MarMar Copenhagen",
@@ -2316,6 +2349,7 @@
   {
     "id": 56,
     "title": "Danal Denim Dress",
+    "price": 499.95,
     "color": "blue",
     "color_filter": "blue",
     "over_kategori": "Overdele",
@@ -2354,6 +2388,7 @@
   {
     "id": 57,
     "title": "Colour Block T-Shirt",
+    "price": 249.95,
     "color": "hvid",
     "color_filter": "white",
     "over_kategori": "Overdele",
@@ -2392,6 +2427,7 @@
   {
     "id": 58,
     "title": "Basic T-Shirt",
+    "price": 199.95,
     "color": "blue",
     "color_filter": "blue",
     "over_kategori": "Overdele",
@@ -2411,6 +2447,10 @@
       "/src/image/58-3.png",
       "/src/image/58-4.png"
     ],
+    "size": {
+      "56": true,
+      "62": true,
+      "68": false,
       "74": true,
       "80": false,
       "86": true,
@@ -2426,6 +2466,7 @@
   {
     "id": 59,
     "title": "Gentle Rib Tights",
+    "price": 199.95,
     "color": "white",
     "color_filter": "white",
     "over_kategori": "Underdele",
@@ -2464,6 +2505,7 @@
   {
     "id": 60,
     "title": "Glitter Tights",
+    "price": 149.95,
     "color": "gold",
     "color_filter": "yellow",
     "over_kategori": "Underdele",
@@ -2502,6 +2544,7 @@
   {
     "id": 61,
     "title": "Azusa Socks – Colourblock",
+    "price": 99.95,
     "color": "multicolor block",
     "color_filter": "multicolor",
     "over_kategori": "Underdele",
@@ -2517,13 +2560,25 @@
     "rating": 4.5,
     "images": ["/src/image/61-1.png", "/src/image/61-2.png"],
     "size": {
-      "31-34": true,
-      "35-38": true
+      "56": true,
+      "62": true,
+      "68": true,
+      "74": true,
+      "80": false,
+      "86": false,
+      "92": true,
+      "100": false,
+      "110": true,
+      "120": true,
+      "130": false,
+      "140": true,
+      "150": false
     }
   },
   {
     "id": 62,
     "title": "Swinnie Bathing Suit",
+    "price": 249.95,
     "color": "blue",
     "color_filter": "blue",
     "over_kategori": "Accessories",
@@ -2563,6 +2618,7 @@
   {
     "id": 63,
     "title": "Heart Print Baby Suit",
+    "price": 249.95,
     "color": "red",
     "color_filter": "red",
     "over_kategori": "Accessories",
@@ -2597,6 +2653,7 @@
   {
     "id": 64,
     "title": "Swira Bikini",
+    "price": 299.95,
     "over_kategori": "Accessories",
     "under_kategori": "Bikini",
     "brand": "MarMar Copenhagen",
@@ -2676,6 +2733,7 @@
   {
     "id": 65,
     "title": "Swiggo Swim Shorts",
+    "price": 199.95,
     "over_kategori": "Accessories",
     "under_kategori": "Badebukser",
     "brand": "MarMar Copenhagen",
@@ -2755,6 +2813,7 @@
   {
     "id": 68,
     "title": "Ruka Baby Suit",
+    "price": 299.95,
     "color": "starry night",
     "color_filter": "blue",
     "over_kategori": "Undertøj & nattøj",
@@ -2789,6 +2848,7 @@
   {
     "id": 70,
     "title": "Underwear Set",
+    "price": 149.95,
     "over_kategori": "Undertøj & nattøj",
     "under_kategori": "Undertøj",
     "brand": "MarMar Copenhagen",
@@ -2868,6 +2928,7 @@
   {
     "id": 72,
     "title": "Pyjamas Set",
+    "price": 299.95,
     "over_kategori": "Undertøj & nattøj",
     "under_kategori": "Nattøj",
     "brand": "MarMar Copenhagen",
@@ -2935,6 +2996,7 @@
   {
     "id": 74,
     "title": "Langærmet Strikket Top",
+    "price": 299.95,
     "color": "beige",
     "color_filter": "beige",
     "over_kategori": "Overdele",
@@ -2973,6 +3035,7 @@
   {
     "id": 75,
     "title": "Økologisk Bomuld Top",
+    "price": 149.95,
     "color": "blue",
     "color_filter": "blue",
     "over_kategori": "Overdele",
@@ -3011,6 +3074,7 @@
   {
     "id": 76,
     "title": "Striktrøje",
+    "price": 399.95,
     "color": "brown",
     "color_filter": "brown",
     "over_kategori": "Overdele",
@@ -3049,6 +3113,7 @@
   {
     "id": 77,
     "title": "Denim Overalls",
+    "price": 499.95,
     "color": "blue",
     "color_filter": "blue",
     "over_kategori": "Underdel",
@@ -3087,6 +3152,7 @@
   {
     "id": 78,
     "title": "Loose Fit Bukser",
+    "price": 249.95,
     "color": "white",
     "color_filter": ["white", "grey"],
     "over_kategori": "Underdel",
@@ -3125,6 +3191,7 @@
   {
     "id": 79,
     "title": "Loose Fit Jeans",
+    "price": 299.95,
     "color": "blue",
     "color_filter": "blue",
     "over_kategori": "Underdel",
@@ -3164,6 +3231,7 @@
   {
     "id": 80,
     "title": "Hair Bow Set",
+    "price": 149.95,
     "color": "multicolor",
     "color_filter": ["multicolor", "beige"],
     "over_kategori": "Accessories",
@@ -3202,6 +3270,7 @@
   {
     "id": 81,
     "title": "Sixpence Hat",
+    "price": 199.95,
     "color": "olive",
     "color_filter": "green",
     "over_kategori": "Accessories",
@@ -3241,6 +3310,7 @@
   {
     "id": 82,
     "title": "2-Pack Baby Strømper",
+    "price": 99.95,
     "over_kategori": "Accessories",
     "under_kategori": "Strømper",
     "brand": "Lil' Atelier",
@@ -3265,9 +3335,19 @@
           "/src/image/82-4.png"
         ],
         "size": {
-          "50/56": false,
-          "62/68": true,
-          "74/80": true
+          "56": true,
+          "62": true,
+          "68": false,
+          "74": true,
+          "80": true,
+          "86": true,
+          "92": true,
+          "100": false,
+          "110": true,
+          "120": true,
+          "130": true,
+          "140": false,
+          "150": false
         }
       },
       {
@@ -3288,9 +3368,21 @@
           "/src/image/product-pics/2-pak-socks-hvid-3.png"
         ],
         "size": {
-          "50/56": false,
-          "62/68": true,
-          "74/80": true
+          "size": {
+            "56": true,
+            "62": true,
+            "68": false,
+            "74": true,
+            "80": true,
+            "86": false,
+            "92": true,
+            "100": false,
+            "110": false,
+            "120": true,
+            "130": false,
+            "140": true,
+            "150": true
+          }
         }
       }
     ]
@@ -3298,6 +3390,7 @@
   {
     "id": 83,
     "title": "Pyjamas Set",
+    "price": 199.95,
     "color": "brown",
     "color_filter": "brown",
     "over_kategori": "Undertøj & nattøj",
@@ -3336,6 +3429,7 @@
   {
     "id": 84,
     "title": "Printet Nattdragt",
+    "price": 249.95,
     "color": "beige",
     "color_filter": "beige",
     "over_kategori": "Undertøj & nattøj",
@@ -3375,6 +3469,7 @@
   {
     "id": 85,
     "title": "Flyverdragt",
+    "price": 799.95,
     "over_kategori": "Overtøj",
     "under_kategori": "Flyverdragt",
     "brand": "Lil' Atelier",
@@ -3522,6 +3617,7 @@
   {
     "id": 87,
     "title": "Teddy Heldragt",
+    "price": 399.95,
     "color": "brown",
     "color_filter": "brown",
     "over_kategori": "Overtøj",
@@ -3561,6 +3657,7 @@
   {
     "id": 89,
     "title": "Printet Nattdragt",
+    "price": 299.95,
     "over_kategori": "Undertøj & nattøj",
     "under_kategori": "Heldragt",
     "brand": "Lil' Atelier",
@@ -3639,6 +3736,7 @@
   {
     "id": 90,
     "title": "Body",
+    "price": 249.95,
     "over_kategori": "Overdele",
     "under_kategori": "Body",
     "brand": "Wheat",
@@ -3718,6 +3816,7 @@
   {
     "id": 92,
     "title": "Kjole",
+    "price": 399.95,
     "over_kategori": "Overdele",
     "under_kategori": "Kjole",
     "brand": "Wheat",
@@ -3796,6 +3895,7 @@
   {
     "id": 94,
     "title": "T-shirt",
+    "price": 299.95,
     "color": "blue",
     "color_filter": "blue",
     "over_kategori": "Overdele",
@@ -3835,6 +3935,7 @@
   {
     "id": 95,
     "title": "Jules Leggings",
+    "price": 249.95,
     "over_kategori": "Underdele",
     "under_kategori": "Leggings",
     "brand": "Wheat",
@@ -3913,6 +4014,7 @@
   {
     "id": 96,
     "title": "Leggings",
+    "price": 249.95,
     "over_kategori": "Underdele",
     "under_kategori": "Leggings",
     "brand": "Wheat",
@@ -3992,6 +4094,7 @@
   {
     "id": 98,
     "title": "2-Pack Jamie Socks",
+    "price": 99.95,
     "over_kategori": "Underdele",
     "under_kategori": "Strømper",
     "brand": "Wheat",
@@ -4071,6 +4174,7 @@
   {
     "id": 100,
     "title": "Badeheldragt",
+    "price": 399.95,
     "over_kategori": "Accessories",
     "under_kategori": "Badedragt",
     "brand": "Wheat",
@@ -4150,6 +4254,7 @@
   {
     "id": 102,
     "title": "Badedragt",
+    "price": 349.95,
     "color": "white_navy",
     "color_filter": "white",
     "over_kategori": "Accessories",
@@ -4189,6 +4294,7 @@
   {
     "id": 103,
     "title": "Bade Shorts",
+    "price": 299.95,
     "over_kategori": "Accessories",
     "under_kategori": "Badebukser",
     "brand": "Wheat",
@@ -4266,6 +4372,7 @@
   {
     "id": 104,
     "title": "Undertøj",
+    "price": 199.95,
     "color": "blue",
     "color_filter": "blue",
     "over_kategori": "Undertøj & nattøj",
@@ -4304,6 +4411,7 @@
   {
     "id": 105,
     "title": "Lucia Kjole",
+    "price": 399.95,
     "color": "white",
     "color_filter": "white",
     "over_kategori": "Undertøj & nattøj",
@@ -4343,6 +4451,7 @@
   {
     "id": 106,
     "title": "Regn Luffer",
+    "price": 249.95,
     "over_kategori": "Overtøj",
     "under_kategori": "Luffer",
     "brand": "Wheat",
@@ -4422,6 +4531,7 @@
   {
     "id": 108,
     "title": "Termojakke",
+    "price": 599.95,
     "over_kategori": "Overtøj",
     "under_kategori": "Jakke",
     "brand": "Wheat",
@@ -4501,6 +4611,7 @@
   {
     "id": 110,
     "title": "Termojakke",
+    "price": 599.95,
     "over_kategori": "Overtøj",
     "under_kategori": "Jakke",
     "brand": "Wheat",
@@ -4580,6 +4691,7 @@
   {
     "id": 112,
     "title": "Prewalker Sneakers",
+    "price": 399.95,
     "over_kategori": "Fodtøj",
     "under_kategori": "Sko",
     "brand": "Wheat",
@@ -4659,6 +4771,7 @@
   {
     "id": 114,
     "title": "Gummistøvler",
+    "price": 399.95,
     "over_kategori": "Fodtøj",
     "under_kategori": "Gummistøvler",
     "brand": "Wheat",
@@ -4738,6 +4851,7 @@
   {
     "id": 116,
     "title": "TEX Baby Prewalkers",
+    "price": 499.95,
     "over_kategori": "Fodtøj",
     "under_kategori": "Støvler",
     "brand": "Wheat",
@@ -4817,6 +4931,7 @@
   {
     "id": 118,
     "title": "Navy Stripe Wrap Body",
+    "price": 299.95,
     "color": "blue",
     "color_filter": "blue",
     "over_kategori": "Overdele",
@@ -4855,6 +4970,7 @@
   {
     "id": 119,
     "title": "Coral Stripe Wrap Body",
+    "price": 299.95,
     "color": "orange",
     "color_filter": "orange",
     "over_kategori": "Overdele",
@@ -4894,6 +5010,7 @@
   {
     "id": 135,
     "title": "Gio nattøjssæt",
+    "price": 299.95,
     "color": "antique stripe",
     "color_filter": ["multicolor", "white"],
     "over_kategori": "Undertøj og nattøj",
@@ -4933,6 +5050,7 @@
   {
     "id": 136,
     "title": "Basic Heldragt",
+    "price": 249.95,
     "over_kategori": "Undertøj og nattøj",
     "under_kategori": "Nattøj",
     "brand": "Konges Slojd",
@@ -5012,6 +5130,7 @@
   {
     "id": 138,
     "title": "Award Flyverdragt",
+    "price": 999.95,
     "over_kategori": "Overtøj",
     "under_kategori": "Flyverdragt",
     "brand": "Konges Slojd",
@@ -5091,6 +5210,7 @@
   {
     "id": 140,
     "title": "juno Bomberjakke",
+    "price": 899.95,
     "color": "blue",
     "color_filter": "blue",
     "over_kategori": "Overtøj",
@@ -5130,6 +5250,7 @@
   {
     "id": 142,
     "title": "Rainy Palme Regnsæt med for",
+    "price": 699.95,
     "over_kategori": "Overtøj",
     "under_kategori": "Regntøj",
     "brand": "Konges Sløjd",
@@ -5208,6 +5329,7 @@
   {
     "id": 145,
     "title": "saga futter",
+    "price": 299.95,
     "color": "grey",
     "color_filter": "grey",
     "over_kategori": "Sko",
@@ -5246,6 +5368,7 @@
   {
     "id": 146,
     "title": "Saga køredragt",
+    "price": 799.95,
     "color": "brown",
     "color_filter": "brown",
     "over_kategori": "Overtøj",
