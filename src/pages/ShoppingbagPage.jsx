@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ShoppingbagPage.css";
 
-
-
 const initialCartItems = [
   {
     id: 1,
@@ -42,6 +40,10 @@ export default function ShoppingbagPage() {
   const [cartItems, setCartItems] = useState(initialCartItems);
   const navigate = useNavigate();
 
+  const closeOverlay = () => {
+    navigate(-1);
+  };
+
   const updateQuantity = (id, delta) => {
     setCartItems((prev) =>
       prev
@@ -65,16 +67,24 @@ export default function ShoppingbagPage() {
   const formatPrice = (price) => price.toFixed(2).replace(".", ",") + " DKK";
 
   return (
-    <div className="shoppingbag-page">
-      <h1 className="shoppingbag-page-title">Kurv</h1>
-
+    <div
+      className="shoppingbag-page"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Kurv"
+    >
+      <button
+        className="shoppingbag-backdrop"
+        onClick={closeOverlay}
+        aria-label="Luk kurv"
+      />
       <div className="shoppingbag-card">
         {/* Header */}
         <div className="shoppingbag-card-header">
-          <span className="shoppingbag-card-title">Kurv ({totalCount})</span>
+          <h1 className="shoppingbag-page-title">Kurv ({totalCount})</h1>
           <button
             className="shoppingbag-close-btn"
-            onClick={() => navigate(-1)}
+            onClick={closeOverlay}
             aria-label="Luk kurv"
           >
             ✕
