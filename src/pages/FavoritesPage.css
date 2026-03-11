@@ -202,69 +202,46 @@
 }
 
 .favorite-size-wrap {
-  position: relative;
-  margin: 0 0.85rem;
+  margin: 0.45rem 0.85rem 0.2rem;
+  border-bottom: 1px solid rgba(74, 47, 44, 0.22);
+  padding-bottom: 0.45rem;
 }
 
-.favorite-size-btn {
-  margin-top: 0.6rem;
-  width: 100%;
-  border: 0;
-  background: transparent;
-  border-bottom: 1px solid rgba(74, 47, 44, 0.4);
-  color: var(--brun);
-  padding: 0 0 0.45rem;
+.favorite-size-label {
+  margin: 0 0 0.35rem;
   font-family: var(--font-display);
-  font-size: clamp(1.05rem, 1.45vw, 1.4rem);
-  font-weight: 400;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
+  font-size: 1.05rem;
+  color: var(--brun);
 }
 
-.favorite-size-btn span {
-  font-size: clamp(1.35rem, 1.9vw, 1.85rem);
-  line-height: 0.8;
-  transform: translateY(-2px);
-}
-
-.favorite-size-dropdown {
-  position: absolute;
-  bottom: calc(100% + 0.9rem);
-  top: auto;
-  left: 0;
-  right: 0;
-  background: rgba(246, 243, 238, 0.94);
-  border: 1px solid rgba(74, 47, 44, 0.3);
-  border-radius: 6px;
+.favorite-size-inline {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   list-style: none;
   margin: 0;
-  padding: 0.3rem 0;
-  z-index: 10;
-  box-shadow: 0 4px 12px rgba(74, 47, 44, 0.1);
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
-  padding: 0.5rem;
-  backdrop-filter: blur(1px);
+  gap: 0.2rem 0.5rem;
+  padding: 0;
 }
 
-.favorite-size-option {
-  border: 1px solid rgba(74, 47, 44, 0.3);
+.favorite-size-inline-option {
+  border: 0;
   background: transparent;
   color: var(--brun);
-  border-radius: 4px;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.85rem;
+  border-radius: 0;
+  padding: 0.1rem 0.18rem;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  line-height: 1.2;
   cursor: pointer;
 }
 
-.favorite-size-option:hover,
-.favorite-size-option.selected {
-  background: var(--brun);
-  color: var(--hvid);
-  border-color: var(--brun);
+.favorite-size-inline-option:hover,
+.favorite-size-inline-option.selected {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .favorite-cart-btn {
