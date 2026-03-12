@@ -1,5 +1,6 @@
 .anmeldelser-section {
   margin: 0 4rem;
+  margin-bottom: 3rem;
 }
 
 .anmeldelser-grid {
@@ -63,16 +64,23 @@
   gap: 1rem;
 }
 
-.trustpilot-link h4 {
+.trustpilot-link p {
   margin: 0;
   text-decoration: underline;
-  font-family: var(--font-body);
-  font-size: 1.25rem;
-  line-height: 1.25;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 .trustpilot-link img {
   width: 2rem;
   height: 2rem;
   object-fit: contain;
+}
+
+.trustpilot-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5rem;
 }

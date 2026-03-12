@@ -98,9 +98,11 @@ export default function AnmeldelserForside() {
         </div>
       </div>
       <div className="trustpilot-link">
-        <h4>Se alle 15.764 anmeldelser på</h4>
+        <p>Vis alle 15.764 anmeldelser</p>
+      </div>
+      <div className="trustpilot-logo">
         <img src={trustpilotstjerne} alt="Trustpilot Stjerner" />
-        <h4>Trustpilot</h4>
+        <p>Trustpilot</p>
       </div>
     </div>
   );

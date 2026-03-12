@@ -1,19 +1,23 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 6rem;
   margin-top: -0.5rem;
 }
 
 /* Hero sektion*/
 .hero {
   position: relative;
+  margin-top: -4rem; /* Bruges til at trække hero-sektionen op så banner overlapper */
+  /* fylder hele viewport-bredden uden side-margin */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   height: 100vh;
-  display: flex;
   overflow: hidden;
 
+  display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: -10rem;
 }
 
 /* billed-container */
@@ -26,34 +30,37 @@ main {
 /* selve billedet */
 .hero-image {
   width: 100%;
-  height: 100%;
+  height: 83%;
   object-fit: cover;
+  display: block;
 }
 
 .title {
   position: relative;
   z-index: 2;
   margin-bottom: 18rem;
+  line-height: 1.25;
+  text-align: center; /* centrerer teksten */
 }
 
 .hero-cta {
   position: absolute;
-  bottom: 25rem;
+  bottom: 24rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  width: 22rem;
+  width: 21rem;
   height: auto;
 }
 
 .hero-dots {
   position: absolute;
-  bottom: 10rem;
+  bottom: 12rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
   display: flex;
-  gap: 2rem;
+  gap: 3.5rem;
 }
 
 .dot {
@@ -182,10 +189,4 @@ main {
   height: 4.5rem;
   object-fit: contain;
   margin-bottom: 0.5rem;
-}
-
-/*Anmeldelser sektion*/
-.anmeldelser-sektion {
-  display: flex;
-  justify-content: center;
 }
