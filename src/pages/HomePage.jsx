@@ -5,29 +5,30 @@ import GenderSection from "../components/GenderSection";
 import Badges from "../components/Badges";
 import ForsideInspiration from "../components/ForsideInspiration";
 import Infoikoner from "../components/infoikoner";
+import AnmeldelserForside from "../components/AnmeldelserForside";
 
 export default function HomePage() {
   return (
     <>
-      <header></header>
       <main>
         {/* Hero Section */}
         <section className="hero">
           <HeroPictures />
           <p className="title">
             <span style={{ color: "var(--blå)" }}> F</span>
-            <span style={{ color: "var(--lyserød)" }}> o</span>
-            <span style={{ color: "var(--orange)" }}> r</span>
-            <span style={{ color: "var(--gul)" }}> å</span>
-            <span style={{ color: "var(--grøn)" }}> r</span>
-            <span style={{ color: "var(--rød)" }}> s</span>
-            <span style={{ color: "var(--gul)" }}> n</span>
-            <span style={{ color: "var(--blå)" }}> y</span>
-            <span style={{ color: "var(--rød)" }}> h</span>
-            <span style={{ color: "var(--grøn)" }}> e</span>
-            <span style={{ color: "var(--lyserød)" }}> d</span>
-            <span style={{ color: "var(--orange)" }}> e</span>
-            <span style={{ color: "var(--blå)" }}> r</span>
+            <span style={{ color: "var(--lyserød)" }}> O</span>
+            <span style={{ color: "var(--orange)" }}> R</span>
+            <span style={{ color: "var(--gul)" }}> Å</span>
+            <span style={{ color: "var(--grøn)" }}> R</span>
+            <span style={{ color: "var(--rød)" }}> S</span>
+            <br />
+            <span style={{ color: "var(--gul)" }}> N</span>
+            <span style={{ color: "var(--blå)" }}> Y</span>
+            <span style={{ color: "var(--rød)" }}> H</span>
+            <span style={{ color: "var(--grøn)" }}> E</span>
+            <span style={{ color: "var(--lyserød)" }}> D</span>
+            <span style={{ color: "var(--orange)" }}> E</span>
+            <span style={{ color: "var(--blå)" }}> R</span>
           </p>
         </section>
 
@@ -54,6 +55,10 @@ export default function HomePage() {
         {/* inspiration Section */}
         <section className="infoikonersektion">
           <Infoikoner />
+        </section>
+        {/* Anmeldelser Section */}
+        <section className="anmeldelser-sektion">
+          <AnmeldelserForside />
         </section>
       </main>
     </>
