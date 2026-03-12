@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./BrandKarrusel.css";
 
 import img1 from "../image/Dilling-3.png";
@@ -17,13 +18,23 @@ import img14 from "../image/wheatcta.svg";
 
 export default function Brandkarrusel() {
   const brands = [
-    { name: "Dilling", image: img1, cta: img8 },
-    { name: "Konges Sløjd", image: img2, cta: img9 },
-    { name: "Lil' Atelier", image: img3, cta: img10 },
-    { name: "MarMar Copenhagen", image: img4, cta: img11 },
-    { name: "Mini Rodini", image: img5, cta: img12 },
-    { name: "Serendipity Organics", image: img6, cta: img13 },
-    { name: "Wheat", image: img7, cta: img14 },
+    { name: "Dilling", image: img1, cta: img8, slug: "dilling" },
+    { name: "Konges Sløjd", image: img2, cta: img9, slug: "konges-slojd" },
+    { name: "Lil' Atelier", image: img3, cta: img10, slug: "lil-atelier" },
+    {
+      name: "MarMar Copenhagen",
+      image: img4,
+      cta: img11,
+      slug: "mar-mar-copenhagen",
+    },
+    { name: "Mini Rodini", image: img5, cta: img12, slug: "mini-rodini" },
+    {
+      name: "Serendipity Organics",
+      image: img6,
+      cta: img13,
+      slug: "serendipity-organics",
+    },
+    { name: "Wheat", image: img7, cta: img14, slug: "wheat" },
   ];
 
   return (
@@ -34,7 +45,9 @@ export default function Brandkarrusel() {
         {brands.map((brand) => (
           <div className="brand-card" key={brand.name}>
             <img src={brand.image} alt={brand.name} className="brand-image" />
-            <img src={brand.cta} alt={brand.name} className="brand-cta" />
+            <Link to={`/brand/${brand.slug}`} className="brand-link">
+              <img src={brand.cta} alt={brand.name} className="brand-cta" />
+            </Link>
           </div>
         ))}
       </div>

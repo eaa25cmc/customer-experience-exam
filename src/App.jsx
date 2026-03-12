@@ -7,7 +7,6 @@ import ContactPage from "./pages/ContactPage";
 import ServicesPage from "./pages/ServicesPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import SalePage from "./pages/SalePage";
-import ProductsPage from "./pages/ProductsPage";
 import PaymentPage from "./pages/PaymentPage";
 import NewsPage from "./pages/NewsPage";
 import InspirationPage from "./pages/InspirationPage";
@@ -19,6 +18,7 @@ import ProductGridGirls from "./components/ProductGridGirls";
 import ProductGridBoys from "./components/ProductGridBoys";
 import CategoryPage from "./components/CategoryPage";
 import ShoppingbagPage from "./pages/ShoppingbagPage";
+import BrandPage from "./pages/BrandPage";
 
 export default function App() {
   const location = useLocation();
@@ -33,7 +33,6 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/sale" element={<SalePage />} />
-        <Route path="/products" element={<ProductsPage />} />
         <Route path="/baby" element={<ProductGridBaby />} />
         <Route path="/pige" element={<ProductGridGirls />} />
         <Route path="/dreng" element={<ProductGridBoys />} />
@@ -51,6 +50,7 @@ export default function App() {
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/sustainability" element={<SustainabilityPage />} />
         <Route path="/shoppingbag" element={<ShoppingbagPage />} />
+        <Route path="/brand/:brandSlug" element={<BrandPage />} />
       </Routes>
       {backgroundLocation && (
         <Routes>

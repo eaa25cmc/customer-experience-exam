@@ -102,7 +102,7 @@ export default function ProductGridGirls() {
 
   return (
     <div>
-      <Breadcrumbs />
+      <Breadcrumbs items={[{ label: "Pige" }]} />
       <h1>Piger</h1>
 
       <FilterOverlay
