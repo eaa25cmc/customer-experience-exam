@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import baby from "../image/baby.png";
 import pige from "../image/Pige3.png";
 import dreng from "../image/Dreng-3.png";
@@ -10,17 +11,23 @@ export default function GenderSection() {
     <div className="gender-grid">
       <div className="gender-card">
         <img src={baby} alt="Baby" />
-        <img src={babystr} alt="Babystr" />
+        <Link to="/baby" className="gender-link">
+          <img src={babystr} alt="Babystr" />
+        </Link>
       </div>
 
       <div className="gender-card">
         <img src={pige} alt="Pige" />
-        <img src={pigestr} alt="Pigestr" />
+        <Link to="/pige" className="gender-link">
+          <img src={pigestr} alt="Pigestr" />
+        </Link>
       </div>
 
       <div className="gender-card">
         <img src={dreng} alt="Dreng" />
-        <img src={drengstr} alt="Drengstr" />
+        <Link to="/dreng" className="gender-link">
+          <img src={drengstr} alt="Drengstr" />
+        </Link>
       </div>
     </div>
   );

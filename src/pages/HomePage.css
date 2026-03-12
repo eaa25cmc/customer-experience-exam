@@ -88,17 +88,23 @@ main {
   width: 25rem;
 }
 
-.gender-card img:first-child {
+.gender-card > img:first-child {
   width: 100%;
   height: 41rem;
   object-fit: cover;
 }
 
-.gender-card img:last-child {
+/* linket (placerer overlay i midten) */
+.gender-card a img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* overlay-billedet */
+.gender-card a img {
+  display: block;
 }
 
 /* badges sektion*/
