@@ -1,26 +1,93 @@
+import { useEffect, useState } from "react";
 import styles from "./DetailImageBox.module.css";
+import HeartIcon from "./HeartIcon";
 import nyhedIcon from "../image/nyhed-ikon.svg";
 import saleIcon from "../image/Sale-ikon.svg";
 
-export default function DetailImageBox({ product }) {
-  const images = product.images || [];
-  const mainImage = images[0];
+export default function DetailImageBox({ product, className }) {
+  if (!product) return null;
+
+  const [validImages, setValidImages] = useState([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const images =
+      product.images && product.images.length > 0
+        ? product.images
+        : product.variants &&
+            product.variants.length > 0 &&
+            product.variants[0].images &&
+            product.variants[0].images.length > 0
+          ? product.variants[0].images
+          : ["/images/placeholder.jpg"];
+
+    setValidImages(images.filter((src) => src && src.trim() !== ""));
+    setActiveIndex(0);
+  }, [product]);
+
+  function handleImageError(src) {
+    // Du kan fx sætte et fallback billede eller logge fejl
+    console.warn("Billedet kunne ikke indlæses:", src);
+  }
 
   return (
-    <div className={styles.imageBox}>
-      {/* Sale badge */}
-      {product.sale && (
-        <img src={saleIcon} alt="Sale" className={styles.saleBadge} />
-      )}
-      {/* Nyhed badge */}
-      {product.news && (
-        <img src={nyhedIcon} alt="Nyhed" className={styles.newsBadge} />
-      )}
-      <button className={styles.favoriteBtn} aria-label="Favorit">
-        <span>♡</span>
-      </button>
-      <img src={mainImage} alt={product.title} className={styles.mainImage} />
-      {/* ...resten af komponenten... */}
+    <div className={className}>
+      <section className={styles.imageWrapper}>
+        {/* Vis det aktive billede */}
+        {validImages[activeIndex] && (
+          <img
+            src={validImages[activeIndex]}
+            alt={product.title}
+            className={styles.image}
+            onError={() => handleImageError(validImages[activeIndex])}
+          />
+        )}
+        {/* Topbar med nyhed/sale og favorit */}
+        <div className={styles.topBar}>
+          <div className={styles.leftIcons}>
+            {product.news && (
+              <img src={nyhedIcon} alt="Nyhed" className={styles.nyhedBoks} />
+            )}
+            {product.sale && (
+              <img src={saleIcon} alt="Sale" className={styles.saleBoks} />
+            )}
+          </div>
+          {/* Dot-navigation til billeder */}
+          <div className={styles.heartWrapper}>
+            <HeartIcon className={styles.heartIcon} />
+          </div>
+        </div>
+        <div className={styles.dotWrapper}>
+          {validImages.map((_, idx) => (
+            <span
+              key={idx}
+              className={
+                idx === activeIndex
+                  ? styles.dot + " " + styles.activeDot
+                  : styles.dot
+              }
+              onClick={() => setActiveIndex(idx)}
+            />
+          ))}
+        </div>
+        {/* Billedrække med thumbnails */}
+        <div className={styles.imageRow}>
+          {validImages.map((src, idx) => (
+            <img
+              key={idx}
+              src={src}
+              alt=""
+              className={styles.variantImage}
+              onClick={() => setActiveIndex(idx)}
+              onError={() => handleImageError(src)}
+            />
+          ))}
+          {/* Placeholder hvis der er færre end 4 billeder */}
+          {Array.from({ length: 4 - validImages.length }).map((_, idx) => (
+            <div key={`ph-${idx}`} className={styles.variantImage} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
