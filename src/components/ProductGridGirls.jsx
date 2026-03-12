@@ -31,9 +31,10 @@ export default function ProductGridGirls() {
       // Flad listen ud, så hver variant bliver et produktkort
       const allProducts = data.flatMap((product) => {
         if (product.variants && product.variants.length > 0) {
-          return product.variants.map((variant, idx) => ({
+          return product.variants.map((variant) => ({
             ...variant,
-            id: product.id + "-" + idx,
+            id: product.id + "-" + variant.variantId, // fx "142-v1"
+            parentId: product.id,
             mainTitle: product.title,
             price: product.price,
             gender: variant.gender || product.gender,

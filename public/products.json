@@ -567,10 +567,10 @@
         "pasform": "Regular",
         "rating": 4.5,
         "images": [
-          "/product-pics/12-1.png",
-          "/product-pics/12-2.png",
-          "/product-pics/12-3.png",
-          "/product-pics/12-4.png"
+          "/product-pics/11-1.png",
+          "/product-pics/11-2.png",
+          "/product-pics/11-3.png",
+          "/product-pics/11-4.png"
         ],
         "size": {
           "56": false,
@@ -4939,8 +4939,8 @@
     "id": 119,
     "title": "Coral Stripe Wrap Body",
     "price": 299.95,
-    "color": "orange",
-    "color_filter": "orange",
+    "color": "coral",
+    "color_filter": "coral",
     "over_kategori": "Overdele",
     "under_kategori": "Body",
     "brand": "Serendipity Organics",
@@ -5532,7 +5532,7 @@
     "news": true,
     "available": true,
     "description": "Babysstøvler lavet i 100 procent uldfleece med ribstrikkede elastiske manchetter og en blød sål.",
-    "materiale": "MERINO WOOL FLEECE",
+    "materiale": "Merinould fleece",
     "pasform": "Regular",
     "rating": 4.5,
     "images": [
