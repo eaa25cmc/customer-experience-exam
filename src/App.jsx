@@ -55,6 +55,7 @@ export default function App() {
       {backgroundLocation && (
         <Routes>
           <Route path="/shoppingbag" element={<ShoppingbagPage />} />
+          <Route path="/baby" element={<ProductGridBaby />} />
         </Routes>
       )}
       <Footer />
