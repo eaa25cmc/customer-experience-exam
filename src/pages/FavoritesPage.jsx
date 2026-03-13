@@ -6,7 +6,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import "./FavoritesPage.css";
 import { addShoppingbagItem } from "../utils/shoppingbagStorage";
 import nyhedIcon from "../image/nyhed-ikon.svg";
-import saleIcon from "../image/Sale-ikon.svg";
+import saleIcon from "../image/sale-ikon.svg";
 import HeartIcon from "../components/HeartIcon";
 
 const initialFavorites = [
