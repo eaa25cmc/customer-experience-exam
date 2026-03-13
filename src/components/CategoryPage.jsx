@@ -64,7 +64,6 @@ const subMap = {
 export default function CategoryPage() {
   const { gender, mainCategory, subcategory } = useParams();
   const [products, setProducts] = useState([]);
-  const [selectedSub, setSelectedSub] = useState("all");
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [activeFilters, setActiveFilters] = useState(createEmptyFilters());
   const [draftFilters, setDraftFilters] = useState(createEmptyFilters());
@@ -75,6 +74,7 @@ export default function CategoryPage() {
       const data = await response.json();
 
       let filtered = data;
+      const initialFilters = createEmptyFilters();
 
       if (genderMap[gender]) {
         filtered = filtered.filter((p) => p.gender === genderMap[gender]);
@@ -88,38 +88,44 @@ export default function CategoryPage() {
         filtered = filtered.filter(
           (p) => p.over_kategori === mainCategoryMap[mainCategory],
         );
+      }
 
-        if (subcategory) {
-          const mappedSub = subMap[subcategory];
+      if (subcategory) {
+        const mappedSub = subMap[subcategory];
 
-          if (mappedSub) {
-            filtered = filtered.filter((p) => p.under_kategori === mappedSub);
-          } else {
-            filtered = [];
-          }
+        if (mappedSub) {
+          initialFilters.types = [mappedSub];
         }
       }
 
       setProducts(filtered);
-      setSelectedSub("all");
-      setActiveFilters(createEmptyFilters());
-      setDraftFilters(createEmptyFilters());
+      setActiveFilters(initialFilters);
+      setDraftFilters(initialFilters);
     }
 
     fetchProducts();
   }, [gender, mainCategory, subcategory]);
 
+  const handleSubCategoryChange = (sub) => {
+    const nextTypes = sub === "all" ? [] : [sub];
+
+    setActiveFilters((prev) => ({
+      ...prev,
+      types: nextTypes,
+    }));
+
+    setDraftFilters((prev) => ({
+      ...prev,
+      types: nextTypes,
+    }));
+  };
+
   const subCategories = [
     ...new Set(products.map((p) => p.under_kategori)),
   ].sort();
 
-  const shownProducts =
-    selectedSub === "all"
-      ? products
-      : products.filter((p) => p.under_kategori === selectedSub);
-
   const filterOptions = buildFilterOptions(products);
-  const finalProducts = applyProductFilters(shownProducts, activeFilters);
+  const finalProducts = applyProductFilters(products, activeFilters);
 
   const openMobileFilter = () => {
     setDraftFilters(activeFilters);
@@ -135,7 +141,6 @@ export default function CategoryPage() {
     const empty = createEmptyFilters();
     setActiveFilters(empty);
     setDraftFilters(empty);
-    setSelectedSub("all");
   };
 
   return (
@@ -157,8 +162,8 @@ export default function CategoryPage() {
 
       <CategoryFilterPanel
         subCategories={subCategories}
-        selectedSub={selectedSub}
-        setSelectedSub={setSelectedSub}
+        selectedSub={activeFilters.types[0] || "all"}
+        setSelectedSub={handleSubCategoryChange}
       />
 
       <div className={styles.productGrid}>

@@ -1,10 +1,10 @@
 export const SORT_OPTIONS = [
-  { value: "alpha_asc", label: "Alfabetisk, A-A" },
-  { value: "alpha_desc", label: "Alfabetisk, A-A" },
-  { value: "price_asc", label: "Pris, lav til hoj" },
-  { value: "price_desc", label: "Pris, hoj til lav" },
-  { value: "newest", label: "Dato, nyere til aeldre" },
-  { value: "oldest", label: "Dato, aeldre til nyere" },
+  { value: "alpha_asc", label: "Alfabetisk, A-Å" },
+  { value: "alpha_desc", label: "Alfabetisk, Å-A" },
+  { value: "price_asc", label: "Pris, lav til høj" },
+  { value: "price_desc", label: "Pris, høj til lav" },
+  { value: "newest", label: "Dato, nyere til ældre" },
+  { value: "oldest", label: "Dato, ældre til nyere" },
 ];
 
 export const PRICE_OPTIONS = [
@@ -35,36 +35,6 @@ export const SIZE_GROUPS = [
   },
 ];
 
-// NYT: Grupperede farver
-export const COLOR_GROUPS = [
-  {
-    label: "Kolde farver",
-    options: ["Blå", "Grøn", "Lilla"],
-  },
-  {
-    label: "Varme farver",
-    options: ["Rød", "Orange", "Gul"],
-  },
-  {
-    label: "Neutrale farver",
-    options: ["Sort", "Hvid", "Grå", "Beige", "Brun"],
-  },
-];
-
-const COLOR_LABELS = {
-  black: "Sort",
-  white: "Hvid",
-  gray: "Gra",
-  grey: "Gra",
-  brown: "Brun",
-  beige: "Beige",
-  blue: "Bla",
-  green: "Gron",
-  pink: "Lyserod",
-  purple: "Lilla",
-  rosa: "Lyserod",
-};
-
 const SIZE_TO_FILTER_LABEL = {
   56: "0-2 M",
   62: "4 M",
@@ -83,6 +53,47 @@ const SIZE_TO_FILTER_LABEL = {
   150: "12 Ar",
 };
 
+const COLOR_LABELS = {
+  black: "Sort",
+  white: "Hvid",
+  gray: "Grå",
+  grey: "Grå",
+  brown: "Brun",
+  beige: "Beige",
+  blue: "Blå",
+  green: "Grøn",
+  pink: "Lyserød",
+  purple: "Lilla",
+  red: "Rød",
+  orange: "Orange",
+  yellow: "Gul",
+  rosa: "Lyserød",
+};
+
+function normalize(value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[_-]/g, " ");
+}
+
+function toTitle(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return "";
+
+  return raw
+    .replace(/[_-]/g, " ")
+    .split(" ")
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
+export function colorToLabel(color) {
+  const key = normalize(color);
+  return COLOR_LABELS[key] || toTitle(color);
+}
+
 export function createEmptyFilters() {
   return {
     sort: "",
@@ -95,24 +106,6 @@ export function createEmptyFilters() {
   };
 }
 
-function normalize(value) {
-  return String(value || "")
-    .trim()
-    .toLowerCase()
-    .replace(/[_-]/g, " ");
-}
-
-function toTitle(value) {
-  const raw = String(value || "").trim();
-  if (!raw) return "";
-  return raw
-    .replace(/[_-]/g, " ")
-    .split(" ")
-    .filter(Boolean)
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
-}
-
 function normalizeGenderValue(value) {
   const raw = String(value || "")
     .trim()
@@ -120,7 +113,8 @@ function normalizeGenderValue(value) {
 
   if (raw === "pige") return "Pige";
   if (raw === "dreng") return "Dreng";
-  if (raw === "baby" || raw === "unisex") return "Unisex";
+  if (raw === "baby") return "Baby";
+  if (raw === "unisex") return "Unisex";
 
   return null;
 }
@@ -159,27 +153,26 @@ function productToGenders(product) {
   return [...new Set(values)];
 }
 
-export function colorToLabel(color) {
-  const key = normalize(color);
-  return COLOR_LABELS[key] || toTitle(color);
-}
-
 export function productToColors(product) {
   const values = [];
 
-  if (Array.isArray(product?.color_filter))
+  if (Array.isArray(product?.color_filter)) {
     values.push(...product.color_filter);
-  if (typeof product?.color_filter === "string")
+  }
+
+  if (typeof product?.color_filter === "string") {
     values.push(product.color_filter);
-  if (product?.color) values.push(product.color);
+  }
 
   if (Array.isArray(product?.variants)) {
     product.variants.forEach((variant) => {
-      if (Array.isArray(variant?.color_filter))
+      if (Array.isArray(variant?.color_filter)) {
         values.push(...variant.color_filter);
-      if (typeof variant?.color_filter === "string")
+      }
+
+      if (typeof variant?.color_filter === "string") {
         values.push(variant.color_filter);
-      if (variant?.color) values.push(variant.color);
+      }
     });
   }
 
@@ -226,7 +219,7 @@ export function buildFilterOptions(products) {
     colors: [...colors].sort(),
     sizes: SIZE_GROUPS,
     brands: [...brands].sort(),
-    genders: ["Pige", "Dreng", "Unisex"],
+    genders: ["Pige", "Dreng", "Baby", "Unisex"],
     prices: PRICE_OPTIONS,
     types: [...types].sort(),
   };
