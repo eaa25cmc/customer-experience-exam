@@ -63,30 +63,31 @@
 
 .banner-text {
   position: absolute;
-  bottom: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 0.5rem 0;
-}
-
-.banner-track {
+  height: 100%;
   display: flex;
-  gap: 60rem;
-  animation: scrollText 24s linear infinite;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  margin: 0;
+  padding: 0;
 }
 
 .banner-track span {
-  font-weight: 400;
+  font-weight: 600;
   font-family: var(--font-body);
-  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  animation: fadeIn 0.5s;
 }
 
-@keyframes scrollText {
-  0% {
-    transform: translateX(100%);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  100% {
-    transform: translateX(-100%);
+  to {
+    opacity: 1;
   }
 }
