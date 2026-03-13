@@ -9,6 +9,7 @@ import {
   loadShoppingbagItems,
   saveShoppingbagItems,
 } from "../utils/shoppingbagStorage";
+import { withBase } from "../utils/productFilters";
 
 const initialCartItems = [];
 
@@ -100,7 +101,7 @@ export default function ShoppingbagPage() {
             cartItems.map((item) => (
               <div className="shoppingbag-item" key={item.id}>
                 <img
-                  src={item.image}
+                  src={withBase(item.image)}
                   alt={item.name}
                   className="shoppingbag-item-img"
                 />

@@ -5,12 +5,13 @@ import styles from "./ProductCard.module.css";
 import HeartIcon from "./HeartIcon";
 import nyhedIcon from "../image/nyhed-ikon.svg";
 import saleIcon from "../image/sale-ikon.svg";
+import { withBase } from "../utils/productFilters";
 
 // Funktion der finder det første billede, enten fra images eller fra variant
 function getFirstImage(product) {
   // Hvis produktet har images-array med mindst ét billede
   if (product.images && product.images.length > 0) {
-    return product.images[0];
+    return withBase(product.images[0]);
   }
   // Hvis produktet har varianter med billeder
   if (
@@ -19,10 +20,10 @@ function getFirstImage(product) {
     product.variants[0].images &&
     product.variants[0].images.length > 0
   ) {
-    return product.variants[0].images[0];
+    return withBase(product.variants[0].images[0]);
   }
   // Hvis ingen billeder findes, vises placeholder
-  return "/images/placeholder.jpg";
+  return withBase("/images/placeholder.jpg");
 }
 
 export default function ProductCard({ product, className }) {

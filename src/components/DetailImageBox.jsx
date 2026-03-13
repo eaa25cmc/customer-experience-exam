@@ -5,6 +5,7 @@ import styles from "./DetailImageBox.module.css";
 import HeartIcon from "./HeartIcon";
 import nyhedIcon from "../image/nyhed-ikon.svg";
 import saleIcon from "../image/sale-ikon.svg";
+import { withBase } from "../utils/productFilters";
 
 export default function DetailImageBox({ product, className }) {
   const [validImages, setValidImages] = useState([]);
@@ -23,7 +24,9 @@ export default function DetailImageBox({ product, className }) {
           ? product.variants[0].images
           : ["/images/placeholder.jpg"];
 
-    setValidImages(images.filter((src) => src && src.trim() !== ""));
+    setValidImages(
+      images.filter((src) => src && src.trim() !== "").map(withBase),
+    );
     setActiveIndex(0);
   }, [product]);
 

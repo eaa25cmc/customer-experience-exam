@@ -22,7 +22,7 @@ export default function DetailPage() {
   // Henter produktdata fra products.json baseret på id og
   useEffect(() => {
     const fetchProduct = async () => {
-      const response = await fetch("/products.json");
+      const response = await fetch(`${import.meta.env.BASE_URL}products.json`);
       const products = await response.json();
       setAllProducts(products);
 

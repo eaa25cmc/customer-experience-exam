@@ -21,7 +21,7 @@ export default function ProductGridGirls() {
 
   useEffect(() => {
     async function fetchProducts() {
-      const url = "/products.json";
+      const url = `${import.meta.env.BASE_URL}products.json`;
       const response = await fetch(url);
       const data = await response.json();
       // Filtrer kun piger-produkter

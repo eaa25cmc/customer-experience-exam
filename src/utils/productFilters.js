@@ -1,3 +1,10 @@
+// Prepend Vite BASE_URL to paths stored in public/ (e.g. /product-pics/...)
+// so they resolve correctly on GitHub Pages sub-directory deployments.
+export function withBase(src) {
+  if (!src) return src;
+  return import.meta.env.BASE_URL + src.replace(/^\//, "");
+}
+
 export const SORT_OPTIONS = [
   { value: "alpha_asc", label: "Alfabetisk, A-Å" },
   { value: "alpha_desc", label: "Alfabetisk, Å-A" },

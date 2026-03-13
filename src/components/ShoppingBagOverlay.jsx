@@ -9,6 +9,7 @@ import "../pages/ShoppingbagPage.css";
 import { useNavigate } from "react-router-dom";
 import antalProdukterIcon from "../image/Antal produkter.svg";
 import skraldespandIcon from "../image/skraldespand.svg";
+import { withBase } from "../utils/productFilters";
 
 export default function ShoppingBagOverlay({ onClose }) {
   const [cartItems, setCartItems] = React.useState(() =>
@@ -89,7 +90,7 @@ export default function ShoppingBagOverlay({ onClose }) {
             cartItems.map((item) => (
               <div className="shoppingbag-item" key={item.id}>
                 <img
-                  src={item.image}
+                  src={withBase(item.image)}
                   alt={item.name}
                   className="shoppingbag-item-img"
                 />

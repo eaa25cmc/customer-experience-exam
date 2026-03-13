@@ -5,6 +5,10 @@ import styles from "./DetailInfoBox.module.css";
 import SizeSelector from "./DetailSizeSelector";
 import DetailAccordion from "./DetailAccordion";
 import BabyDropdown from "./BabyDropdown";
+import laegIKurvSvg from "../image/laeg-i-kurv-knap.svg";
+import leveringIkonSvg from "../image/levering-ikon.svg";
+import fragtIkonSvg from "../image/fragt-ikon.svg";
+import returretIkonSvg from "../image/returret-ikon.svg";
 
 export default function DetailInfoBox({ product }) {
   const navigate = useNavigate();
@@ -104,19 +108,19 @@ export default function DetailInfoBox({ product }) {
       </div>
       {/* Tilføj til kurv-knap */}
       <button className={styles["add-to-cart"]}>
-        <img src="/src/image/laeg-i-kurv-knap.svg" alt="Add to cart" />
+        <img src={laegIKurvSvg} alt="Add to cart" />
       </button>
       <section className={styles.deliveryInfo}>
         <div>
-          <img src="/src/image/levering-ikon.svg" alt="1-2 dages levering" />
+          <img src={leveringIkonSvg} alt="1-2 dages levering" />
           1-2 dages levering
         </div>
         <div>
-          <img src="/src/image/fragt-ikon.svg" alt="Gratis fragt" />
+          <img src={fragtIkonSvg} alt="Gratis fragt" />
           Gratis fragt
         </div>
         <div>
-          <img src="/src/image/returret-ikon.svg" alt="30 dages returrret" />
+          <img src={returretIkonSvg} alt="30 dages returrret" />
           30 dages returrret
         </div>
       </section>
