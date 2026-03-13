@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useCartOverlay } from "../context/CartOverlayContext";
 import { NavLink } from "react-router";
 import banner from "../image/banner.svg";
 import logo from "../image/logo.svg";
@@ -13,6 +14,7 @@ import "./Navbar.css";
 
 export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const { setCartOverlayOpen } = useCartOverlay();
   return (
     <div className="hero-header">
       <div className="topnav">
@@ -42,9 +44,20 @@ export default function Navbar() {
           <NavLink to="/favorites">
             <img src={hjerteikon} alt="Favoritter" />
           </NavLink>
-          <NavLink to="/shoppingbag">
+          <button
+            type="button"
+            className="cart-icon-btn"
+            style={{
+              background: "none",
+              border: "none",
+              padding: 0,
+              cursor: "pointer",
+            }}
+            aria-label="Åbn kurv"
+            onClick={() => setCartOverlayOpen(true)}
+          >
             <img src={kurvikon} alt="Kurv" />
-          </NavLink>
+          </button>
         </div>
       </div>
 

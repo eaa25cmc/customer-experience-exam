@@ -1,7 +1,15 @@
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .footer {
   background-color: var(--brun);
   color: var(--hvid);
   padding: 4rem 5rem 3rem;
+  min-height: 320px;
+  margin-top: auto;
 }
 
 .footer h4,

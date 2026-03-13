@@ -5,6 +5,7 @@ import "./FavoritesPage.css";
 import { addShoppingbagItem } from "../utils/shoppingbagStorage";
 import nyhedIcon from "../image/nyhed-ikon.svg";
 import saleIcon from "../image/Sale-ikon.svg";
+import HeartIcon from "../components/HeartIcon";
 
 const initialFavorites = [
   {
@@ -206,7 +207,7 @@ export default function FavoritesPage() {
         <Breadcrumbs />
 
         <header className="favorite-header">
-          <h1>Mine Favoritter</h1>
+          <h2>Mine Favoritter</h2>
           <p>{favorites.length} artikler</p>
         </header>
 
@@ -214,7 +215,7 @@ export default function FavoritesPage() {
           className="favorite-login-box"
           aria-label="Login for favoritter"
         >
-          <h2>Mist ikke dine favoritter!</h2>
+          <h3>Mist ikke dine favoritter!</h3>
           <p>Log ind eller opret bruger for at gemme dine favoritter</p>
           <button type="button">OPRET / LOG IND</button>
         </section>
@@ -237,7 +238,7 @@ export default function FavoritesPage() {
                     onClick={() => undoRemove(product.id)}
                     className="favorite-undo-btn"
                   >
-                    ↩ Fortryd
+                    Fortryd
                   </button>
                 </div>
               );
@@ -275,9 +276,11 @@ export default function FavoritesPage() {
                     type="button"
                     aria-label={`Fjern ${activeProduct.name} fra favoritter`}
                     className="favorite-heart"
-                    onClick={() => removeFavorite(activeProduct.id)}
                   >
-                    ❤
+                    <HeartIcon
+                      initialFilled={true}
+                      onToggle={() => removeFavorite(activeProduct.id)}
+                    />
                   </button>
                   <img
                     src={activeProduct.image}
@@ -288,7 +291,13 @@ export default function FavoritesPage() {
 
                 <div className="favorite-card-body">
                   <h3>{activeProduct.name}</h3>
-                  <p>{activeProduct.price}</p>
+                  <p
+                    className={
+                      activeProduct.sale ? "favorite-price-sale" : undefined
+                    }
+                  >
+                    {activeProduct.price}
+                  </p>
                 </div>
 
                 <div className="favorite-size-wrap">

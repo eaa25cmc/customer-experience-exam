@@ -1,5 +1,10 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import {
+  CartOverlayProvider,
+  useCartOverlay,
+} from "./context/CartOverlayContext";
+import ShoppingBagOverlay from "./components/ShoppingBagOverlay";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -24,41 +29,51 @@ export default function App() {
   const location = useLocation();
   const backgroundLocation = location.state?.backgroundLocation;
 
+  function CartOverlayConsumer() {
+    const { isCartOverlayOpen, setCartOverlayOpen } = useCartOverlay();
+    return isCartOverlayOpen ? (
+      <ShoppingBagOverlay onClose={() => setCartOverlayOpen(false)} />
+    ) : null;
+  }
+
   return (
-    <>
-      <Navbar />
-      <Routes location={backgroundLocation || location}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/sale" element={<SalePage />} />
-        <Route path="/baby" element={<ProductGridBaby />} />
-        <Route path="/pige" element={<ProductGridGirls />} />
-        <Route path="/dreng" element={<ProductGridBoys />} />
-        <Route path="/payment" element={<PaymentPage />} />
-        <Route path="/news" element={<NewsPage />} />
-        <Route path="/inspiration" element={<InspirationPage />} />
-        <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="/produkt/:id" element={<DetailPage />} />
-        <Route path="/kategori/:category" element={<CategoryPage />} />
-        <Route path="/detail" element={<DetailPage />} />
-        <Route
-          path="/kategori/:gender/:mainCategory/:subcategory?"
-          element={<CategoryPage />}
-        />
-        <Route path="*" element={<NotFoundPage />} />
-        <Route path="/sustainability" element={<SustainabilityPage />} />
-        <Route path="/shoppingbag" element={<ShoppingbagPage />} />
-        <Route path="/brand/:brandSlug" element={<BrandPage />} />
-      </Routes>
-      {backgroundLocation && (
-        <Routes>
-          <Route path="/shoppingbag" element={<ShoppingbagPage />} />
+    <CartOverlayProvider>
+      <div className="footer-wrapper">
+        <Navbar />
+        <Routes location={backgroundLocation || location}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/sale" element={<SalePage />} />
           <Route path="/baby" element={<ProductGridBaby />} />
+          <Route path="/pige" element={<ProductGridGirls />} />
+          <Route path="/dreng" element={<ProductGridBoys />} />
+          <Route path="/payment" element={<PaymentPage />} />
+          <Route path="/news" element={<NewsPage />} />
+          <Route path="/inspiration" element={<InspirationPage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
+          <Route path="/produkt/:id" element={<DetailPage />} />
+          <Route path="/kategori/:category" element={<CategoryPage />} />
+          <Route path="/detail" element={<DetailPage />} />
+          <Route
+            path="/kategori/:gender/:mainCategory/:subcategory?"
+            element={<CategoryPage />}
+          />
+          <Route path="*" element={<NotFoundPage />} />
+          <Route path="/sustainability" element={<SustainabilityPage />} />
+          <Route path="/shoppingbag" element={<ShoppingbagPage />} />
+          <Route path="/brand/:brandSlug" element={<BrandPage />} />
         </Routes>
-      )}
-      <Footer />
-    </>
+        {backgroundLocation && (
+          <Routes>
+            <Route path="/shoppingbag" element={<ShoppingbagPage />} />
+            <Route path="/baby" element={<ProductGridBaby />} />
+          </Routes>
+        )}
+        <CartOverlayConsumer />
+        <Footer />
+      </div>
+    </CartOverlayProvider>
   );
 }
