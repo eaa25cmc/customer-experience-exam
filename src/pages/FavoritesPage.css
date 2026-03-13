@@ -13,23 +13,14 @@
 .favorite-header {
   text-align: center;
   position: relative;
-  margin-top: 1.8rem;
-}
-
-.favorite-header h1 {
-  font-family: var(--font-display);
-  font-size: 2.8rem;
-  font-weight: 400;
-  letter-spacing: 0.3px;
 }
 
 .favorite-header p {
-  margin-top: 0.45rem;
-  font-size: 1.3rem;
+  margin-top: 0.5rem;
 }
 
 .favorite-login-box {
-  margin: 1.75rem auto 0;
+  margin: 2rem auto 0;
   width: min(71rem, 100%);
   position: relative;
   background: var(--sekundærhvid);
@@ -43,40 +34,34 @@
 }
 
 .favorite-login-box h2 {
-  font-family: var(--font-display);
-  font-size: 3rem;
   font-weight: 400;
-  letter-spacing: 0.4px;
-  -webkit-text-stroke: 0.8px var(--brun);
+  letter-spacing: 0.5px;
+  -webkit-text-stroke: 0.5px var(--brun);
   text-shadow: var(--brun) 0.8px 0 0;
 }
 
 .favorite-login-box p {
-  margin-top: 0.75rem;
-  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 .favorite-login-box button {
-  margin-top: 1.45rem;
+  margin-top: 1.5rem;
   border: 0;
   background: var(--brun);
   color: var(--hvid);
   border-radius: 6px;
-  padding: 0.8rem 2rem;
-  font-size: 1.15rem;
-  font-family: var(--font-display);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   cursor: pointer;
+}
+.favorite-login-box button:hover {
+  scale: 1.05;
 }
 
 .favorite-share {
-  margin-top: 1.65rem;
+  margin-top: 2rem;
   text-align: center;
   color: var(--brun);
-}
-
-.favorite-share p {
-  font-family: var(--font-display);
-  font-size: 1.7rem;
 }
 
 .favorite-share svg {
@@ -155,16 +140,10 @@
   position: absolute;
   left: 0.7rem;
   top: 0.7rem;
-  border-top: 2px solid var(--brun);
-  border-right: 1.5px solid var(--brun);
-  border-bottom: 1.5px solid var(--brun);
-  border-left: 2px solid var(--brun);
-  color: var(--brun);
-  background: rgba(246, 243, 238, 0.94);
   border-radius: 8px 5px 7px 6px / 5px 8px 6px 7px;
-  padding: 0.12rem 0.9rem;
+  padding: 0.5rem 0.9rem;
   font-family: var(--font-display);
-  font-size: 1.02rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   z-index: 2;
 }
@@ -173,19 +152,15 @@
   position: absolute;
   right: 1rem;
   top: 1rem;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  border: 0;
-  background: rgba(246, 243, 238, 0.96);
-  color: #b8474f;
-  font-size: 1rem;
-  cursor: pointer;
   z-index: 2;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .favorite-card-body {
-  padding: 0.55rem 0.85rem 0;
+  padding: 0.55em 1rem 0;
 }
 
 .favorite-card h3 {
@@ -195,22 +170,27 @@
   font-size: 1.05rem;
 }
 
+.favorite-price-sale {
+  color: var(--rød) !important;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
 .favorite-card p {
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
   color: var(--brun);
 }
 
 .favorite-size-wrap {
-  margin: 0.45rem 0.85rem 0.2rem;
+  margin: 0.5rem 0.5rem;
   border-bottom: 1px solid rgba(74, 47, 44, 0.22);
   padding-bottom: 0.45rem;
 }
 
 .favorite-size-label {
-  margin: 0 0 0.35rem;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
+  margin: 0.5rem;
   color: var(--brun);
 }
 
@@ -222,12 +202,13 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.2rem 0.5rem;
+  gap: 0.2rem;
   padding: 0;
 }
 
 .favorite-size-inline-option {
   border: 0;
+  margin: 0.5rem;
   background: transparent;
   color: var(--brun);
   border-radius: 0;
@@ -245,7 +226,7 @@
 }
 
 .favorite-cart-btn {
-  margin-top: 0.65rem;
+  margin-top: 0.5rem;
   width: calc(100% - 1.7rem);
   border-top: 1.8px solid rgba(246, 243, 238, 0.9);
   border-right: 1.4px solid rgba(246, 243, 238, 0.9);
@@ -254,28 +235,21 @@
   background: var(--brun);
   color: var(--hvid);
   border-radius: 10px 7px 9px 8px / 8px 10px 7px 9px;
-  font-family: var(--font-display);
-  font-size: clamp(1.25rem, 1.8vw, 1.8rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.6px;
-  padding: 0.95rem 0.5rem 0.9rem;
+  padding: 1rem 0.5rem 1rem;
   cursor: pointer;
   transition: background 0.2s;
   display: block;
-  margin-left: 0.85rem;
-  margin-right: 0.85rem;
-}
-
-.favorite-cart-btn.disabled {
-  background: rgba(74, 47, 44, 0.3);
-  cursor: not-allowed;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .favorite-bulk-wrap {
   display: flex;
   justify-content: center;
-  margin-top: 2.2rem;
+  margin-top: 2rem;
 }
 
 .favorite-bulk-btn {
@@ -284,10 +258,19 @@
   color: var(--hvid);
   border-radius: 8px;
   min-width: 16rem;
-  padding: 0.72rem 1.2rem;
-  font-family: var(--font-display);
-  font-size: 1.2rem;
+  padding: 1rem 0.5rem;
+  margin-top: 3rem;
   cursor: pointer;
+  font-size: 1.25rem;
+  font-family: var(--font-display);
+}
+
+.favorite-bulk h4 {
+  color: var(--hvid);
+}
+
+.favorite-bulk-btn:hover {
+  scale: 1.05;
 }
 
 .favorite-undo-tile {
@@ -302,19 +285,18 @@
 }
 
 .favorite-undo-btn {
-  border: 1.5px solid var(--brun);
-  background: var(--sekundærhvid);
-  color: var(--brun);
+  border: none;
+  background: var(--rød);
+  color: var(--hvid);
   border-radius: 8px 6px 7px 5px / 6px 8px 5px 7px;
-  padding: 0.45rem 0.95rem;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   line-height: 1;
   cursor: pointer;
 }
 
 .favorite-undo-btn:hover {
-  background: rgba(232, 220, 205, 0.85);
+  background: #a82323;
 }
 
 @media (max-width: 69rem) {
