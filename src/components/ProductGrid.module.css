@@ -230,3 +230,34 @@ h1 {
     display: none;
   }
 }
+
+/* header sektion grafik*/
+
+.headerSection {
+  position: relative;
+  width: 100vw;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.headerSection h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-align: center;
+  z-index: 1;
+  width: 100vw;
+  pointer-events: none;
+}
+
+.headerSection img {
+  margin-right: 5rem;
+}
+
