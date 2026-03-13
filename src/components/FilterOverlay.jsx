@@ -1,5 +1,8 @@
-import { useEffect, useRef, useState } from "react";
-import filterIcon from "../image/product-pics/filter.svg";
+import { useState } from "react";
+import filterButtonIcon from "../image/product-pics/filter.svg";
+import plusIcon from "../image/plus.svg";
+import minusIcon from "../image/minus.svg";
+import closeIcon from "../image/kryds.svg";
 import styles from "./ProductGrid.module.css";
 
 export default function FilterOverlay({
@@ -12,121 +15,106 @@ export default function FilterOverlay({
   onReset,
   onApply,
 }) {
-  const triggerRef = useRef(null);
-  const [panelPosition, setPanelPosition] = useState({ top: 24, left: 16 });
   const [openSections, setOpenSections] = useState({
-    sort: true,
+    sort: false,
+    productTypes: false,
     colors: false,
     sizes: false,
     brands: false,
     genders: false,
     prices: false,
-    types: false,
   });
 
-  useEffect(() => {
-    if (!isOpen) return;
-
-    const updatePanelPosition = () => {
-      if (!triggerRef.current) return;
-      const rect = triggerRef.current.getBoundingClientRect();
-      const panelWidth = Math.min(348, window.innerWidth - 32);
-      const maxLeft = Math.max(16, window.innerWidth - panelWidth - 16);
-
-      setPanelPosition({
-        top: rect.bottom + 8,
-        left: Math.min(Math.max(16, rect.left), maxLeft),
-      });
-    };
-
-    updatePanelPosition();
-    window.addEventListener("resize", updatePanelPosition);
-    window.addEventListener("scroll", updatePanelPosition, true);
-
-    return () => {
-      window.removeEventListener("resize", updatePanelPosition);
-      window.removeEventListener("scroll", updatePanelPosition, true);
-    };
-  }, [isOpen]);
-
-  const toggleSection = (key) => {
-    setOpenSections((prev) => ({ ...prev, [key]: !prev[key] }));
+  const toggleSection = (sectionName) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [sectionName]: !prev[sectionName],
+    }));
   };
 
   const toggleCheckbox = (group, value) => {
-    const current = draftFilters[group] || [];
-    const exists = current.includes(value);
+    const currentValues = draftFilters[group] || [];
+    const isSelected = currentValues.includes(value);
 
     onDraftFiltersChange({
       ...draftFilters,
-      [group]: exists
-        ? current.filter((item) => item !== value)
-        : [...current, value],
+      [group]: isSelected
+        ? currentValues.filter((item) => item !== value)
+        : [...currentValues, value],
     });
   };
 
   const setSort = (value) => {
-    onDraftFiltersChange({ ...draftFilters, sort: value });
+    onDraftFiltersChange({
+      ...draftFilters,
+      sort: value,
+    });
   };
+
+  const renderSectionIcon = (isSectionOpen) => (
+    <img
+      src={isSectionOpen ? minusIcon : plusIcon}
+      alt=""
+      aria-hidden="true"
+      className={styles.filterSectionIcon}
+    />
+  );
 
   return (
     <>
       <button
-        ref={triggerRef}
         type="button"
-        className={styles.mobileFilterTrigger}
+        className={styles.filterTriggerButton}
         onClick={onOpen}
-        aria-label="Åben mobil filtrering"
+        aria-label="Åbn filter"
       >
-        <img src={filterIcon} alt="" aria-hidden="true" />
+        <img src={filterButtonIcon} alt="" aria-hidden="true" />
       </button>
 
       {isOpen && (
         <div
-          className={styles.mobileFilterOverlay}
+          className={styles.filterOverlay}
           role="dialog"
           aria-modal="true"
-          aria-label="Mobil filtrering"
+          aria-label="Filter"
         >
           <button
             type="button"
-            className={styles.mobileFilterBackdrop}
+            className={styles.filterOverlayBackdrop}
             onClick={onClose}
-            aria-label="Luk filtrering"
+            aria-label="Luk filter"
           />
 
-          <div
-            className={styles.mobileFilterPanel}
-            style={{
-              top: `${panelPosition.top}px`,
-              left: `${panelPosition.left}px`,
-            }}
-          >
-            <div className={styles.mobileFilterHeaderMain}>
+          <aside className={styles.filterSidebar}>
+            <div className={styles.filterHeader}>
               <h2>Filter</h2>
+
               <button
                 type="button"
+                className={styles.filterCloseButton}
                 onClick={onClose}
-                aria-label="Luk filtrering"
+                aria-label="Luk filter"
               >
-                ×
+                <img src={closeIcon} alt="" aria-hidden="true" />
               </button>
             </div>
 
-            <div className={styles.mobileFilterSectionCollapsed}>
+            <button
+              type="button"
+              className={styles.filterSectionButton}
+              onClick={() => toggleSection("sort")}
+            >
               <span>Sorter</span>
-              <button type="button" onClick={() => toggleSection("sort")}>
-                {openSections.sort ? "−" : "+"}
-              </button>
-            </div>
+              {renderSectionIcon(openSections.sort)}
+            </button>
 
             {openSections.sort && (
-              <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterCheckboxList}>
+              <div className={styles.filterSectionContent}>
+                <div className={styles.filterOptionList}>
                   {options.sort.map((option) => (
                     <label
                       key={option.value}
-                      className={styles.mobileFilterCheckRow}
+                      className={styles.filterOptionRow}
                     >
                       <input
                         type="radio"
@@ -141,18 +129,46 @@ export default function FilterOverlay({
               </div>
             )}
 
-            <div className={styles.mobileFilterSectionCollapsed}>
+            <button
+              type="button"
+              className={styles.filterSectionButton}
+              onClick={() => toggleSection("productTypes")}
+            >
+              <span>Produkttype</span>
+              {renderSectionIcon(openSections.productTypes)}
+            </button>
+
+            {openSections.productTypes && (
+              <div className={styles.filterSectionContent}>
+                <div className={styles.filterOptionList}>
+                  {options.types.map((type) => (
+                    <label key={type} className={styles.filterOptionRow}>
+                      <input
+                        type="checkbox"
+                        checked={draftFilters.types.includes(type)}
+                        onChange={() => toggleCheckbox("types", type)}
+                      />
+                      <span>{type}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <button
+              type="button"
+              className={styles.filterSectionButton}
+              onClick={() => toggleSection("colors")}
+            >
               <span>Farver</span>
-              <button type="button" onClick={() => toggleSection("colors")}>
-                {openSections.colors ? "−" : "+"}
-              </button>
-            </div>
+              {renderSectionIcon(openSections.colors)}
+            </button>
 
             {openSections.colors && (
-              <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterCheckboxList}>
+              <div className={styles.filterSectionContent}>
+                <div className={styles.filterOptionList}>
                   {options.colors.map((color) => (
-                    <label key={color} className={styles.mobileFilterCheckRow}>
+                    <label key={color} className={styles.filterOptionRow}>
                       <input
                         type="checkbox"
                         checked={draftFilters.colors.includes(color)}
@@ -165,27 +181,24 @@ export default function FilterOverlay({
               </div>
             )}
 
-            <div className={styles.mobileFilterSectionCollapsed}>
+            <button
+              type="button"
+              className={styles.filterSectionButton}
+              onClick={() => toggleSection("sizes")}
+            >
               <span>Størrelse</span>
-              <button type="button" onClick={() => toggleSection("sizes")}>
-                {openSections.sizes ? "−" : "+"}
-              </button>
-            </div>
+              {renderSectionIcon(openSections.sizes)}
+            </button>
 
             {openSections.sizes && (
-              <div className={styles.mobileFilterSection}>
+              <div className={styles.filterSectionContent}>
                 {options.sizes.map((group) => (
-                  <div
-                    key={group.label}
-                    className={styles.mobileFilterSizeGroup}
-                  >
+                  <div key={group.label} className={styles.filterSizeGroup}>
                     <p>{group.label}</p>
-                    <div className={styles.mobileFilterCheckboxList}>
+
+                    <div className={styles.filterOptionList}>
                       {group.options.map((size) => (
-                        <label
-                          key={size}
-                          className={styles.mobileFilterCheckRow}
-                        >
+                        <label key={size} className={styles.filterOptionRow}>
                           <input
                             type="checkbox"
                             checked={draftFilters.sizes.includes(size)}
@@ -200,18 +213,20 @@ export default function FilterOverlay({
               </div>
             )}
 
-            <div className={styles.mobileFilterSectionCollapsed}>
+            <button
+              type="button"
+              className={styles.filterSectionButton}
+              onClick={() => toggleSection("brands")}
+            >
               <span>Brands</span>
-              <button type="button" onClick={() => toggleSection("brands")}>
-                {openSections.brands ? "−" : "+"}
-              </button>
-            </div>
+              {renderSectionIcon(openSections.brands)}
+            </button>
 
             {openSections.brands && (
-              <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterCheckboxList}>
+              <div className={styles.filterSectionContent}>
+                <div className={styles.filterOptionList}>
                   {options.brands.map((brand) => (
-                    <label key={brand} className={styles.mobileFilterCheckRow}>
+                    <label key={brand} className={styles.filterOptionRow}>
                       <input
                         type="checkbox"
                         checked={draftFilters.brands.includes(brand)}
@@ -224,18 +239,20 @@ export default function FilterOverlay({
               </div>
             )}
 
-            <div className={styles.mobileFilterSectionCollapsed}>
+            <button
+              type="button"
+              className={styles.filterSectionButton}
+              onClick={() => toggleSection("genders")}
+            >
               <span>Køn</span>
-              <button type="button" onClick={() => toggleSection("genders")}>
-                {openSections.genders ? "−" : "+"}
-              </button>
-            </div>
+              {renderSectionIcon(openSections.genders)}
+            </button>
 
             {openSections.genders && (
-              <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterCheckboxList}>
+              <div className={styles.filterSectionContent}>
+                <div className={styles.filterOptionList}>
                   {options.genders.map((gender) => (
-                    <label key={gender} className={styles.mobileFilterCheckRow}>
+                    <label key={gender} className={styles.filterOptionRow}>
                       <input
                         type="checkbox"
                         checked={draftFilters.genders.includes(gender)}
@@ -248,21 +265,20 @@ export default function FilterOverlay({
               </div>
             )}
 
-            <div className={styles.mobileFilterSectionCollapsed}>
+            <button
+              type="button"
+              className={styles.filterSectionButton}
+              onClick={() => toggleSection("prices")}
+            >
               <span>Pris</span>
-              <button type="button" onClick={() => toggleSection("prices")}>
-                {openSections.prices ? "−" : "+"}
-              </button>
-            </div>
+              {renderSectionIcon(openSections.prices)}
+            </button>
 
             {openSections.prices && (
-              <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterCheckboxList}>
+              <div className={styles.filterSectionContent}>
+                <div className={styles.filterOptionList}>
                   {options.prices.map((price) => (
-                    <label
-                      key={price.value}
-                      className={styles.mobileFilterCheckRow}
-                    >
+                    <label key={price.value} className={styles.filterOptionRow}>
                       <input
                         type="checkbox"
                         checked={draftFilters.prices.includes(price.value)}
@@ -275,47 +291,24 @@ export default function FilterOverlay({
               </div>
             )}
 
-            <div className={styles.mobileFilterSectionCollapsed}>
-              <span>Produkttype</span>
-              <button type="button" onClick={() => toggleSection("types")}>
-                {openSections.types ? "−" : "+"}
-              </button>
-            </div>
-
-            {openSections.types && (
-              <div className={styles.mobileFilterSection}>
-                <div className={styles.mobileFilterCheckboxList}>
-                  {options.types.map((type) => (
-                    <label key={type} className={styles.mobileFilterCheckRow}>
-                      <input
-                        type="checkbox"
-                        checked={draftFilters.types.includes(type)}
-                        onChange={() => toggleCheckbox("types", type)}
-                      />
-                      <span>{type}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <div className={styles.mobileFilterActions}>
+            <div className={styles.filterActionBar}>
               <button
                 type="button"
-                className={styles.mobileFilterReset}
+                className={styles.filterResetButton}
                 onClick={onReset}
               >
                 Nulstil filter
               </button>
+
               <button
                 type="button"
-                className={styles.mobileFilterApply}
+                className={styles.filterApplyButton}
                 onClick={onApply}
               >
                 Vis Produkter
               </button>
             </div>
-          </div>
+          </aside>
         </div>
       )}
     </>

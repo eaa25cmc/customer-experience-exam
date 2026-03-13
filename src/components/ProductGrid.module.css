@@ -13,6 +13,14 @@ h1 {
 }
 
 /* KATEGORI OVERSIGT */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin: 3.5rem;
+  justify-content: center;
+}
+
 .filterPanel {
   display: flex;
   justify-content: center;
@@ -20,27 +28,23 @@ h1 {
   gap: 1rem;
 }
 
-.categoryButton {
-  background: var(--hvid);
-  color: var(--brun);
-  border: 2px solid var(--brun);
-  border-radius: 999px; /* oval */
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  margin: 0;
-  cursor: pointer;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border 0.2s;
-}
-
 .categoryButtons {
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
+}
+
+.categoryButton {
+  background: var(--hvid);
+  color: var(--brun);
+  border: 2px solid var(--brun);
+  border-radius: 999px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  cursor: pointer;
 }
 
 .activeCategoryButton {
@@ -55,7 +59,7 @@ h1 {
   border-color: var(--brun);
 }
 
-.mobileFilterTrigger {
+.filterTriggerButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -67,79 +71,105 @@ h1 {
   cursor: pointer;
 }
 
-.mobileFilterTrigger img {
+.filterTriggerButton img {
   width: 10.875rem;
   height: 2.5rem;
   display: block;
 }
 
-.mobileFilterOverlay {
+.filterOverlay {
   position: fixed;
   inset: 0;
   z-index: 1300;
 }
 
-.mobileFilterBackdrop {
+.filterOverlayBackdrop {
   position: absolute;
   inset: 0;
   border: 0;
-  background: rgba(50, 50, 50, 0.82);
+  background: rgba(50, 50, 50, 0.35);
 }
 
-.mobileFilterPanel {
-  position: absolute;
-  top: 1.5rem;
-  left: 1rem;
-  width: min(348px, calc(100% - 2rem));
+.filterSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: min(30rem, 100vw);
+  height: 100vh;
   background: var(--hvid);
-  border: 1px solid rgba(74, 47, 44, 0.22);
+  border-right: 1px solid var(--brun);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 1301;
 }
 
-.mobileFilterHeaderMain {
+.filterHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1.5rem;
-  border-top: 1px solid rgba(74, 47, 44, 0.28);
-  border-bottom: 1px solid rgba(74, 47, 44, 0.28);
+  padding: 2rem 2.5rem;
+  border-bottom: 1px solid var(--brun);
 }
 
-.mobileFilterHeaderMain h2 {
+.filterHeader h2 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
-.mobileFilterHeaderMain button {
+.filterCloseButton {
   border: 0;
   background: transparent;
-  color: var(--brun);
-  font-size: 2rem;
-  line-height: 1;
+  padding: 0;
   cursor: pointer;
 }
 
-.mobileFilterSection {
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid rgba(74, 47, 44, 0.28);
+.filterCloseButton img {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: block;
 }
 
-.mobileFilterRowTitle {
+.filterSectionButton {
+  width: 100%;
+  padding: 1.7rem 2.5rem;
+  border: 0;
+  border-bottom: 1px solid var(--brun);
+  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.75rem;
   font-family: var(--font-display);
-  font-size: 1.9rem;
+  font-size: 2rem;
+  color: var(--brun);
+  text-align: left;
+  cursor: pointer;
 }
 
-.mobileFilterCheckboxList {
+.filterSectionIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.filterSectionIconOpen {
+  transform: rotate(45deg);
+}
+
+.filterSectionContent {
+  padding: 1rem 2.5rem 1.5rem;
+  border-bottom: 1px var(--brun);
+}
+
+.filterOptionList {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.mobileFilterCheckRow {
+.filterOptionRow {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -147,65 +177,54 @@ h1 {
   color: var(--brun);
 }
 
-.mobileFilterCheckRow input {
+.filterOptionRow input {
   width: 1rem;
   height: 1rem;
 }
 
-.mobileFilterCheckRow input[type="checkbox"] {
+.filterOptionRow input[type="checkbox"],
+.filterOptionRow input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
-  border: 1px solid rgba(74, 47, 44, 0.45);
+  border: 1px solid var(--brun);
   border-radius: 2px;
-  background: #fff;
+  background: var(--hvid);
   display: inline-block;
   cursor: pointer;
 }
 
-.mobileFilterCheckRow input[type="checkbox"]:checked {
+.filterOptionRow input[type="radio"] {
+  border-radius: 50%;
+}
+
+.filterOptionRow input[type="checkbox"]:checked,
+.filterOptionRow input[type="radio"]:checked {
   background-image: url("../image/kryds.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 0.68rem 0.68rem;
 }
 
-.mobileFilterSizeGroup {
+.filterSizeGroup {
   margin-top: 0.75rem;
 }
 
-.mobileFilterSizeGroup p {
+.filterSizeGroup p {
   margin: 0 0 0.65rem;
   font-family: var(--font-body);
   color: var(--brun);
 }
 
-.mobileFilterSectionCollapsed {
-  padding: 1.1rem 1.5rem;
-  border-bottom: 1px solid rgba(74, 47, 44, 0.28);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-}
-
-.mobileFilterSectionCollapsed button {
-  border: 0;
-  background: transparent;
-  color: var(--brun);
-  font-family: inherit;
-  font-size: 2rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.mobileFilterActions {
+.filterActionBar {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: auto;
+  position: sticky;
+  bottom: 0;
 }
 
-.mobileFilterReset,
-.mobileFilterApply {
+.filterResetButton,
+.filterApplyButton {
   border: 0;
   padding: 1rem 0.75rem;
   font-family: var(--font-display);
@@ -213,12 +232,12 @@ h1 {
   cursor: pointer;
 }
 
-.mobileFilterReset {
+.filterResetButton {
   background: var(--sekundærhvid);
   color: var(--brun);
 }
 
-.mobileFilterApply {
+.filterApplyButton {
   background: var(--brun);
   color: var(--hvid);
 }
