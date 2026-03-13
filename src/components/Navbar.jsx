@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useCartOverlay } from "../context/CartOverlayContext";
 import { NavLink } from "react-router";
 import banner from "../image/banner.svg";
@@ -15,6 +15,21 @@ import "./Navbar.css";
 export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const { setCartOverlayOpen } = useCartOverlay();
+  // Synkroniseret carousel til hero-billede og banner-tekst
+  const heroImages = [banner, banner, banner];
+  const bannerMessages = [
+    "Gratis og hurtig levering indenfor 1-2 hverdage",
+    "Over 15.000 tilfredse kunder",
+    "Økologisk og GOTS-certificeret tøj",
+  ];
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCarouselIndex((prev) => (prev + 1) % heroImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
   return (
     <div className="hero-header">
       <div className="topnav">
@@ -74,14 +89,13 @@ export default function Navbar() {
       )}
 
       <div className="banner">
-        <img src={banner} alt="Banner" className="banner-image" />
-
+        <img
+          src={heroImages[carouselIndex]}
+          alt="Banner"
+          className="banner-image"
+        />
         <div className="banner-text">
-          <div className="banner-track">
-            <span>Gratis og hurtig levering indenfor 1-2 hverdage</span>
-            <span>Over 15.000 tilfredse kunder</span>
-            <span>Økologisk og GOTS-certificeret tøj</span>
-          </div>
+          <p className="banner-carousel">{bannerMessages[carouselIndex]}</p>
         </div>
       </div>
     </div>

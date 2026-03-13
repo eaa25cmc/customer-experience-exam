@@ -5,10 +5,10 @@ import nyhedIcon from "../image/nyhed-ikon.svg";
 import saleIcon from "../image/Sale-ikon.svg";
 
 export default function DetailImageBox({ product, className }) {
-  if (!product) return null;
-
   const [validImages, setValidImages] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  if (!product) return null;
 
   useEffect(() => {
     const images =
