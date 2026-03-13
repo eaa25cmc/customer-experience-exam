@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import styles from "./ProductGrid.module.css";
 import Breadcrumbs from "./Breadcrumbs";
+import sun from "../image/product-page-sun.svg";
 import FilterOverlay from "./FilterOverlay";
 import {
   applyProductFilters,
@@ -98,8 +99,10 @@ export default function ProductGridBaby() {
   return (
     <div>
       <Breadcrumbs items={[{ label: "Baby" }]} />
-      <h1>Baby</h1>
-
+      <section className={styles.headerSection}>
+        <h1>Baby</h1>
+        <img src={sun} alt="sol grafik" />
+      </section>
       <FilterOverlay
         isOpen={isMobileFilterOpen}
         onOpen={openMobileFilter}

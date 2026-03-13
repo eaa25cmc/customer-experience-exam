@@ -5,6 +5,7 @@ import ProductCard from "./ProductCard";
 import styles from "./ProductGrid.module.css";
 import Breadcrumbs from "./Breadcrumbs";
 import FilterOverlay from "./FilterOverlay";
+import sun from "../image/product-page-sun.svg";
 import {
   applyProductFilters,
   buildFilterOptions,
@@ -105,7 +106,10 @@ export default function ProductGridBoys() {
   return (
     <div>
       <Breadcrumbs items={[{ label: "Dreng" }]} />
-      <h1>Drenge</h1>
+      <section className={styles.headerSection}>
+        <h1>Drenge</h1>
+        <img src={sun} alt="sol grafik" />
+      </section>
 
       <FilterOverlay
         isOpen={isMobileFilterOpen}
