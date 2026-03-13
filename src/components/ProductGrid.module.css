@@ -12,7 +12,7 @@ h1 {
   justify-content: center;
 }
 
-/* KATEGORI OVERSIGT */
+/* Filtrering og kategori OVERSIGT */
 .productGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -39,12 +39,12 @@ h1 {
   background: var(--hvid);
   color: var(--brun);
   border: 2px solid var(--brun);
-  border-radius: 999px;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
   font-weight: 500;
   margin: 0;
   cursor: pointer;
+  border-radius: 2rem;
 }
 
 .activeCategoryButton {
@@ -72,7 +72,7 @@ h1 {
 }
 
 .filterTriggerButton img {
-  width: 10.875rem;
+  width: 10rem;
   height: 2.5rem;
   display: block;
 }
@@ -97,7 +97,6 @@ h1 {
   width: min(30rem, 100vw);
   height: 100vh;
   background: var(--hvid);
-  border-right: 1px solid var(--brun);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -108,14 +107,8 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2.5rem;
+  padding: 2rem;
   border-bottom: 1px solid var(--brun);
-}
-
-.filterHeader h2 {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: 3rem;
 }
 
 .filterCloseButton {
@@ -133,7 +126,7 @@ h1 {
 
 .filterSectionButton {
   width: 100%;
-  padding: 1.7rem 2.5rem;
+  padding: 2rem 2.5rem;
   border: 0;
   border-bottom: 1px solid var(--brun);
   background: transparent;
@@ -141,7 +134,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--brun);
   text-align: left;
   cursor: pointer;
@@ -160,13 +153,13 @@ h1 {
 
 .filterSectionContent {
   padding: 1rem 2.5rem 1.5rem;
-  border-bottom: 1px var(--brun);
+  border-bottom: 1px solid var(--brun);
 }
 
 .filterOptionList {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .filterOptionRow {
@@ -187,14 +180,9 @@ h1 {
   appearance: none;
   -webkit-appearance: none;
   border: 1px solid var(--brun);
-  border-radius: 2px;
   background: var(--hvid);
   display: inline-block;
   cursor: pointer;
-}
-
-.filterOptionRow input[type="radio"] {
-  border-radius: 50%;
 }
 
 .filterOptionRow input[type="checkbox"]:checked,
@@ -202,17 +190,12 @@ h1 {
   background-image: url("../image/kryds.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 0.68rem 0.68rem;
+  background-size: 1rem 1rem;
+  cursor: pointer;
 }
 
 .filterSizeGroup {
-  margin-top: 0.75rem;
-}
-
-.filterSizeGroup p {
-  margin: 0 0 0.65rem;
-  font-family: var(--font-body);
-  color: var(--brun);
+  margin-top: 1rem;
 }
 
 .filterActionBar {
@@ -226,9 +209,9 @@ h1 {
 .filterResetButton,
 .filterApplyButton {
   border: 0;
-  padding: 1rem 0.75rem;
+  padding: 1rem 0.5rem;
   font-family: var(--font-display);
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
@@ -242,7 +225,7 @@ h1 {
   color: var(--hvid);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 80rem) {
   .filterPanel {
     display: none;
   }
