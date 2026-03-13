@@ -6,7 +6,7 @@ import BrandKarrusel from "../components/BrandKarrusel";
 import GenderSection from "../components/GenderSection";
 import Badges from "../components/Badges";
 import ForsideInspiration from "../components/ForsideInspiration";
-import Infoikoner from "../components/infoikoner";
+import Infoikoner from "./../components/Infoikoner";
 import AnmeldelserForside from "../components/AnmeldelserForside";
 
 export default function HomePage() {
