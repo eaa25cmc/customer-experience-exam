@@ -1,3 +1,5 @@
+// Dynamisk kategoriside – viser produkter filtreret på køn, overkategori og underkategori fra URL-parametre.
+// Indeholder også avanceret filteroverlay med sortering, farver, størrelser og brands.
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";

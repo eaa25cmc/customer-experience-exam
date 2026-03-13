@@ -1,3 +1,5 @@
+// Brandside – viser alle produkter tilhørende et specifikt brand.
+// Brandet hentes fra URL-parameteren (:brandSlug) og matches mod products.json.
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../components/ProductCard";

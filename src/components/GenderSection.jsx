@@ -1,3 +1,4 @@
+// Kønssektion til forsiden – viser tre billeder med links til baby-, pige- og drenge-kategorisiderne.
 import { Link } from "react-router-dom";
 import baby from "../image/baby.png";
 import pige from "../image/Pige3.png";

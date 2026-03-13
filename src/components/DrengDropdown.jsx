@@ -1,3 +1,5 @@
+// Dreng dropdown-menu – navigationsoverlay der viser underkategorier til drenge-sektionen.
+// Lukkes ved klik på baggrunden eller krydset via onClose-prop.
 import { NavLink } from "react-router-dom";
 import "./Dropdown.css";
 import dropdownbaggrund from "../image/kategoridrengdropdown.svg";

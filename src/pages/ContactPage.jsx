@@ -1,3 +1,4 @@
+// Kontaktside – simpel statisk side med overskrift. Indholdet kan udbygges med kontaktformular.
 export default function ContactPage() {
   return (
     <>

@@ -1,3 +1,5 @@
+// Indkøbskurv-overlay – viser kurven som et slide-in panel oven på siden.
+// Indlæser og gemmer kurv-data i localStorage. Viser produkter, antal, trin-indikator og samlet pris.
 import React from "react";
 import {
   loadShoppingbagItems,

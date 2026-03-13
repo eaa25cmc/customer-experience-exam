@@ -1,3 +1,6 @@
+// Produktdetaljeside – viser alt information om ét produkt.
+// Henter produktet (eller en variant) fra products.json baseret på id i URL-parameteren.
+// Gemmer besøgte produkter i localStorage til "Sidst set"-karrusellen.
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";

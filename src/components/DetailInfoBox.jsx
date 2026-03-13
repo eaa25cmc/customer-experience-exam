@@ -1,3 +1,5 @@
+// Produktinformationsboks – viser navn, pris (inkl. udsalgspris), farvevalg, størrelsesvælger,
+// lagerinfo, tilføj-til-kurv-knap, leveringsinformation og akkordeon med detaljer.
 import { useNavigate } from "react-router-dom";
 import styles from "./DetailInfoBox.module.css";
 import SizeSelector from "./DetailSizeSelector";
@@ -29,7 +31,7 @@ export default function DetailInfoBox({ product }) {
     "misty blue": "#5684acff",
     green: "#87b789ff",
     yellow: "#e9db8cff",
-    brown: "#6b4e39ff"
+    brown: "#6b4e39ff",
     // Tilføj flere mappings her!
   };
 

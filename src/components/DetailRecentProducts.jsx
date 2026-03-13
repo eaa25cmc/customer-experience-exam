@@ -1,3 +1,5 @@
+// "Sidst set" karrusel – henter de senest besøgte produkter fra localStorage og viser dem som produktkort.
+// Returnerer null og vises ikke, hvis der ikke er nogen sidst set produkter.
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";

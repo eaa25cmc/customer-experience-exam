@@ -1,3 +1,4 @@
+// Betalingsside – simpel statisk side med overskrift. Skal udbygges med betalingsflow.
 export default function PaymentPage() {
   return (
     <>

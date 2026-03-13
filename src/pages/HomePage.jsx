@@ -1,3 +1,5 @@
+// Forside – samler alle forsidekomponenter i én side.
+// Indeholder hero-slider, brandkarrusel, kønssektioner, badges, inspiration, infoikoner og anmeldelser.
 import "./HomePage.css";
 import HeroPictures from "../components/HeroPictures";
 import BrandKarrusel from "../components/BrandKarrusel";

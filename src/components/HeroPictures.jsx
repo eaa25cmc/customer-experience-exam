@@ -1,3 +1,5 @@
+// Hero-billedslider til forsiden – skifter automatisk mellem tre billeder hvert 4. sekund.
+// Viser dot-navigation og et CTA-billede oven på slideren.
 import { useState, useEffect } from "react";
 
 import img1 from "../image/forsidebillede.png";

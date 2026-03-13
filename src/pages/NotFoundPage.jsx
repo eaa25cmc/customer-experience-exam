@@ -1,3 +1,5 @@
+// 404-side – vises automatisk, når brugeren besøger en URL der ikke matcher nogen rute.
+// Giver brugeren mulighed for at navigere tilbage til forsiden.
 import { Link } from "react-router";
 
 export default function NotFoundPage() {

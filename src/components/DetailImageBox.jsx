@@ -1,3 +1,5 @@
+// Produktbilledgalleri – viser produktbilleder med dot-navigation, thumbnail-række og nyhed/sale-ikoner.
+// Håndterer både produkter med direkte billeder og produkter med varianter.
 import { useEffect, useState } from "react";
 import styles from "./DetailImageBox.module.css";
 import HeartIcon from "./HeartIcon";

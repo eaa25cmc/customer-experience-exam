@@ -1,3 +1,4 @@
+// Kundeanmeldelser til forsiden – viser et grid med fire kundeanmeldelser inkl. profilikon og stjernebedømmelse.
 import fyldtprofilikon from "../image/anmeldelserprofil.svg";
 import fyldtstjerneikon from "../image/anmeldelserstjernefyldt.svg";
 import trustpilotstjerne from "../image/trustpilotstjerne.svg";

@@ -1,3 +1,5 @@
+// Sidefod – viser navigationlinks til shopping guide, om os, konto, hjælp og kontakt.
+// Indeholder også sociale medier-ikoner og betalingsmetoder i bunden.
 import "./Footer.css";
 import globeikon from "../image/globus.svg";
 import facebookikon from "../image/facebook.svg";

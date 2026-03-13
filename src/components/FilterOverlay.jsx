@@ -1,3 +1,5 @@
+// Filter-sidebar overlay – åbner en sidebar med sortering, produkttyper, farver, størrelser, brands og kønsfiltre.
+// Bruger et "draft filters"-mønster, så ændringer kun anvendes når brugeren trykker på "Vis resultater".
 import { useState } from "react";
 import filterButtonIcon from "../image/product-pics/filter.svg";
 import plusIcon from "../image/plus.svg";

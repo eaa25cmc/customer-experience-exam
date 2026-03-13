@@ -1,3 +1,5 @@
+// Favorit-hjerte-ikon – toggler mellem fyldt og tomt hjerte når der klikkes.
+// Kalder onToggle-callback med ny tilstand, hvis den er angivet.
 import { useState } from "react";
 import likeHeartStroke from "../image/like-hjerte-stroke.svg";
 import likeHeartFyldt from "../image/like-hjerte-fyldt.svg";

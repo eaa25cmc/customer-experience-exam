@@ -1,3 +1,5 @@
+// Favoritside – viser brugerens favoritprodukter med mulighed for at fjerne dem eller lægge dem i kurven.
+// Produkterne er i øjeblikket hardkodet i initialFavorites, men kan kobles til localStorage.
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";

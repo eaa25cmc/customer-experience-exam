@@ -1,3 +1,5 @@
+// Produktgrid til pige-siden – henter pige- og unisex-produkter fra products.json.
+// Indeholder kategorifilterpanel og avanceret filteroverlay.
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import styles from "./ProductGrid.module.css";

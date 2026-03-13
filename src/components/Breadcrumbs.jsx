@@ -1,3 +1,5 @@
+// Brødkrummenavigation – opbygger automatisk navigation ud fra URL-parametre (køn, kategori, underkategori).
+// Kan også modtage eksplicitte items-props fra forrældrekomponenten.
 import { NavLink, useParams } from "react-router-dom";
 import styles from "./Breadcrumbs.module.css";
 

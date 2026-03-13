@@ -1,3 +1,4 @@
+// Informationsikoner-sektion til forsiden – viser fire ikoner for levering, fri fragt, retur og anmeldelser.
 import leveringikon from "../image/leveringikon.svg";
 import fragtikon from "../image/frifragtikon.svg";
 import returikon from "../image/returikon.svg";

@@ -1,3 +1,5 @@
+// Størrelsesvælger – viser alle tilgængelige størrelser som klikkbare cirkler.
+// Udsolgte størrelser markeres med en overstregning. Håndterer både varianter og enkeltprodukter.
 import { useState } from "react";
 import styles from "./DetailInfoBox.module.css";
 

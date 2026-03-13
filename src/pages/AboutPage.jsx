@@ -1,3 +1,4 @@
+// Om-siden – simpel statisk side med overskrift. Indholdet kan udbygges senere.
 export default function AboutPage() {
   return (
     <>

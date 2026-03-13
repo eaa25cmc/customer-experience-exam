@@ -1,3 +1,5 @@
+// "Relaterede produkter" karrusel – viser produkter fra samme underkategori som det aktuelle produkt.
+// Hvis der er færre end 4, suppleres der med produkter fra samme brand.
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import styles from "./DetailRelatedProducts.module.css";

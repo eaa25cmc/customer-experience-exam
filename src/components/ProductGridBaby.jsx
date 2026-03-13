@@ -1,3 +1,5 @@
+// Produktgrid til baby-siden – henter alle baby-produkter fra products.json og flader varianter ud til individuelle kort.
+// Indeholder kategorifilterpanel og avanceret filteroverlay.
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import styles from "./ProductGrid.module.css";

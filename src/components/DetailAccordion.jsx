@@ -1,3 +1,5 @@
+// Produktakkordeon – viser produktbeskrivelse, materialer, certificeringer og leveringsinformation i foldbare sektioner.
+// Første sektion er åben som standard. Flere sektioner kan være åbne samtidig.
 import { useState } from "react";
 import styles from "./DetailInfoBox.module.css";
 
@@ -42,7 +44,7 @@ export default function DetailAccordion({ product }) {
     "100 % uldfleece":
       "100 % uldfleece er utroligt blødt og varmt, perfekt til vintertøj og accessories til de mindste.",
     "Bomulds denim":
-      "Bomulds denim er et slidstærkt og alsidigt materiale, der er perfekt til jeans og jakker."
+      "Bomulds denim er et slidstærkt og alsidigt materiale, der er perfekt til jeans og jakker.",
   };
 
   const sections = [
@@ -56,7 +58,10 @@ export default function DetailAccordion({ product }) {
       content:
         "Vores produkter er fremstillet med omtanke for både miljø og mennesker. Vi benytter materialer, der er certificeret efter internationale standarder som OEKO-TEX® og GOTS, hvilket sikrer, at tekstilerne er fri for skadelige kemikalier og produceret under ansvarlige forhold. Certificeringerne garanterer høj kvalitet, bæredygtighed og tryghed for dig og dit barn.",
     },
-    { title: "Levering", content: "Leveringstid er 1-2 hverdage. Altid gratis levering." },
+    {
+      title: "Levering",
+      content: "Leveringstid er 1-2 hverdage. Altid gratis levering.",
+    },
   ];
 
   return (

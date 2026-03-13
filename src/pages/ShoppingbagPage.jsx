@@ -1,3 +1,5 @@
+// Indkøbskurvside – viser kurven som en fuld side med produkter, antal, priser og trin-indikator.
+// Indlæser og gemmer kurv-data i localStorage via shoppingbagStorage.
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ShoppingbagPage.css";

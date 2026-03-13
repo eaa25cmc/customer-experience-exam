@@ -1,3 +1,4 @@
+// Servicesside – simpel statisk side med overskrift. Indholdet kan udbygges med serviceoplysninger.
 export default function ServicesPage() {
   return (
     <>

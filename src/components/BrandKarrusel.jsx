@@ -1,3 +1,4 @@
+// Brandkarrusel til forsiden – viser alle syv brands med billede og link til den respektive brandside.
 import { Link } from "react-router-dom";
 import "./BrandKarrusel.css";
 

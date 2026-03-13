@@ -1,3 +1,4 @@
+// Kvalitetsbadges til forsiden – viser fire badges: naturlige materialer, GOTS-certificering, holdbarhed og komfort.
 import badge1 from "../image/naturlige-materialer-badge.svg";
 import badge2 from "../image/lyseroedbadge.svg";
 import badge3 from "../image/holdbarhedbadge.svg";

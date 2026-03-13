@@ -1,3 +1,4 @@
+// Inspirationsside – simpel side med breadcrumbs og overskrift. Indholdet kan udbygges med inspirationsindhold.
 import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function InspirationPage() {

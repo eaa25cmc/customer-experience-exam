@@ -1,3 +1,5 @@
+// Navigationsbjælke – viser logo, navigation med dropdown-menuer for Baby/Pige/Dreng og ikoner til søg, profil, favoritter og kurv.
+// Indeholder et roterende banner med kampagnetekster øverst.
 import { useState, useEffect } from "react";
 import { useCartOverlay } from "../context/CartOverlayContext";
 import { NavLink } from "react-router";

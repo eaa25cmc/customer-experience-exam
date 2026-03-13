@@ -1,3 +1,4 @@
+// Nyhedsside – simpel side med breadcrumbs og overskrift. Indholdet kan udbygges med nyhedsprodukter.
 import Breadcrumbs from "../components/Breadcrumbs";
 export default function News() {
   return (

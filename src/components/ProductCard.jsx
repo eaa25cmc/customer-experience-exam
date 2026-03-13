@@ -1,3 +1,5 @@
+// Produktkort – viser produktbillede, nyhed/sale-ikoner, favorit-hjerte, produktnavn og pris.
+// Linker til produktdetaljesiden baseret på produkt-id eller variant-id.
 import { Link } from "react-router-dom"; // Korrekt import til routing
 import styles from "./ProductCard.module.css";
 import HeartIcon from "./HeartIcon";

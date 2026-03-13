@@ -1,3 +1,4 @@
+// Inspirationssektion til forsiden – viser fire inspirationsbilleder og et Instagram-tag.
 import inspiration1 from "../image/video-1.png";
 import inspiration2 from "../image/video-2.png";
 import inspiration3 from "../image/video-3.png";
