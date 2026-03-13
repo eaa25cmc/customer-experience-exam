@@ -89,7 +89,7 @@ export default function FilterOverlay({
 
           <aside className={styles.filterSidebar}>
             <div className={styles.filterHeader}>
-              <h2>Filter</h2>
+              <h1>Filter</h1>
 
               <button
                 type="button"
