@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "./DetailImageBox.module.css";
 import HeartIcon from "./HeartIcon";
 import nyhedIcon from "../image/nyhed-ikon.svg";
-import saleIcon from "../image/Sale-ikon.svg";
+import saleIcon from "../image/sale-ikon.svg";
 
 export default function DetailImageBox({ product, className }) {
   const [validImages, setValidImages] = useState([]);

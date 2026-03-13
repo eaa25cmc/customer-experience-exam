@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"; // Korrekt import til routing
 import styles from "./ProductCard.module.css";
 import HeartIcon from "./HeartIcon";
 import nyhedIcon from "../image/nyhed-ikon.svg";
-import saleIcon from "../image/Sale-ikon.svg";
+import saleIcon from "../image/sale-ikon.svg";
 
 // Funktion der finder det første billede, enten fra images eller fra variant
 function getFirstImage(product) {
